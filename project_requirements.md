@@ -12,4 +12,12 @@ Project Requirements
     * Joint, Cartesian, And trajectory control
     * Peripheral (i.e. Xbox 360 controller pr HOTAS) control
     * Sensible ROS structure 
-* Robust micronctroller control from controller pc (i.e. able to adjust constants 
+* Robust micronctroller-PC communocation
+    * Able to change constants like joint angles from PC through ROS
+    * Greater than 100hz two-way communication (for information like current and target joint angles)
+* Power:
+    * 24V
+    * Less than 10A; no blowing breakers or PSU'
+* Estop system
+     * Hardware and software triggers
+     * Should cut power to motor drivers 
