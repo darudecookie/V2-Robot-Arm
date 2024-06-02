@@ -1,6 +1,8 @@
 Project Requirements
+<ins>Stretch/Future Requirements</ins>
+
 * 1 Kg payload
-* >=750mm total reach
+* greater than 750mm reach
 * 
 * ROS/ROS2 integration
-* Robust micronctroller control from main pc (i.e. able to adjust constants 
+* Robust micronctroller control from controller pc (i.e. able to adjust constants 
