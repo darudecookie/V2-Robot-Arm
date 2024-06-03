@@ -6,34 +6,32 @@ __Topic Name__
 * <ins>Topic short summary</ins>   
 * <ins>Topic data type</ins>    
 
+__parsed_peripheral_info__
 
-__current_joint_information__  
-* current angles, velocities, and potential acceleration and/or jerk of all robot joints from arm's encoders
-* 2-4 Float arrays
+__current_joint_information__
 
-__target_joint_information__
-* target angles, velocities, and potential acceleration and/or jerk of all robot joints from arm's encoders
-* 2-4 Float arrays
-
-
-
-__current_cartesian__
-* current cartesian position and orientation of robot end effector
-* kdl vector thingy
+__system_diagnostic_information__
 
 __target_cartesian__
-* target cartesian position and orientation of robot end effector
-* kdl vector thingy
 
-__system_status__
-* information about the current system status
-* contains:
-    * bool: joint_hold
-    * bool: shutting_down
+__target_joint_information__
 
+__current_end_effector_information__
+
+__target_end_effector_information__
 
 
 __Services:__  
+
+__microcontroller_parameter_dump__
+
+__system_status__
+
+__control_status__
+
+__target_end_effector_state__
+
+__microcontroller_parameter_dump__
 
 
 __Nodes:__  
