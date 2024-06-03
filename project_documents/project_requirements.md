@@ -1,5 +1,5 @@
 Project Requirements  
- <ins>Stretch/Future Requirements</ins>  
+<ins>Stretch/Future Requirements</ins>  
 
 
 * 1 Kg payload  
@@ -17,7 +17,7 @@ Project Requirements
     * Greater than 100hz two-way communication (for information like current and target joint angles)
 * Power:
     * 24V
-    * Less than 10A; no blowing breakers or PSU'
+    * Less than 10A; no blowing breakers or PSU's
 * Estop system
      * Hardware and software triggers
      * Should cut power to motor drivers 
