@@ -1,5 +1,5 @@
-import tkinter as tk
-import tkinter.font as tk_font
+import customtkinter as CTk
+
 
 
 def parse_n_floats(n, input_string, delim_char=" "):
@@ -11,7 +11,7 @@ def parse_n_floats(n, input_string, delim_char=" "):
         if char == delim_char:
             num_delim += 1
     if num_delim != n or input_string[0] == delim_char or input_string[-1] == delim_char:
-       return False
+        return False
 
     string_floats = ["", "", ""]
     floats = [0, 0, 0]
@@ -33,58 +33,65 @@ def parse_n_floats(n, input_string, delim_char=" "):
     return floats
 
 
-class GUI_Controller:
+class GUI_Controller(CTk.CTk):
     def __init__(self):
         self.JointHold = False
 
-        self.main_GUI = tk.Tk()
+        self.main_GUI = CTk.CTk()
         self.main_GUI.geometry("720x480")
-        self.main_GUI.configure(background="grey")
+        self.main_GUI.configure(fg_color="grey")
 
-        spacing_label = tk.Label(self.main_GUI, background="grey")
-        spacing_label.grid(row=0, column=0)
+        self.cartesian_inp_Buttons = [CTk.CTkButton(self.main_GUI, command=self.parse_cartesian_pos, width=15, text="send"), CTk.CTkButton(self.main_GUI, command=self.parse_cartesian_rot, width=15, text="send"), ]
+        self.cartesian_inp_Entries = []
+        self.cartesian_inp_Labels = []
+        self.cartesian_home_Buttons = [CTk.CTkButton(self.main_GUI, command=self.home_cartesian_pos, width=10, text="home"), CTk.CTkButton(self.main_GUI, command=self.home_cartesian_rot, width=10, text="home"), ]
 
-        self.cartesian_Buttons = [tk.Button(self.main_GUI, command=self.parse_cartesian_pos, padx=15, text="send"), tk.Button(
-            self.main_GUI, command=self.parse_cartesian_rot, padx=15, text="send"), ]
-        self.cartesian_Entries = []
-        self.cartesian_Labels = []
-
-        cart_lable_list = ("Position (mm); 'X Y Z'",
-                           "Rotation (deg); 'Roll Pitch Yaw'", )
+        cart_label_list = ("Position (mm); 'X Y Z'", "Rotation (deg); 'Roll Pitch Yaw'", )
         for i in range(2):
-            self.cartesian_Labels.append(
-                tk.Label(text="Target Cartesian " + cart_lable_list[i], background="grey"))
-            self.cartesian_Labels[i].grid(
-                row=i+1, column=1, padx=15, sticky=tk.W)
+            self.cartesian_inp_Labels.append(CTk.CTkLabel( self.main_GUI, text="Target Cartesian " + cart_label_list[i], fg_color="grey"))
+            #self.cartesian_inp_Labels[i].pack(row=i, column=1, padx=15, sticky=CTk.W)
 
-            self.cartesian_Entries.append(
-                tk.Entry(self.main_GUI, background="grey"))
-            self.cartesian_Entries[i].grid(row=i+1, column=2)
-            self.cartesian_Buttons[i].configure(background="dark grey")
-            self.cartesian_Buttons[i].grid(row=i+1, column=3)
+            self.cartesian_inp_Entries.append(CTk.CTkEntry(self.main_GUI, fg_color="grey"))
+            #self.cartesian_inp_Entries[i].grid(row=i, column=2)
+            
+            self.cartesian_inp_Buttons[i].configure(fg_color="dark grey")
+           # self.cartesian_inp_Buttons[i].grid(row=i, column=3,padx= 5,sticky=CTk.W)
 
-        # self.cartesian_jog_Buttons = [tk.Button(self.main_GUI, pady=5, padx=5, text="^"),tk.Button(self.main_GUI, pady=5,padx=5, text="<"),tk.Button(self.main_GUI, pady=5,padx=5, text=">"),tk.Button(self.main_GUI, pady=5, padx=5, text="V"),]
+            self.cartesian_home_Buttons[i].configure(fg_color="dark grey")
+            #self.cartesian_home_Buttons[i].grid(row=i, column=4,padx= 5,sticky=CTk.W)            
 
-        # self.cartesian_jog_Buttons[0].grid(row=4, column=1)
-        # self.cartesian_jog_Buttons[1].grid(row=5, column=0)
-        # self.cartesian_jog_Buttons[2].grid(row=5, column=2)
-        # self.cartesian_jog_Buttons[3].grid(row=6, column=1)
+        self.Estop_Jointhold_GUI =CTk.CTk()
+        self.Estop_Jointhold_GUI.geometry("150x197")
+        self.Estop_Jointhold_GUI.configure(fg_color="black")
+        self.Estop_Jointhold_GUI.resizable(0, 0)
+        
+        self.JointHold_button = CTk.CTkButton(self.Estop_Jointhold_GUI, text="JOINT HOLD", command=self.JointHold_callback, height=30, width=9,  fg_color="#FF6700",  )#font=tk_font.Font(size=20))
+        self.JointHold_button.grid(row=1)
 
-        self.JointHold_button = tk.Button(self.main_GUI, text="JOINT HOLD", command=self.JointHold_callback,
-                                          pady=15, padx=20,  background="orange",  font=tk_font.Font(size=15))
-        self.JointHold_button.grid(row=1, column=4, pady=0, padx=50)
+        self.Estop_button = CTk.CTkButton(self.Estop_Jointhold_GUI, text="E-STOP", command=self.E_stop_callback, height=30, width=30, fg_color="#FF0000", )#font=tk_font.Font(size=20))
+        self.Estop_button.grid(row=2)
 
-        self.Estop_button = tk.Button(self.main_GUI, text="E-STOP", command=self.E_stop_callback,
-                                      pady=15, padx=40, background="red", font=tk_font.Font(size=15))
-        self.Estop_button.grid(row=3, column=4, pady=0, padx=50)
+        self.Estop_Jointhold_GUI_loop()
 
-        self.main_GUI.mainloop()
+    def Estop_Jointhold_GUI_loop(self):
+        self.Estop_Jointhold_GUI.after(100, self.Estop_Jointhold_GUI_loop)
 
+        if 'normal' != self.Estop_Jointhold_GUI.state():
+            self.E_stop_callback()
+        else:
+            self.Estop_Jointhold_GUI.lift()
+        
     def parse_cartesian_pos(self):
-        print(parse_n_floats(2, self.cartesian_Entries[0].get()), "pos")
-
+        print(parse_n_floats(2, self.cartesian_Entries[0].cget()), "pos")
+    
     def parse_cartesian_rot(self):
-        print(parse_n_floats(2, self.cartesian_Entries[1].get()), "rot")
+        print(parse_n_floats(2, self.cartesian_Entries[1].cget()), "rot")
+    
+    def home_cartesian_pos(self):
+        print("cart pos home")
+    
+    def home_cartesian_rot(self):
+        print("cart rot home")    
 
     def JointHold_callback(self):
         if self.JointHold:
@@ -99,3 +106,4 @@ class GUI_Controller:
 
 
 meow = GUI_Controller()
+meow.mainloop()
