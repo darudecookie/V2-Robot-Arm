@@ -1,0 +1,16 @@
+basically i need to send an array of seven floats to in both directions a lot, so i think it might be useful to create a protocol for that
+
+
+
+the idea is that if you want to joint hold or toggle some param you can send just your cmd and dont have the extra overhead of processing an arg 
+in writing this i realize it might be faster to push arg processing onto the individual func that processes the arg but idk
+
+so my message can be up to 30 chars long
+ -first char (command) identifies the command for the mcu
+ - next 29 chars (arg) are optional and used to pass arguments for commands
+
+arg for 7 floats:
+- i know values are probably going to be between -180 and 180, and i want probably 3 decimal points, so i could used fixed-point and have it in like 3 bytes/floats
+- each byte can be 0-255 so i can use one byte per 2 decimal places
+- in fixed point i can have a num between -180 and 180 w/ four decimal places w/ 3 bytes 
+- byte 1: basically int8_t that handles whole number portion

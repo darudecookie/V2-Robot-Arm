@@ -6,28 +6,85 @@ __Topic Name__
 * <ins>Topic short summary</ins>   
 * <ins>Topic data type</ins>    
 
-__parsed_peripheral_info__
 
 __current_joint_information__
-
-__system_diagnostic_information__
-
-__target_cartesian__
+* information about the current joints on the arms
+* float[7] position
+* float[7] velocity
+* float[7] acceleration
+* float[7] jerk
+* float[7] torque (?)
 
 __target_joint_information__
+* information about the target state of the joints
+* float[7] position
+* float[7] velocity
+* float[7] acceleration
+* float[7] jerk
+
+__system_diagnostic_information__
+* information about secondary diagnositc values
+* bool estop (whether estop is hit, can be low-hz topic)
+* float[**] temperature (could add temp sensors in future)
+* float[**] 
+
+__target_cartesian__
+* information about the target cartesian coordinates of the arm
+* EITHER:
+    * float[3] position (x y z)
+    * float[3] rotation (roll pitch yaw)
+* OR
+    * float[**] weird kdl vector thing (?)
+
+
 
 __current_end_effector_information__
+* information from the end effector, this will change based on what the end effector is/does
+* float current_end_effector_value
+* bool current_end_effector_bool
 
 __target_end_effector_information__
-
+* target end effector state, this will change based on what the end effector is/does
+* float target_end_effector_value
+* bool target_end_effector_bool
 
 __Services:__  
 
 __microcontroller_parameter_dump__
+* single msg that contains a lot of rarely modified params that can be updated on the mcu
+* int PID_update_target
+* int[3] PID_update_params
+
+* int joint_position_limit_update_target
+* float[2] joint_position_limit_update_params
+
+* int joint_velocity_limit_update_target
+* float[2] joint_velocity_limit_update_params
+
+* int joint_acceleration_limit_update_target
+* float[2] joint_acceleration_limit_update_params
+
+* int joint_torque_limit_update_target
+* float[2] joint_torque_limit_update_params
+
+* float[2] x_workspace_bounds
+* float[2] y_workspace_bounds
+* float[2] z_workspace_bounds
+* float[7] home_joint_angles
+
 
 __system_status__
+* service call for important/time sensitive funcs
+* bool E_Stop
+* bool Joint_Hold
+* bool move_home 
 
 __control_status__
+* used to control which node/solver is controlling the arm
+* bool Trajectory_Controller_outputting
+* bool IK_Solver_outputting
+* bool Peripheral_Interface_outputting
+* bool Master_Controller_outputting
 
 __target_end_effector_state__
 
