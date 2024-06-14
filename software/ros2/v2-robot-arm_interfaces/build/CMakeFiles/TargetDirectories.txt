@@ -1,0 +1,9 @@
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/uninstall.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/v2-robot-arm_interfaces_uninstall.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/test.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/edit_cache.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/rebuild_cache.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/list_install_components.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/install.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/install/local.dir
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/v2-robot-arm_interfaces/build/CMakeFiles/install/strip.dir

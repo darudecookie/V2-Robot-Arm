@@ -33,9 +33,6 @@ __target_cartesian__
 * EITHER:
     * float[3] position (x y z)
     * float[3] rotation (roll pitch yaw)
-* OR
-    * float[**] weird kdl vector thing (?)
-
 
 
 __current_end_effector_information__
@@ -158,16 +155,22 @@ __End_Effector_Controller_Node__
 
 
 
-__User_Interface_Node__
-* Node handles user input to robot like safing, homing, and displaying current cartesian and joint info; could use a gui
+__ROS_Controller_Node__
+* Node controls other nodes and also provides io for user to interface with system
 * Publishes
     * 
 * Subscribes 
     * 
 
-__ROS_Controller_Node__
-* Node 
-* Publishes
-    * 
-* Subscribes 
-    * 
+__Package Breakdown:__
+* v2-robot-arm_interfaces
+    * all msg's and srv's for system 
+* hardware_interface
+    * Microcontroller_Interface_Node
+    * End_Effector_Controller_Node
+* movement_controllers   
+    * Trajectory_Controller_Node
+    * IK_Solver_Node
+    * Peripherial_Interface_Node
+* ros_controller_interface
+    * ROS_Controller_Node
