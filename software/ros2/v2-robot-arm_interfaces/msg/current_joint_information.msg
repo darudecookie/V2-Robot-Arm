@@ -1,7 +1,7 @@
 std_msgs/Header header
 
-float[7] position
-float[7] velocity
-float[7] acceleration
-float[7] jerk
-float[7] torque
+float32[7] Current_Joint_Positions
+float32[7] Current_Joint_Velocity
+float32[7] Current_Joint_Acceleration
+float32[7] Current_Joint_Jerks
+float32[7] Current_Joint_Torques

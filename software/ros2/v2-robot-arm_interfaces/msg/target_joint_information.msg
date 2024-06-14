@@ -1,5 +1,6 @@
 std_msgs/Header header
 
-float[7] position
-float[7] velocity
-float[7] torque
+int16 param_to_control
+float[7] Target_Joint_Positions
+float[7] Target_Joint_Velocities
+float[7] Target_Joint_Torques
