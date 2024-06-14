@@ -3,7 +3,7 @@ import serial
 import time
 from collections import deque
 
-from v2-robot-arm_interfaces import 
+from v2_robot_arm_interfaces.msg import current_end_effector_information.msg, 
 
 # format here is basically 'command_index : (command_name, has_arguments (bool))'
 # so this entry: '0:("Estop", False)' means that the command has an index/associated number of 0, is named 'Estop' and has no arguments

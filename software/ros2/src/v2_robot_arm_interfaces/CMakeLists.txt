@@ -7,27 +7,29 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(std_msgs REQUIRED)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-	"msg/control_status.msg"
-	"msg/current_end_effector_information.msg"
-	"msg/current_joint_information.msg"
-	"msg/system_diagnostic_information.msg"
-	"msg/target_cartesian.msg"
-	"msg/target_end_effector_information.msg"
-	"msg/target_joint_information.msg"
+	"msg/ControlStatus.msg"
+	"msg/CurrentEEInfo.msg"
+	"msg/CurrentJointInfo.msg"
+	"msg/SystemDiagnosticInfo.msg"
+	"msg/TargetCartesian.msg"
+	"msg/TargetEEInfo.msg"
+	"msg/TargetJointInfo.msg"
 	
-	"srv/microcontroller_parameter_dump.srv"
-	"srv/system_status.srv"
-	"srv/target_end_effector_state.srv"
+	"srv/MicrocontrollerParameterDump.srv"
+	"srv/SystemStatus.srv"
+	"srv/TargetEEState.srv"
 	
-	"action/parametric_trajectory_information.action"
+	"action/ParametricTrajectoryInfo.action"
 	
 	
-	DEPENDENCIES standard_msgs
+	DEPENDENCIES std_msgs
 )
 
 

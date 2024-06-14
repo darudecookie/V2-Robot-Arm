@@ -1,0 +1,47 @@
+[0.710s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces -DCMAKE_INSTALL_PREFIX=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces
+[0.811s] -- The C compiler identification is GNU 13.2.0
+[0.926s] -- The CXX compiler identification is GNU 13.2.0
+[0.957s] -- Detecting C compiler ABI info
+[1.124s] -- Detecting C compiler ABI info - done
+[1.142s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.142s] -- Detecting C compile features
+[1.143s] -- Detecting C compile features - done
+[1.162s] -- Detecting CXX compiler ABI info
+[1.338s] -- Detecting CXX compiler ABI info - done
+[1.371s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.373s] -- Detecting CXX compile features
+[1.379s] -- Detecting CXX compile features - done
+[1.383s] -- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)
+[1.649s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.856s] -- Found ament_lint_auto: 0.18.0 (/opt/ros/rolling/share/ament_lint_auto/cmake)
+[2.073s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.078s] -- Configured cppcheck include dirs: 
+[2.078s] -- Configured cppcheck exclude dirs and/or files: 
+[2.083s] -- Added test 'lint_cmake' to check CMake code style
+[2.099s] -- Added test 'uncrustify' to check C / C++ code style
+[2.112s] -- Configured uncrustify additional arguments: 
+[2.112s] -- Added test 'xmllint' to check XML markup files
+[2.117s] -- Configuring done (1.4s)
+[2.130s] -- Generating done (0.0s)
+[2.135s] -- Build files have been written to: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces
+[2.151s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces -DCMAKE_INSTALL_PREFIX=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces
+[2.152s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4
+[2.223s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4
+[2.277s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces
+[2.290s] -- Install configuration: ""
+[2.292s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/ament_index/resource_index/package_run_dependencies/v2_robot_arm_interfaces
+[2.295s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/ament_index/resource_index/parent_prefix_path/v2_robot_arm_interfaces
+[2.295s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/ament_prefix_path.sh
+[2.296s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/ament_prefix_path.dsv
+[2.297s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/path.sh
+[2.297s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/path.dsv
+[2.303s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.bash
+[2.303s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.sh
+[2.304s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.zsh
+[2.304s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.dsv
+[2.304s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.dsv
+[2.304s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/ament_index/resource_index/packages/v2_robot_arm_interfaces
+[2.304s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfacesConfig.cmake
+[2.304s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfacesConfig-version.cmake
+[2.309s] -- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.xml
+[2.317s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces

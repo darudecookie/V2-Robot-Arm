@@ -1,0 +1,6 @@
+-- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)
+-- Found rosidl_default_generators: 1.7.0 (/opt/ros/rolling/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_adapter: 4.7.0 (/opt/ros/rolling/share/rosidl_adapter/cmake)
+-- Configuring incomplete, errors occurred!

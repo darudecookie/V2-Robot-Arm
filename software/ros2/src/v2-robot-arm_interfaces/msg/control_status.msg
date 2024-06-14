@@ -1,4 +1,0 @@
-int8 Trajectory_Controller_outputting 0
-int8 IK_Solver_outputting 1
-int8 Peripheral_Interface_outputting 0 
-int8 Master_Controller_outputting 1

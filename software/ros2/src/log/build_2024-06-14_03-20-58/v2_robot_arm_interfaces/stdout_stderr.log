@@ -1,0 +1,52 @@
+-- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)
+-- Found rosidl_default_generators: 1.7.0 (/opt/ros/rolling/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_adapter: 4.7.0 (/opt/ros/rolling/share/rosidl_adapter/cmake)
+[31mCMake Error at /opt/ros/rolling/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+  v2_robot_arm_interfaces --arguments-file
+  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_adapter__arguments__v2_robot_arm_interfaces.json
+  --output-dir
+  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces
+  --output-file
+  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces.idls)
+  returned error code 1:
+
+  Error processing 'int8 Trajectory_Controller_outputting 0' of
+  'v2_robot_arm_interfaces/control_status':
+  ''Trajectory_Controller_outputting' is an invalid field name.  It should
+  have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+
+  Traceback (most recent call last):
+
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+      sys.exit(main())
+               ^^^^^^
+    File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+      abs_idl_file = convert_to_idl(
+                     ^^^^^^^^^^^^^^^
+    File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+      return convert_msg_to_idl(
+             ^^^^^^^^^^^^^^^^^^^
+    File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+      msg = parse_message_string(package_name, input_file.stem, content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+      fields.append(Field(
+                    ^^^^^^
+    File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 355, in __init__
+      raise NameError(
+
+  NameError: 'Trajectory_Controller_outputting' is an invalid field name.  It
+  should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+
+Call Stack (most recent call first):
+  /opt/ros/rolling/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+  CMakeLists.txt:14 (rosidl_generate_interfaces)
+
+[0m
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

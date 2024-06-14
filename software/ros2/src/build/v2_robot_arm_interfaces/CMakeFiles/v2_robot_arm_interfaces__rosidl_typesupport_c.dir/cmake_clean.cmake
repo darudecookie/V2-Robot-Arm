@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o.d"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o"
+  "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o.d"
+  "libv2_robot_arm_interfaces__rosidl_typesupport_c.pdb"
+  "libv2_robot_arm_interfaces__rosidl_typesupport_c.so"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp"
+  "rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

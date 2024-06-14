@@ -1,0 +1,313 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Event",
+      "fields": [
+        {
+          "name": "info",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "request",
+          "type": {
+            "type_id": 97,
+            "capacity": 1,
+            "string_capacity": 0,
+            "nested_type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response",
+          "type": {
+            "type_id": 97,
+            "capacity": 1,
+            "string_capacity": 0,
+            "nested_type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Response"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Request",
+        "fields": [
+          {
+            "name": "joint_position_limit_update_target",
+            "type": {
+              "type_id": 4,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "-10"
+          },
+          {
+            "name": "joint_position_limit_update_params",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(0.0, 0.0)"
+          },
+          {
+            "name": "joint_velocity_limit_update_target",
+            "type": {
+              "type_id": 4,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "-10"
+          },
+          {
+            "name": "joint_velocity_limit_update_params",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(0.0, 0.0)"
+          },
+          {
+            "name": "joint_torque_limit_update_target",
+            "type": {
+              "type_id": 4,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "-10"
+          },
+          {
+            "name": "joint_torque_limit_update_params",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(0.0, 0.0)"
+          },
+          {
+            "name": "joint_acceleration_limit_update_target",
+            "type": {
+              "type_id": 4,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "-10"
+          },
+          {
+            "name": "joint_acceleration_limit_update_params",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(0.0, 0.0)"
+          },
+          {
+            "name": "joint_jerk_limit_update_target",
+            "type": {
+              "type_id": 4,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "-10"
+          },
+          {
+            "name": "joint_jerk_limit_update_params",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(0.0, 0.0)"
+          },
+          {
+            "name": "x_workspace_bounds",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(-1.0, -1.0)"
+          },
+          {
+            "name": "y_workspace_bounds",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(-1.0, -1.0)"
+          },
+          {
+            "name": "z_workspace_bounds",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(-1.0, -1.0)"
+          },
+          {
+            "name": "pid_update_target",
+            "type": {
+              "type_id": 4,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "-10"
+          },
+          {
+            "name": "pid_update_params",
+            "type": {
+              "type_id": 58,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(-1.0, -1.0, -1.0)"
+          },
+          {
+            "name": "joint_home_positions",
+            "type": {
+              "type_id": 58,
+              "capacity": 7,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "(-100.0, -100.0, -100.0, -100.0, -100.0, -100.0, -100.0)"
+          }
+        ]
+      },
+      {
+        "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Response",
+        "fields": [
+          {
+            "name": "returnsuccess",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Event",
+      "hash_string": "RIHS01_59107090aa288d1b54436d1677764ca843044ec9042dc1abe1151c4b01ca7dd9"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Request",
+      "hash_string": "RIHS01_2a412bbc1d2e671b7363df5e42dbb8b0bff9e722e11755addb10f82bc9599ba7"
+    },
+    {
+      "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Response",
+      "hash_string": "RIHS01_902c7541be34ef5cae68ea0b450527b078b14ebdc95d6686e18973d887411139"
+    }
+  ]
+}

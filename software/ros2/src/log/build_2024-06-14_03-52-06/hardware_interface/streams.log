@@ -1,0 +1,24 @@
+[1.960s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/install.log --single-version-externally-managed install_data
+[2.355s] running egg_info
+[2.380s] writing ../build/hardware_interface/hardware_interface.egg-info/PKG-INFO
+[2.380s] writing dependency_links to ../build/hardware_interface/hardware_interface.egg-info/dependency_links.txt
+[2.380s] writing requirements to ../build/hardware_interface/hardware_interface.egg-info/requires.txt
+[2.380s] writing top-level names to ../build/hardware_interface/hardware_interface.egg-info/top_level.txt
+[2.436s] reading manifest file '../build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[2.437s] writing manifest file '../build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[2.437s] running build
+[2.438s] running build_py
+[2.438s] running install
+[2.448s] running install_lib
+[2.474s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages/hardware_interface/Microcontroller_Interface_Node.py to Microcontroller_Interface_Node.cpython-312.pyc
+[2.474s]   File "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages/hardware_interface/Microcontroller_Interface_Node.py", line 6
+[2.475s]     from v2_robot_arm_interfaces.msg import current_end_effector_information.msg, 
+[2.475s]                                                                             ^
+[2.475s] SyntaxError: invalid syntax
+[2.475s] 
+[2.475s] running install_data
+[2.475s] running install_egg_info
+[2.505s] removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info' (and everything under it)
+[2.505s] Copying ../build/hardware_interface/hardware_interface.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info
+[2.507s] running install_scripts
+[2.677s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/install.log'

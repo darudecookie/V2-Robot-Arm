@@ -1,0 +1,5 @@
+  File "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages/hardware_interface/Microcontroller_Interface_Node.py", line 6
+    from v2_robot_arm_interfaces.msg import 
+                                            ^
+SyntaxError: invalid syntax
+

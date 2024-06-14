@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from v2_robot_arm_interfaces/srv/TargetEEState.srv
+// generated code does not contain a copyright notice
+
+
+module v2_robot_arm_interfaces {
+  module srv {
+    struct TargetEEState_Request {
+      float target_end_effector_value;
+
+      @default (value=0)
+      int8 target_end_effector_bool;
+    };
+    struct TargetEEState_Response {
+      float current_end_effector_value;
+    };
+  };
+};

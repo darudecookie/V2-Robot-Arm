@@ -1,0 +1,16 @@
+{
+  "package_name": "v2_robot_arm_interfaces",
+  "non_idl_tuples": [
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/ControlStatus.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/CurrentEEInfo.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/CurrentJointInfo.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/SystemDiagnosticInfo.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/TargetCartesian.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/TargetEEInfo.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:msg/TargetJointInfo.msg",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:srv/MicrocontrollerParameterDump.srv",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:srv/SystemStatus.srv",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:srv/TargetEEState.srv",
+    "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces:action/ParametricTrajectoryInfo.action"
+  ]
+}

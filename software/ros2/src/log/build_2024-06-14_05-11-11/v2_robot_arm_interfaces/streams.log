@@ -1,0 +1,22 @@
+[0.755s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4
+[0.797s] -- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)
+[1.249s] -- Configuring incomplete, errors occurred!
+[1.250s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[1.250s]   By not providing "Findstandard_msgs.cmake" in CMAKE_MODULE_PATH this
+[1.250s]   project has asked CMake to find a package configuration file provided by
+[1.250s]   "standard_msgs", but CMake did not find one.
+[1.250s] 
+[1.250s]   Could not find a package configuration file provided by "standard_msgs"
+[1.250s]   with any of the following names:
+[1.251s] 
+[1.251s]     standard_msgsConfig.cmake
+[1.251s]     standard_msgs-config.cmake
+[1.251s] 
+[1.254s]   Add the installation prefix of "standard_msgs" to CMAKE_PREFIX_PATH or set
+[1.254s]   "standard_msgs_DIR" to a directory containing one of the above files.  If
+[1.254s]   "standard_msgs" provides a separate development package or SDK, be sure it
+[1.254s]   has been installed.
+[1.254s] 
+[1.255s] [0m
+[1.257s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[1.260s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4

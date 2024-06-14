@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2_robot_arm_interfaces/msg/CurrentJointInfo.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module v2_robot_arm_interfaces {
+  module msg {
+    typedef float float__7[7];
+    struct CurrentJointInfo {
+      std_msgs::msg::Header header;
+
+      float__7 current_joint_positions;
+
+      float__7 current_joint_velocity;
+
+      float__7 current_joint_acceleration;
+
+      float__7 current_joint_jerks;
+
+      float__7 current_joint_torques;
+    };
+  };
+};

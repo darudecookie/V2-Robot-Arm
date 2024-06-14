@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.000367] (hardware_interface) JobQueued: {'identifier': 'hardware_interface', 'dependencies': OrderedDict()}
+[0.000498] (movement_controllers) JobQueued: {'identifier': 'movement_controllers', 'dependencies': OrderedDict()}
+[0.000535] (ros_controller_interface) JobQueued: {'identifier': 'ros_controller_interface', 'dependencies': OrderedDict()}
+[0.000563] (v2_robot_arm_interfaces) JobQueued: {'identifier': 'v2_robot_arm_interfaces', 'dependencies': OrderedDict()}
+[0.001080] (hardware_interface) JobStarted: {'identifier': 'hardware_interface'}
+[0.009635] (movement_controllers) JobStarted: {'identifier': 'movement_controllers'}
+[0.017454] (ros_controller_interface) JobStarted: {'identifier': 'ros_controller_interface'}
+[0.023990] (v2_robot_arm_interfaces) JobStarted: {'identifier': 'v2_robot_arm_interfaces'}
+[0.100017] (-) TimerEvent: {}
+[0.200335] (-) TimerEvent: {}
+[0.303280] (-) TimerEvent: {}
+[0.403577] (-) TimerEvent: {}
+[0.503910] (-) TimerEvent: {}
+[0.604241] (-) TimerEvent: {}
+[0.704556] (-) TimerEvent: {}
+[0.777131] (v2_robot_arm_interfaces) JobProgress: {'identifier': 'v2_robot_arm_interfaces', 'progress': 'cmake'}
+[0.778168] (v2_robot_arm_interfaces) JobProgress: {'identifier': 'v2_robot_arm_interfaces', 'progress': 'build'}
+[0.778305] (v2_robot_arm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darudecookie', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/opt/gz_math_vendor/lib:/opt/ros/rolling/opt/gz_utils_vendor/lib:/opt/ros/rolling/opt/gz_cmake_vendor/lib:/opt/ros/rolling/lib', 'HOME': '/home/darudecookie', 'OLDPWD': '/home/darudecookie/Documents/V2-Robot-Arm/software', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1465', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'rolling', 'LOGNAME': 'darudecookie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'darudecookie', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/darudecookie-ThinkPad-X1-Carbon-5th:@/tmp/.ICE-unix/1417,unix/darudecookie-ThinkPad-X1-Carbon-5th:/tmp/.ICE-unix/1417', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a3dbc28b_057b_4bfa_a2a7_e4090f153982', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.UR65O2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.110', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/rolling', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/rolling/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/rolling/opt/gz_math_vendor:/opt/ros/rolling/opt/gz_utils_vendor:/opt/ros/rolling/opt/gz_cmake_vendor:/opt/ros/rolling'}), 'shell': False}
+[0.806294] (-) TimerEvent: {}
+[0.821339] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)\n'}
+[0.906398] (-) TimerEvent: {}
+[1.006721] (-) TimerEvent: {}
+[1.108430] (-) TimerEvent: {}
+[1.208764] (-) TimerEvent: {}
+[1.274060] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.274463] (v2_robot_arm_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[1.274667] (v2_robot_arm_interfaces) StderrLine: {'line': b'  By not providing "Findstandard_msgs.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.274823] (v2_robot_arm_interfaces) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.274972] (v2_robot_arm_interfaces) StderrLine: {'line': b'  "standard_msgs", but CMake did not find one.\n'}
+[1.275118] (v2_robot_arm_interfaces) StderrLine: {'line': b'\n'}
+[1.275287] (v2_robot_arm_interfaces) StderrLine: {'line': b'  Could not find a package configuration file provided by "standard_msgs"\n'}
+[1.275439] (v2_robot_arm_interfaces) StderrLine: {'line': b'  with any of the following names:\n'}
+[1.275585] (v2_robot_arm_interfaces) StderrLine: {'line': b'\n'}
+[1.275730] (v2_robot_arm_interfaces) StderrLine: {'line': b'    standard_msgsConfig.cmake\n'}
+[1.275878] (v2_robot_arm_interfaces) StderrLine: {'line': b'    standard_msgs-config.cmake\n'}
+[1.276019] (v2_robot_arm_interfaces) StderrLine: {'line': b'\n'}
+[1.276164] (v2_robot_arm_interfaces) StderrLine: {'line': b'  Add the installation prefix of "standard_msgs" to CMAKE_PREFIX_PATH or set\n'}
+[1.278930] (v2_robot_arm_interfaces) StderrLine: {'line': b'  "standard_msgs_DIR" to a directory containing one of the above files.  If\n'}
+[1.279110] (v2_robot_arm_interfaces) StderrLine: {'line': b'  "standard_msgs" provides a separate development package or SDK, be sure it\n'}
+[1.279292] (v2_robot_arm_interfaces) StderrLine: {'line': b'  has been installed.\n'}
+[1.279460] (v2_robot_arm_interfaces) StderrLine: {'line': b'\n'}
+[1.279605] (v2_robot_arm_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[1.282092] (v2_robot_arm_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:226: cmake_check_build_system] Error 1\n'}
+[1.284905] (v2_robot_arm_interfaces) CommandEnded: {'returncode': 2}
+[1.308848] (-) TimerEvent: {}
+[1.340340] (v2_robot_arm_interfaces) JobEnded: {'identifier': 'v2_robot_arm_interfaces', 'rc': 2}
+[1.409332] (-) TimerEvent: {}
+[1.509651] (-) TimerEvent: {}
+[1.612440] (-) TimerEvent: {}
+[1.713295] (-) TimerEvent: {}
+[1.815279] (-) TimerEvent: {}
+[1.876964] (hardware_interface) JobEnded: {'identifier': 'hardware_interface', 'rc': 'SIGINT'}
+[1.915371] (-) TimerEvent: {}
+[2.002483] (movement_controllers) JobEnded: {'identifier': 'movement_controllers', 'rc': 'SIGINT'}
+[2.015474] (-) TimerEvent: {}
+[2.055404] (ros_controller_interface) JobEnded: {'identifier': 'ros_controller_interface', 'rc': 'SIGINT'}
+[2.065878] (-) EventReactorShutdown: {}
