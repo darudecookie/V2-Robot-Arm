@@ -1,0 +1,43 @@
+[2.598s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/install.log --single-version-externally-managed install_data
+[3.153s] running egg_info
+[3.153s] creating ../build/movement_controllers/movement_controllers.egg-info
+[3.203s] writing ../build/movement_controllers/movement_controllers.egg-info/PKG-INFO
+[3.203s] writing dependency_links to ../build/movement_controllers/movement_controllers.egg-info/dependency_links.txt
+[3.203s] writing entry points to ../build/movement_controllers/movement_controllers.egg-info/entry_points.txt
+[3.203s] writing requirements to ../build/movement_controllers/movement_controllers.egg-info/requires.txt
+[3.204s] writing top-level names to ../build/movement_controllers/movement_controllers.egg-info/top_level.txt
+[3.204s] writing manifest file '../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[3.306s] reading manifest file '../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[3.306s] writing manifest file '../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[3.306s] running build
+[3.306s] running build_py
+[3.306s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build
+[3.306s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib
+[3.307s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers
+[3.307s] copying movement_controllers/Peripheral_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers
+[3.307s] copying movement_controllers/__init__.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers
+[3.307s] copying movement_controllers/IK_Solver_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers
+[3.307s] copying movement_controllers/Trajectory_Controller_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers
+[3.307s] running install
+[3.323s] running install_lib
+[3.360s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers
+[3.360s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers/Peripheral_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers
+[3.361s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers/__init__.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers
+[3.361s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers/IK_Solver_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers
+[3.361s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build/lib/movement_controllers/Trajectory_Controller_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers
+[3.362s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/Peripheral_Interface_Node.py to Peripheral_Interface_Node.cpython-312.pyc
+[3.362s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/__init__.py to __init__.cpython-312.pyc
+[3.363s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py to IK_Solver_Node.cpython-312.pyc
+[3.363s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/Trajectory_Controller_Node.py to Trajectory_Controller_Node.cpython-312.pyc
+[3.363s] running install_data
+[3.363s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/ament_index
+[3.364s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/ament_index/resource_index
+[3.364s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/ament_index/resource_index/packages
+[3.364s] copying resource/movement_controllers -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/ament_index/resource_index/packages
+[3.365s] copying package.xml -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers
+[3.365s] running install_egg_info
+[3.397s] Copying ../build/movement_controllers/movement_controllers.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info
+[3.398s] running install_scripts
+[3.592s] Installing Peripheral_Intreface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/movement_controllers
+[3.593s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/install.log'
+[3.636s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/install.log --single-version-externally-managed install_data

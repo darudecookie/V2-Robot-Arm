@@ -1,0 +1,2 @@
+[console_scripts]
+ROS_Controller_Node = ros_controller_interface.ROS_Controller_Node:main

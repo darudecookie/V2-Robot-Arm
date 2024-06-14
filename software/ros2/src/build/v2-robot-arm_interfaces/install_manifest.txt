@@ -1,0 +1,15 @@
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/ament_index/resource_index/package_run_dependencies/v2-robot-arm_interfaces
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/ament_index/resource_index/parent_prefix_path/v2-robot-arm_interfaces
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/environment/ament_prefix_path.sh
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/environment/ament_prefix_path.dsv
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/environment/path.sh
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/environment/path.dsv
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/local_setup.bash
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/local_setup.sh
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/local_setup.zsh
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/local_setup.dsv
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/package.dsv
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/ament_index/resource_index/packages/v2-robot-arm_interfaces
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/cmake/v2-robot-arm_interfacesConfig.cmake
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/cmake/v2-robot-arm_interfacesConfig-version.cmake
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2-robot-arm_interfaces/share/v2-robot-arm_interfaces/package.xml

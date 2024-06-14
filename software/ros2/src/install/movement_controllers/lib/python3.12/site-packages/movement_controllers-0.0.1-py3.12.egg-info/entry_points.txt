@@ -1,0 +1,2 @@
+[console_scripts]
+Peripheral_Intreface_Node = movement_controllers.Peripheral_Intreface_Node:main
