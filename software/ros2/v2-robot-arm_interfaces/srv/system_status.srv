@@ -1,0 +1,5 @@
+int8 Estop 0
+int8 JointHold 0
+int8 move_home 0
+---
+returnSuccess

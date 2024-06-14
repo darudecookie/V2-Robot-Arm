@@ -1,0 +1,8 @@
+float32[2] t_range
+float32 t_speed
+
+string parametric_equation
+--- 
+int8 returnSuccess
+---
+float32 current_t
