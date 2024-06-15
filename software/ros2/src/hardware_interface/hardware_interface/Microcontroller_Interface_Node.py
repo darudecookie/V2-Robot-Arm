@@ -153,53 +153,72 @@ class Serial_Interface( rclpy.Node):
 
         return output_bytes
 
-    def send_system_status(self, msg,):
-        if msg.Estop != 0:
+    
+    def MCU_comminication_loop(self):
+        read_line = self.Serial_port.readline()
+        if read_line:
+            self.MCU_report_queue.append(self.decode_from_serial(read_line))
+
+        if len(self.MCU_send_queue) > 0:
+            to_send_line = self.MCU_send_queue.popleft()
+            self.Serial_port.write(to_send_line)
+
+        self.print_for_ros("report q:", len(self.MCU_report_queue),"send q:", len(self.MCU_send_queue))
+    
+    def ros_communication_loop(self):
+        if len(self.MCU_report_queue>0):
+            information_to_report = self.MCU_report_queue.popleft()
+            if information_to_report[0] == -1:
+                return
+    
+    def print_for_ros(self, arg):
+        
+        for val in arg:
+            print(str(val), sep=" ", end="")
+        print("\n")
+
+
+    def send_system_status(self, request, response):
+        if request.estop != 0:
             estop_byte_msg = self.command_to_bytes(MCU_arguments["Estop"])
-            if msg.estop == 1:
+            if request.estop == 1:
                 estop_byte_msg += self.command_to_bytes(1)
-            elif msg.estop == -1:
+            elif request.estop == -1:
                 estop_byte_msg += self.command_to_bytes(2)
             self.MCU_send_queue.append(estop_byte_msg)
 
-        if msg.JointHold != 0:
+        if request.jointhold != 0:
             estop_byte_msg = self.command_to_bytes(MCU_arguments["JointHold"])
-            if msg.estop == 1:
+            if request.jointhold == 1:
                 estop_byte_msg += self.command_to_bytes(1)
-            elif msg.estop == -1:
+            elif request.jointhold == -1:
                 estop_byte_msg += self.command_to_bytes(2)
             self.MCU_send_queue.append(estop_byte_msg)
             
-        if msg.move_home == 1:
+        if request.move_home == 1:
             self.MCU_send_queue.append(self.command_to_bytes(MCU_arguments["Move_Home"]))
         
-        return 1
-    
-    def report_system_diagnostic_information(self):
-        print("mwo")
+        response.returnsuccess = 1
+        
+        return response
 
-    def send_joint_information(self, msg):
+    def send_joint_information(self, msg) -> None:
         joint_info_msg = rb""
         float_vals_to_write = []
 
         if msg.param_to_control == 0:
             joint_info_msg += self.command_to_bytes(MCU_arguments["Set_Joint_Positions"])
-            float_vals_to_write = msg.Target_Joint_Positions
-        elif msg.Joint_Info_Type == 1:
-            joint_info_msg += self.command_to_bytes(
-                MCU_arguments["Set_Joint_Velocities"]
-            )
+            float_vals_to_write = msg.target_joint_velocities
+        elif msg.param_to_control == 1:
+            joint_info_msg += self.command_to_bytes(MCU_arguments["Set_Joint_Velocities"])
             float_vals_to_write = msg.Target_Joint_Velocities
-        elif msg.Joint_Info_Type == 2:
+        elif msg.param_to_control == 2:
             joint_info_msg += self.command_to_bytes(MCU_arguments["Set_Joint_Torques"])
-            float_vals_to_write = msg.Target_Joint_Torques
+            float_vals_to_write = msg.target_joint_torques
 
-        joint_info_msg += self.encode_n_floats(float_vals_to_write, y)
+        joint_info_msg += self.encode_n_floats(float_vals_to_write, 7)
 
         self.MCU_send_queue.append(joint_info_msg)
-
-    def report_joint_information(self):
-        print("mwo")
 
     def send_end_effector_information(self, msg):
         if msg.target_end_effector_bool!=0:
@@ -212,10 +231,7 @@ class Serial_Interface( rclpy.Node):
         else:   
             end_effector_val = msg.target_end_effector_value 
             self.MCU_send_queue.append(self.command_to_bytes(MCU_arguments["Set_EE_Float"]) + self.encode_1_float(end_effector_val))
-            
-    def report_end_effector_information(self):
-        print("mwo")
-
+    
     def send_MCU_parameter_dump(self, request, response) -> int:
         def queue_param_if_needed(target_joint: int, param_values: float, param_code_name: str, ) -> None:
             if target_joint != - 10: 
@@ -251,28 +267,17 @@ class Serial_Interface( rclpy.Node):
 
         response.returnsuccess = 1
         return response
-    
-    def MCU_comminication_loop(self):
-        read_line = self.Serial_port.readline()
-        if read_line:
-            self.MCU_report_queue.append(self.decode_from_serial(read_line))
 
-        if len(self.MCU_send_queue) > 0:
-            to_send_line = self.MCU_send_queue.popleft()
-            self.Serial_port.write(to_send_line)
+       
+    def report_system_diagnostic_information(self):
+        print("mwo")     
+            
+    def report_joint_information(self):
+        print("mwo")
+        
+    def report_end_effector_information(self):
+        print("mwo")
 
-        self.print_for_ros("report q:", len(self.MCU_report_queue),"send q:", len(self.MCU_send_queue))
-    
-    def ros_communication_loop(self):
-        if len(self.MCU_report_queue>0):
-            information_to_report = self.MCU_report_queue.popleft()
-            if information_to_report[0] == -1:
-                return
-    
-    def print_for_ros(self, arg):
-        for val in arg:
-            print(str(val), sep=" ", end="")
-        print("\n")
 
 meow = Serial_Interface()
 meow.print_for_ros("e")
