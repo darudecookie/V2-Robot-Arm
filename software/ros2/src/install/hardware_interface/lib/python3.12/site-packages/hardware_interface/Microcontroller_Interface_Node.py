@@ -1,14 +1,14 @@
-import rclpy
 import serial
 import time
 from collections import deque
 
-from v2_robot_arm_interfaces.msg import current_end_effector_information.msg, 
+import rclpy
+from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo 
+from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump
 
 # format here is basically 'command_index : (command_name, has_arguments (bool))'
 # so this entry: '0:("Estop", False)' means that the command has an index/associated number of 0, is named 'Estop' and has no arguments
 # ********** both of these lists are copied here and on the mcu, and ensuring that they match is absolutely critical to proper function **********
-
 MCU_arguments = {
     0: "Estop",
     1: "JointHold",
@@ -35,7 +35,7 @@ MCU_arguments = {
 }
 
 
-class Serial_Interface:
+class Serial_Interface(rclpy.Node):
     def __init__(
         self,
         port: str = "COM4",
@@ -47,20 +47,16 @@ class Serial_Interface:
         self.stop_char = rb">"
         self.end_char = rb"\n"
 
-        self.MCU_report_queue = deque(
-            []
-        )  # queue of decoded received messages from the MCU
-        self.MCU_send_queue = deque(
-            []
-        )  # queue of messages to be sent to the MCU that have already been encoded to bits
+        self.MCU_report_queue = deque([])  # queue of decoded received messages from the MCU
+        self.MCU_send_queue = deque([])  # queue of messages to be sent to the MCU that have already been encoded to bits
 
-        self.print_for_ROS(("opening serial port, port:", port))
+        self.print_for_ros(("opening serial port, port:", port))
         while True:
             try:
                 self.Serial_port = serial.Serial(port, baud_rate)
                 break
             except AttributeError:
-                self.print_for_ROS(
+                self.print_for_ros(
                     (
                         "failed to open serial port to MCU, port:",
                         port,
@@ -69,6 +65,12 @@ class Serial_Interface:
                 )
                 time.sleep(0.5)
 
+        MCU_communication_frequency = 200 #value (hz) for program to read and then write an mcu message
+        ros_communication_frequency = 500 #value for messages to be pulled from queue and sent to ros
+        
+        self.MCU_communication_timer = self.create_timer(1/MCU_communication_frequency, self.MCU_comminication_loop)
+        self.ros_communication_timer = self.create_timer(1/ros_communication_frequency, self.ros_communication_loop)
+
     def __del__(self):
         self.Serial_port.close()
 
@@ -76,7 +78,7 @@ class Serial_Interface:
         should_parse = False
         command_byte = True
 
-        parsed_message = [-1, ""]
+        parsed_message = [-1, rb""]
 
         for character in str(serial_input):
             if character == self.start_char:
@@ -103,7 +105,7 @@ class Serial_Interface:
             output_command = command.to_bytes(1, byteorder="little", signed=False)
             return output_command
         except OverflowError:
-            self.print_for_ROS(("command out of range; cannot be transformed to bytes"))
+            self.print_for_ros(("command out of range; cannot be transformed to bytes"))
             return ""
 
     def encode_1_float(self, input_float: float) -> str:
@@ -127,7 +129,7 @@ class Serial_Interface:
 
     def encode_n_floats(self, input_float_array: float, n_floats: int = 7) -> str:
         if len(input_float_array) != n_floats:
-            self.print_for_ROS("length of float array does not match provide length")
+            self.print_for_ros("length of float array does not match provide length")
             return ""
 
         output_bytes = rb""
@@ -137,8 +139,8 @@ class Serial_Interface:
 
         return output_bytes
 
-    def send_system_status(self, msg,):
 
+    def send_system_status(self, msg,):
         if msg.Estop != 0:
             estop_byte_msg = self.command_to_bytes(MCU_arguments["Estop"])
             if msg.estop == 1:
@@ -157,7 +159,9 @@ class Serial_Interface:
             
         if msg.move_home == 1:
             self.MCU_send_queue.append(self.command_to_bytes(MCU_arguments["Move_Home"]))
-
+        
+        return 1
+    
     def report_system_diagnostic_information(self):
         print("mwo")
 
@@ -185,7 +189,6 @@ class Serial_Interface:
         print("mwo")
 
     def send_end_effector_information(self, msg):
-        
         if msg.target_end_effector_bool!=0:
             if  msg.target_end_effector_bool ==1 :
                 end_effector_val = 1
@@ -234,13 +237,7 @@ class Serial_Interface:
             self.MCU_send_queue.append(encoded_msg)
         return 1
 
-    def print_for_ROS(self, arg):
-        for val in arg:
-            print(str(val), sep=" ", end="")
-        print("\n")
-
     def MCU_comminication_loop(self):
-        # will be ROS timer/timerinterupt thingy when implemented
         read_line = self.Serial_port.readline()
         if read_line:
             self.MCU_report_queue.append(self.decode_from_serial(read_line))
@@ -249,10 +246,19 @@ class Serial_Interface:
             to_send_line = self.MCU_send_queue.popleft()
             self.Serial_port.write(to_send_line)
 
-    def ROS_communication_loop(self):
-        print("mwo")
-
+        self.print_for_ros("report q:", len(self.MCU_report_queue),"send q:", len(self.MCU_send_queue))
+    
+    def ros_communication_loop(self):
+        if len(self.MCU_report_queue>0):
+            information_to_report = self.MCU_report_queue.popleft()
+            if information_to_report[0] == -1:
+                return
+    
+    def print_for_ros(self, arg):
+        for val in arg:
+            print(str(val), sep=" ", end="")
+        print("\n")
 
 meow = Serial_Interface()
-meow.print_for_ROS("e")
+meow.print_for_ros("e")
 print("done")

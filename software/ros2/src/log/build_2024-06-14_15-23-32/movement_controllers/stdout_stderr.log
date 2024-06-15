@@ -1,0 +1,19 @@
+running egg_info
+writing ../build/movement_controllers/movement_controllers.egg-info/PKG-INFO
+writing dependency_links to ../build/movement_controllers/movement_controllers.egg-info/dependency_links.txt
+writing entry points to ../build/movement_controllers/movement_controllers.egg-info/entry_points.txt
+writing requirements to ../build/movement_controllers/movement_controllers.egg-info/requires.txt
+writing top-level names to ../build/movement_controllers/movement_controllers.egg-info/top_level.txt
+reading manifest file '../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+writing manifest file '../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info' (and everything under it)
+Copying ../build/movement_controllers/movement_controllers.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info
+running install_scripts
+Installing Peripheral_Intreface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/movement_controllers
+writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/install.log'
