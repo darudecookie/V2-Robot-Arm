@@ -6,9 +6,7 @@ import rclpy
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo
 from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump
 
-# format here is basically 'command_index : (command_name, has_arguments (bool))'
-# so this entry: '0:("Estop", False)' means that the command has an index/associated number of 0, is named 'Estop' and has no arguments
-# ********** both of these lists are copied here and on the mcu, and ensuring that they match is absolutely critical to proper function **********
+# ********** both of these dicts/lists are copied here and on the mcu, and ensuring that they match is absolutely critical to proper function **********
 MCU_arguments = {
     0: "Estop",
     1: "JointHold",
@@ -66,14 +64,27 @@ class Serial_Interface(rclpy.node.Node):
         # queue of messages to be sent to the MCU that have already been encoded to bits
         self.MCU_send_queue = deque([])
 
-        self.get_logger().info(("opening serial port, port:", port))
+        self.get_logger().info("opening serial port, port:", port)
         while True:
             try:
                 self.Serial_port = serial.Serial(port, baud_rate)
+                self.get_logger().info("Opened mcu serial port")
                 break
             except AttributeError:
                 self.get_logger().warn(f"failed to open serial port to MCU, port: {port}, retrying in 0.5 seconds")
                 time.sleep(0.5)
+        
+        time.sleep(0.5)
+        
+        self.get_logger.info("establishing communication with microcontroller")
+        while True:
+            read_msg = self.Serial_port.readline()
+            if read_msg == MCU_init_sequence:
+                self.get_logger().info(f"established MCU connection")
+                break
+            self.get_logger().warn(f"failed to establish MCU connection, retrying in 0.15 seconds")
+            time.sleep(0.15)
+
 
         # creating all of the publishers and subscirbers for appropriate topics
         self.current_Joint_Info_pub = self.create_publisher(CurrentJointInfo, "current_joint_information", 10)

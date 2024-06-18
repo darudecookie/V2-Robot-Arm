@@ -25,7 +25,7 @@ class End_Effector_Controller(rclpy.node.Node):
     
     def target_EE_timer_callback(self, msg):
         msg = TargetEEInfo
-        msg.
+        msg.current_end_effector_value = self.internal_target_EE_state
         self.target_EE_info_pub.publish(msg)
 
 def main(args=None):
