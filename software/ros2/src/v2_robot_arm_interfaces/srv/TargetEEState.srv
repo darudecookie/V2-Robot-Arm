@@ -1,4 +1,3 @@
 float32 target_end_effector_value
-int8 target_end_effector_bool 0
 ---
 float32 current_end_effector_value

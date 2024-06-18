@@ -1,4 +1,3 @@
 std_msgs/Header header
 
 float32 current_end_effector_value
-int8 current_end_effector_bool 0
