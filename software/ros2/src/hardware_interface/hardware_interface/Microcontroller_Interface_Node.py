@@ -3,6 +3,7 @@ import time
 from collections import deque
 
 import rclpy
+from rclpy.node import Node
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo
 from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump
 
@@ -44,36 +45,35 @@ MCU_arguments = {
 }
 
 
-class Serial_Interface(rclpy.Node):
+class Serial_Interface(Node):
     def __init__(
         self,
         port: str = "COM4",
         baud_rate: int = 115200,
         MCU_init_sequence=rb"<MCU_init>\n",
     ):
-
+        super().__init__("Microcontroller_Interface_Node")
+        
         self.start_char = rb"<"
         self.stop_char = rb">"
         self.end_char = rb"\n"
+
+        self.MCU_key_list = tuple(MCU_arguments.keys())
+        self.MCU_val_list= tuple(MCU_arguments.values())
+
 
         # queue of decoded received messages from the MCU
         self.MCU_report_queue = deque([])
         # queue of messages to be sent to the MCU that have already been encoded to bits
         self.MCU_send_queue = deque([])
 
-        self.print_for_ros(("opening serial port, port:", port))
+        self.get_logger().info(("opening serial port, port:", port))
         while True:
             try:
                 self.Serial_port = serial.Serial(port, baud_rate)
                 break
             except AttributeError:
-                self.print_for_ros(
-                    (
-                        "failed to open serial port to MCU, port:",
-                        port,
-                        "retrying in 0.5 seconds",
-                    )
-                )
+                self.get_logger().warn(f"failed to open serial port to MCU, port: {port}, retrying in 0.5 seconds")
                 time.sleep(0.5)
 
         # creating all of the publishers and subscirbers for appropriate topics
@@ -102,6 +102,10 @@ class Serial_Interface(rclpy.Node):
 
     def __del__(self):
         self.Serial_port.close()
+
+    def key_from_val(self, value: str) -> int:
+        return self.MCU_key_list[self.MCU_val_list.index(value)]
+
 
     def decode_from_serial(self, serial_input: str) -> tuple:
         should_parse = False
@@ -135,8 +139,7 @@ class Serial_Interface(rclpy.Node):
                 1, byteorder="little", signed=False)
             return output_command
         except OverflowError:
-            self.print_for_ros(
-                ("command out of range; cannot be transformed to bytes"))
+            self.get_logger().debug("command out of range; cannot be transformed to bytes")
             return ""
 
     def encode_1_float(self, input_float: float) -> str:
@@ -158,12 +161,11 @@ class Serial_Interface(rclpy.Node):
                                              byteorder="little", signed=False)
             )
         else:
-            print("float value out of range; val not converted")
+            self.get_logger().debug("float value out of range; val not converted")
 
     def encode_n_floats(self, input_float_array: float, n_floats: int = 7) -> str:
         if len(input_float_array) != n_floats:
-            self.print_for_ros(
-                "length of float array does not match provide length")
+            self.get_logger().debug("length of float array does not match provide length")
             return ""
 
         output_bytes = rb""
@@ -196,6 +198,7 @@ class Serial_Interface(rclpy.Node):
 
         return float_array
     
+
     def MCU_comminication_loop(self):
         read_line = self.Serial_port.readline()
         if read_line:
@@ -205,22 +208,15 @@ class Serial_Interface(rclpy.Node):
             to_send_line = self.MCU_send_queue.popleft()
             self.Serial_port.write(to_send_line)
 
-        self.print_for_ros("report q:", len(
-            self.MCU_report_queue), "send q:", len(self.MCU_send_queue))
-
+        self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
 
     def ros_communication_loop(self):
         if len(self.MCU_report_queue > 0):
             information_to_report = self.MCU_report_queue.popleft()
             if information_to_report[0] == -1:
                 return
-
-    def print_for_ros(self, arg):
-
-        for val in arg:
-            print(str(val), sep=" ", end="")
-        print("\n")
-
+            match information_to_report[0]
+    
     def send_system_status(self, request, response):
         if request.estop != 0:
             estop_byte_msg = self.command_to_bytes(MCU_arguments["Estop"])
@@ -378,7 +374,13 @@ class Serial_Interface(rclpy.Node):
             
             self.current_EE_Info_components =[False, False]
 
-meow = Serial_Interface()
-meow.print_for_ros("e")
-print("done")
 
+def main(args=None):
+    rclpy.init(args=args)
+
+    Serial_Interface_Object = Serial_Interface()
+    rclpy.spin(Serial_Interface_Object)
+
+
+if __name__ == "main":
+    main()
