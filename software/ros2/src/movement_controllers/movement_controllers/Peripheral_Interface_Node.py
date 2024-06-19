@@ -3,6 +3,8 @@ from rclpy.node import Node
 
 class Joystick_Controller(Node):
     def __init__(self):
+        super().__init__() 
+
         
 
 def main(args=None):

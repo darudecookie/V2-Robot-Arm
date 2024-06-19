@@ -3,6 +3,8 @@ from rclpy.node import Node
 
 class Trajectory_Controller(Node):
     def __init__(self):
+        super().__init__() 
+        
         self.Current_Cartesian_pub = self.create_publisher()
         self.Target_Cartesian_sub
         
