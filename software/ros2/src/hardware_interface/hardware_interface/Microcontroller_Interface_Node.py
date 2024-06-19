@@ -3,6 +3,7 @@ import time
 from collections import deque
 
 import rclpy
+from rclpy.node import Node
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo
 from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump
 
@@ -42,7 +43,7 @@ MCU_arguments = {
 }
 
 
-class Serial_Interface(rclpy.node.Node):
+class Serial_Interface(Node):
     def __init__(
         self,
         port: str = "COM4",
@@ -64,13 +65,13 @@ class Serial_Interface(rclpy.node.Node):
         # queue of messages to be sent to the MCU that have already been encoded to bits
         self.MCU_send_queue = deque([])
 
-        self.get_logger().info("opening serial port, port:", port)
+        self.get_logger().info(f"opening serial port, port: {port}")
         while True:
             try:
                 self.Serial_port = serial.Serial(port, baud_rate)
                 self.get_logger().info("Opened mcu serial port")
                 break
-            except AttributeError:
+            except serial.SerialException:
                 self.get_logger().warn(f"failed to open serial port to MCU, port: {port}, retrying in 0.5 seconds")
                 time.sleep(0.5)
         
@@ -113,8 +114,10 @@ class Serial_Interface(rclpy.node.Node):
         self.get_logger().info("MCU_Interface_Node setup complete")
 
     def __del__(self):
-        self.Serial_port.close()
-
+        try:
+            self.Serial_port.close()
+        except AttributeError:
+            return
 
     def key_from_val(self, value: str) -> int:
         return self.MCU_key_list[self.MCU_val_list.index(value)]

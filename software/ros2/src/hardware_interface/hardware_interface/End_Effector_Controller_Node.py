@@ -1,9 +1,10 @@
 
 import rclpy
+from rclpy.node import Node
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo 
 from v2_robot_arm_interfaces.srv import TargetEEState
 
-class End_Effector_Controller(rclpy.node.Node):
+class End_Effector_Controller(Node):
     def __init__(self):
         super().__init__("End_Effector_Controller_Node")
 
