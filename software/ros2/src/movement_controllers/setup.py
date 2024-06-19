@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'Peripheral_Intreface_Node = movement_controllers.Peripheral_Intreface_Node:main'
+            'Peripheral_Interface_Node = movement_controllers.Peripheral_Interface_Node:main'
         ],
     },
 )

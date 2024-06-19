@@ -2,10 +2,12 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>movement_controllers</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description>controllers that control robot's motion</description>
   <maintainer email="darudecookie@gmail.com">darudecookie</maintainer>
   <license>TODO: License declaration</license>
+
+  <depend>v2_robot_arm_interfaces</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
