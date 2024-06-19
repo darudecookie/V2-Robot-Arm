@@ -10,8 +10,7 @@ setup(
     version='0.0.1',
     packages=find_packages(exclude=['test']),
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+        ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         
         (os.path.join('share', package_name), ['package.xml']),
         # Include all launch files.
@@ -28,7 +27,6 @@ setup(
         "console_scripts":[
             "End_Effector_Controller_Node = hardware_interface.End_Effector_Controller_Node:main",
             "Microcontroller_Interface_Node = hardware_interface.Microcontroller_Interface_Node:main"
-
         ]
     },
 )

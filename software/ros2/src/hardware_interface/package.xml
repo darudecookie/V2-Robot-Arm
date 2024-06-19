@@ -7,7 +7,7 @@
   <maintainer email="darudecookie@gmail.com">darudecookie</maintainer>
   <license>TODO: License declaration</license>
 
-<depend> v2_robot_arm_interfaces</depend>
+  <depend> v2_robot_arm_interfaces</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
