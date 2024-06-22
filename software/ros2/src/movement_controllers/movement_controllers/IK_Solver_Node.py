@@ -21,8 +21,8 @@ class IK_Controller(Node):
         self.target_joint_angles = [0,0,0,0,0,0,0]
         self.current_joint_angles = [0,0,0,0,0,0,0]
 
-        self.target_cartesian_matrix = PyKDL
-        self.current_cartesian_matrix = PyKDL
+        self.target_cartesian_matrix = PyKDL.Frame()
+        self.current_cartesian_matrix = PyKDL.Frame()
 
 
         self.IK_Calc_frequency = 200
@@ -41,7 +41,7 @@ class IK_Controller(Node):
     def update_target_cartesian(self, msg):
         msg.position =  #3 float array
         msg.rotation = # 3 float array
-        
+
     def update_and_pub_IK(self):
 
 
