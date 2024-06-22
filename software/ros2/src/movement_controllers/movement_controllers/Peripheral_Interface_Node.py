@@ -4,8 +4,9 @@ import time
 
 import rclpy
 from rclpy.node import Node
-from v2_robot_arm_interfaces.msg import TargetCartesian, CurrentCartesian, SystemDiagnosticInfo, ControlStatus
+from v2_robot_arm_interfaces.msg import TargetCartesian, CurrentCartesian, SystemDiagnosticInfo, ControlStatus, PeripheralSpeed
 from v2_robot_arm_interfaces.srv import SystemStatus
+from std_msgs import float32
 
 class Thrustmaster_HOTAS_Controller(Node):
     def __init__(self):
@@ -20,7 +21,7 @@ class Thrustmaster_HOTAS_Controller(Node):
         self.should_output = False
         self.position_output = True    
         
-        self.position_speed = 10
+        self.translation_speed = 10
         self.rotation_speed = math.degrees(10)
         
         self.current_cartesian_pos = [0,0,0]
@@ -48,7 +49,8 @@ class Thrustmaster_HOTAS_Controller(Node):
         self.System_Diagnostic_sub = self.create_subscription(SystemDiagnosticInfo, "system_diagnostic_info", self.update_jointhold_from_system, 10)
         self.Control_Status_sub = self.create_subscription(ControlStatus, "control_status", self.update_output_from_system, 10)
         self.Current_Cartesian_sub = self.create_subscription(CurrentCartesian, "current_cartesian", self.update_current_cartesian_from_system, 10)
-        
+        self.Peripheral_Speed_sub = self.create_subscription(PeripheralSpeed, "peripheral_speed", self.update_speeds_from_system, 10) 
+
         self.Target_Cartesian_pub = self.create_publisher(TargetCartesian, "target_cartesian", 10)
         
         self.get_logger().info(f"initiated!\nperipheral name: '{inputs.gamepad}'")
@@ -69,6 +71,13 @@ class Thrustmaster_HOTAS_Controller(Node):
         self.current_cartesian_rot = msg.rotation
         
         self.get_logger().debug("receiving updated current cartesian coords")
+
+    def update_speeds_from_system(self, msg) -> None:
+        self.translation_speed = msg.translation_speed 
+        self.rotation_speed = msg.rotation_speed
+
+        self.get_logger().debug(f"updating peripheral translation and rotation speeds to {self.translation_speed}, {self.rotation_speed}")
+
 
     def parse_event_from_peripheral(self) -> None:      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
         gamepad_events = inputs.get_gamepad()
@@ -98,6 +107,7 @@ class Thrustmaster_HOTAS_Controller(Node):
                             case "ABS_Z":
                                 self.joy_values[2] = joy_val
             self.get_logger().debug("parsing new peripheral event(s)")
+    
 
     def update_cartesian_from_peripheral(self) -> None:
         if self.should_output and self.System_Status_Req.jointhold == 1:
@@ -106,16 +116,18 @@ class Thrustmaster_HOTAS_Controller(Node):
             if self.position_output:
                 msg.rotation = self.current_cartesian_rot
                 
-                delta_num = self.position_speed * (1/self.cartesian_update_frequency)
+                delta_num = self.translation_speed * (1/self.cartesian_update_frequency)
                 for i in range(3):
                     msg.rotation[i] = self.current_cartesian_pos[i] + delta_num*self.joy_values[i]
-                    
+                msg.rotation_speed = self.rotation_speed
+
             else:
                 msg.position = self.current_cartesian_rot
                 
                 delta_num = self.rotation_speed * (1/self.cartesian_update_frequency)
                 for i in range(3):
                     msg.rotation[i] = self.current_cartesian_rot[i] + delta_num*self.joy_values[i]
+                msg.translation_speed = self.translation_speed
                     
             self.Target_Cartesian_pub.publish(msg)
             self.get_logger().debug("peripheral controller: publishing updated cartesian coords")
@@ -124,7 +136,7 @@ class Thrustmaster_HOTAS_Controller(Node):
 def main(args=None):
     rclpy.init(args=args)
     Joystick_Controller_Object = Thrustmaster_HOTAS_Controller()
-    
+
     rclpy.spin(Joystick_Controller_Object)
     while True:
         for device in inputs.devices:
