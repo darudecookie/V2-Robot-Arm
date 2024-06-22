@@ -14,9 +14,13 @@ find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+	"action/ParametricTrajectoryInfo.action"
+
 	"msg/ControlStatus.msg"
 	"msg/CurrentEEInfo.msg"
 	"msg/CurrentJointInfo.msg"
+	"msg/CurrentCartesian.msg"
+	"msg/PeripheralSpeed.msg"
 	"msg/SystemDiagnosticInfo.msg"
 	"msg/TargetCartesian.msg"
 	"msg/TargetEEInfo.msg"
@@ -25,10 +29,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 	"srv/MicrocontrollerParameterDump.srv"
 	"srv/SystemStatus.srv"
 	"srv/TargetEEState.srv"
-	
-	"action/ParametricTrajectoryInfo.action"
-	
-	
+		
 	DEPENDENCIES std_msgs
 )
 
