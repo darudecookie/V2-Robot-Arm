@@ -51,7 +51,9 @@ class Serial_Interface(Node):
         MCU_init_sequence=rb"<MCU_init>\n",
     ):
         super().__init__("Microcontroller_Interface_Node")
-        
+               
+        self.get_logger().info("initiating node")
+
         self.start_char = rb"<"
         self.stop_char = rb">"
         self.end_char = rb"\n"
@@ -144,7 +146,6 @@ class Serial_Interface(Node):
                     parsed_message[1] += character
 
     def write_bytes_to_serial(self, arg_cmd_bytes: str) -> None:
-
         output_bytes = self.start_char + arg_cmd_bytes + self.stop_char + self.end_char
         self.Serial_port.write(output_bytes)
 
@@ -216,34 +217,46 @@ class Serial_Interface(Node):
         read_line = self.Serial_port.readline()
         if read_line:
             self.MCU_report_queue.append(self.decode_from_serial(read_line))
+            self.get_logger().debug("reading command-arg from MCU")
 
         if len(self.MCU_send_queue) > 0:
             to_send_line = self.MCU_send_queue.popleft()
             self.Serial_port.write(to_send_line)
+            self.get_logger().debug("sending command-arg to MCU")
 
         self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
 
     def send_system_status(self, request, response):
+        
         if request.estop != 0:
             estop_byte_msg = self.command_to_bytes(self.key_from_val("Estop"))
             if request.estop == 1:
                 estop_byte_msg += self.command_to_bytes(1)
+                                
+                self.get_logger.warn("E-Stop activated -- origin: software")
             elif request.estop == -1:
                 estop_byte_msg += self.command_to_bytes(2)
-            self.MCU_send_queue.append(estop_byte_msg)
+
+                self.get_logger.warn("E-Stop deactivated")
+            self.MCU_send_queue.appendleft(estop_byte_msg)
+            
 
         if request.jointhold != 0:
             estop_byte_msg = self.command_to_bytes(self.key_from_val("JointHold"))
             if request.jointhold == 1:
                 estop_byte_msg += self.command_to_bytes(1)
+
+                self.get_logger.warn("joint hold activated")
             elif request.jointhold == -1:
                 estop_byte_msg += self.command_to_bytes(2)
-            self.MCU_send_queue.append(estop_byte_msg)
+                               
+                self.get_logger.warn("joint hold dectivated")
+            self.MCU_send_queue.appendleft(estop_byte_msg)
 
         if request.move_home == 1:
-            self.MCU_send_queue.append(
-                self.command_to_bytes(self.key_from_val("Move_Home")))
+            self.MCU_send_queue.appendleft(self.command_to_bytes(self.key_from_val("Move_Home")))
 
+            self.get_logger().info("move home commanded")
         response.returnsuccess = 1
 
         return response

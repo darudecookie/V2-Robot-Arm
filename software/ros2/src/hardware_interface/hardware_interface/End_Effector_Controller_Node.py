@@ -8,6 +8,7 @@ class End_Effector_Controller(Node):
     def __init__(self):
         super().__init__("End_Effector_Controller_Node")
 
+        self.get_logger().info("in")
         self.internal_current_EE_state = 0
         self.internal_target_EE_state = 0
         
