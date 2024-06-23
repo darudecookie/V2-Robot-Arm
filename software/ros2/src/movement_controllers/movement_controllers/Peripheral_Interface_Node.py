@@ -6,7 +6,7 @@ import rclpy
 from rclpy.node import Node
 from v2_robot_arm_interfaces.msg import TargetCartesian, CurrentCartesian, SystemDiagnosticInfo, ControlStatus, PeripheralSpeed
 from v2_robot_arm_interfaces.srv import SystemStatus
-from std_msgs import float32
+
 
 class Thrustmaster_HOTAS_Controller(Node):
     def __init__(self):
@@ -38,11 +38,12 @@ class Thrustmaster_HOTAS_Controller(Node):
         self.peripheral_event_timer = self.create_timer(1/peripheral_event_frequency, self.parse_event_from_peripheral)
 
         self.cartesian_update_frequency = 50
-        self.cartesian_update_timer = self.create_timer(1/self.cartesian_update_frequency, self.update_current_cartesian_from_system,)
+        self.cartesian_update_timer = self.create_timer(1/self.cartesian_update_frequency, self.update_cartesian_from_peripheral,)
         
         
         self.System_Status_client = self.create_client(SystemStatus, "system_status", )
-        while not self.System_Status_client.wait_for_service(timeout_sec = 1):
+
+        while False: #not self.System_Status_client.wait_for_service(timeout_sec = 1):
             self.get_logger().warn("'system_status' service not available\nretrying in 1 second")
         self.get_logger().info("'system_status' service found\nproceeding with initiation!")
 
@@ -53,7 +54,7 @@ class Thrustmaster_HOTAS_Controller(Node):
 
         self.Target_Cartesian_pub = self.create_publisher(TargetCartesian, "target_cartesian", 10)
         
-        self.get_logger().info(f"initiated!\nperipheral name: '{inputs.gamepad}'")
+        self.get_logger().info(f"initiated!\nperipheral name: '{inputs.GamePad}'")
 
     def update_jointhold_from_system(self, msg) -> None:
         if msg.joint_hold !=0:
@@ -82,20 +83,28 @@ class Thrustmaster_HOTAS_Controller(Node):
     def parse_event_from_peripheral(self) -> None:      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
         gamepad_events = inputs.get_gamepad()
 
-        for gamepad_event in gamepad_events:
-            if gamepad_event:
+        if gamepad_events:
+            for gamepad_event in gamepad_events:
                 match gamepad_event.ev_type:
+                    
                     case "Key":     #button press
                         if gamepad_event.code == "BTN_Z" and gamepad_event.state == 1:      #trigger button is hit (toggle position/rotation)
                             self.position_output = not self.position_output
                             
                             self.get_logger().info("toggling position/rotation control")
-                        if gamepad_event.code == "BTN_WEST" and gamepad_event.state == 1:   #thumb trigger/ wpn release is hit (jointhold)
+                        elif gamepad_event.code == "BTN_WEST" and gamepad_event.state == 1:   #thumb trigger/ wpn release is hit (jointhold)
                             self.System_Status_Req.jointhold = -(self.System_Status_Req.jointhold)
                             self.System_Status_client.call_async(self.System_Status_Req)
-                            
+
                             self.get_logger().warn("toggling jointhold")
-                            
+
+                        elif gamepad_event.code == "BTN_SELECT" and gamepad_event.state == 1:
+                            self.System_Status_Req.move_home = 1
+                            self.System_Status_client.call_async(self.System_Status_Req)
+                            self.System_Status_Req.move_home = 0
+
+                            self.get_logger().info("commanding move home")
+
                     case "Absolute":        #joystick
                         joy_val = (gamepad_event.state - 128)/128   #normalizing joy val(0-255) to -1 to 1
                         match gamepad_event.code:
