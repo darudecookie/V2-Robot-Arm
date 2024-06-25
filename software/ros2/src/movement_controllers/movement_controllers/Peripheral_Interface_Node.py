@@ -8,11 +8,54 @@ from v2_robot_arm_interfaces.msg import TargetCartesian, CurrentCartesian, Syste
 from v2_robot_arm_interfaces.srv import SystemStatus
 
 
-class Thrustmaster_HOTAS_Controller(Node):
+class Thrustmaster_TFlight_X:
     def __init__(self):
-        super().__init__("Peripheral_Controller_Node")
 
+        self.joy_values = [0,0,0] 
+
+        self.joint_hold = False
+        self.cart_pos_outputting = False
+        self.movehome = False
+
+        while len(inputs.devices.gamepads) == 0:
+            print("no gamepads found\nretrying in 1 second")
+            time.sleep(1)   
+
+    def parse_event_from_peripheral(self) -> None:      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
+        gamepad_events = inputs.get_gamepad()
+
+        if gamepad_events:
+            for gamepad_event in gamepad_events:
+                match gamepad_event.ev_type:     
+                    case "Key":     #button press
+                        if gamepad_event.code == "BTN_Z" and gamepad_event.state == 1:      #trigger button is hit (toggle position/rotation)
+                            self.cart_pos_outputting = not self.cart_pos_outputting
+
+                        elif gamepad_event.code == "BTN_WEST" and gamepad_event.state == 1:   #thumb trigger/ wpn release is hit (jointhold)
+                            self.joint_hold = not self.joint_hold
+
+                        elif gamepad_event.code == "BTN_SELECT" and gamepad_event.state == 1:
+                            self.movehome = True
+
+                    case "Absolute":        #joystick
+                        joy_val = (gamepad_event.state - 128)/128   #normalizing joy val(0-255) to -1 to 1
+                        match gamepad_event.code:
+                            #NOTE: I switched the x and y values on the joystick and on the robot
+                            case "ABS_Y":
+                                self.joy_values[0] = joy_val
+                            case "ABS_X":
+                                self.joy_values[1] = joy_val
+                            case "ABS_Z":
+                                self.joy_values[2] = joy_val
+     
+
+class Peripheral_Controller(Node):
+    def __init__(self):
+        super().__init__("Peripheral_Controller_Node",  allow_undeclared_parameters=True, automatically_declare_parameters_from_overrides=True)
         self.get_logger().info("initiating node")
+
+        self.declare_parameter("safe_startup",True)
+        safe_startup = self.get_parameter("safe_startup")
 
         self.System_Status_Req = SystemStatus        
         self.System_Status_Req.jointhold = -1
@@ -27,10 +70,12 @@ class Thrustmaster_HOTAS_Controller(Node):
         self.current_cartesian_pos = [0,0,0]
         self.current_cartesian_rot = [0,0,0]
 
-        
-        while len(inputs.devices.gamepads) == 0:
-            self.get_logger().warn("no gamepads found\nretrying in 1 second")
-            time.sleep(1)
+
+        if safe_startup.value:    
+            while len(inputs.devices.gamepads) == 0:
+                self.get_logger().warn("no gamepads found\nretrying in 0.5 seconds")
+                time.sleep(.5)
+            
         self.get_logger().info("gamepad found!\nproceeding with initiation")
 
         
@@ -42,10 +87,11 @@ class Thrustmaster_HOTAS_Controller(Node):
         
         
         self.System_Status_client = self.create_client(SystemStatus, "system_status", )
-
-        while False: #not self.System_Status_client.wait_for_service(timeout_sec = 1):
-            self.get_logger().warn("'system_status' service not available\nretrying in 1 second")
+        if safe_startup.value:    
+            while not self.System_Status_client.wait_for_service(timeout_sec = 1):
+                self.get_logger().warn("'system_status' service not available\nretrying in 1 second")
         self.get_logger().info("'system_status' service found\nproceeding with initiation!")
+
 
         self.System_Diagnostic_sub = self.create_subscription(SystemDiagnosticInfo, "system_diagnostic_info", self.update_jointhold_from_system, 10)
         self.Control_Status_sub = self.create_subscription(ControlStatus, "control_status", self.update_output_from_system, 10)
@@ -54,7 +100,7 @@ class Thrustmaster_HOTAS_Controller(Node):
 
         self.Target_Cartesian_pub = self.create_publisher(TargetCartesian, "target_cartesian", 10)
         
-        self.get_logger().info(f"initiated!\nperipheral name: '{inputs.GamePad}'")
+        self.get_logger().info(f"node initiated!\nperipheral name: '{inputs.GamePad}'")
 
     def update_jointhold_from_system(self, msg) -> None:
         if msg.joint_hold !=0:
@@ -119,13 +165,14 @@ class Thrustmaster_HOTAS_Controller(Node):
     
 
     def update_cartesian_from_peripheral(self) -> None:
-        if self.should_output and self.System_Status_Req.jointhold == 1:
+        if self.should_output and self.System_Status_Req.jointhold == 0 and self.System_Status_Req.move_home == 0:
             msg = TargetCartesian
             
             if self.position_output:
                 msg.rotation = self.current_cartesian_rot
                 
                 delta_num = self.translation_speed * (1/self.cartesian_update_frequency)
+
                 for i in range(3):
                     msg.rotation[i] = self.current_cartesian_pos[i] + delta_num*self.joy_values[i]
                 msg.rotation_speed = self.rotation_speed
@@ -144,18 +191,11 @@ class Thrustmaster_HOTAS_Controller(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    Joystick_Controller_Object = Thrustmaster_HOTAS_Controller()
+    Joystick_Controller_Object = Peripheral_Controller()
 
     rclpy.spin(Joystick_Controller_Object)
-    while True:
-        for device in inputs.devices:
-            if device == "Microsoft Keyboard" or device =="Microsoft Mouse" :
-                print("hiii")
-    while False:
-        events = inputs.get_gamepad()
-        if events:
-            for event in events:
-                print(event.ev_type, event.code, event.state)
+
+
 if __name__ == '__main__':
     main()
 
