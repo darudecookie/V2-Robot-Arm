@@ -34,7 +34,7 @@
           "default_value": "0"
         },
         {
-          "name": "master_controller",
+          "name": "main_controller",
           "type": {
             "type_id": 2,
             "capacity": 0,
@@ -50,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "v2_robot_arm_interfaces/msg/ControlStatus",
-      "hash_string": "RIHS01_d81b64bcc4ea033e4537e3f455432b255ae28a73c3535b9aba7e2b780043ed24"
+      "hash_string": "RIHS01_c9d0bc742d0eb692f153c65628fc716d3117d408c1f1ab4560ca13821559f3cd"
     }
   ]
 }

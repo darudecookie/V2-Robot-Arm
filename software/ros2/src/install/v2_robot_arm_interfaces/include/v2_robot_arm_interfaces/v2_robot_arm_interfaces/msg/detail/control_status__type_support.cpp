@@ -94,7 +94,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlStatus
     nullptr  // resize(index) function pointer
   },
   {
-    "master_controller",  // name
+    "main_controller",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -102,7 +102,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlStatus
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(v2_robot_arm_interfaces::msg::ControlStatus, master_controller),  // bytes offset in struct
+    offsetof(v2_robot_arm_interfaces::msg::ControlStatus, main_controller),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

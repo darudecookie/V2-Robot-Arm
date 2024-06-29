@@ -252,7 +252,13 @@ class Metaclass_SystemStatus_Response(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
+            'RETURNSUCCESS__DEFAULT': 0,
         }
+
+    @property
+    def RETURNSUCCESS__DEFAULT(cls):
+        """Return default value for message field 'returnsuccess'."""
+        return 0
 
 
 class SystemStatus_Response(metaclass=Metaclass_SystemStatus_Response):
@@ -282,7 +288,8 @@ class SystemStatus_Response(metaclass=Metaclass_SystemStatus_Response):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.returnsuccess = kwargs.get('returnsuccess', int())
+        self.returnsuccess = kwargs.get(
+            'returnsuccess', SystemStatus_Response.RETURNSUCCESS__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')

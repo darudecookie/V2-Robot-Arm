@@ -213,12 +213,12 @@ CMakeFiles/v2_robot_arm_interfaces.dir/clean:
 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=37 "Built target v2_robot_arm_interfaces__rosidl_generator_type_description"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num= "Built target v2_robot_arm_interfaces__rosidl_generator_type_description"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_type_description.dir/rule
@@ -244,7 +244,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/all: CMakeFiles/v2_ro
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rule
@@ -265,12 +265,12 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/clean:
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66 "Built target v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66 "Built target v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 35
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rule
@@ -296,7 +296,7 @@ CMakeFiles/v2_robot_arm_interfaces__cpp.dir/all: CMakeFiles/v2_robot_arm_interfa
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__cpp.dir/rule
@@ -323,7 +323,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all: CMa
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rule
@@ -344,7 +344,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean:
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=77,78,79,80,81,82,83,84,85 "Built target v2_robot_arm_interfaces__rosidl_typesupport_introspection_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=77,78,79,80,81,82,83,84,85,86 "Built target v2_robot_arm_interfaces__rosidl_typesupport_introspection_c"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/all
 
 # Build rule for subdir invocation for target.
@@ -375,7 +375,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/all: CMakeFiles/v2_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rule
@@ -397,12 +397,12 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/all: CMakeFiles/v2_robot_arm_interfaces__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=86,87,88,89,90,91,92,93,94,95 "Built target v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=87,88,89,90,91,92,93,94,95,96 "Built target v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rule
@@ -424,7 +424,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/all: CMakeFiles/v
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/all: CMakeFiles/v2_robot_arm_interfaces__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56 "Built target v2_robot_arm_interfaces__rosidl_typesupport_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57 "Built target v2_robot_arm_interfaces__rosidl_typesupport_cpp"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -504,12 +504,12 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/all: CMakeFiles/v2_r
 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/all: v2_robot_arm_interfaces__py/CMakeFiles/v2_robot_arm_interfaces__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36 "Built target v2_robot_arm_interfaces__rosidl_generator_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37 "Built target v2_robot_arm_interfaces__rosidl_generator_py"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 95
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 96
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rule
@@ -539,7 +539,7 @@ CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/all: v2_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 96
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rule
@@ -569,7 +569,7 @@ CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 97
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 98
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.dir/rule
@@ -593,7 +593,7 @@ CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/all: CMakeFiles/v
 CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/all: v2_robot_arm_interfaces__py/CMakeFiles/v2_robot_arm_interfaces__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=96,97 "Built target v2_robot_arm_interfaces_s__rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=97 "Built target v2_robot_arm_interfaces_s__rosidl_typesupport_c"
 .PHONY : CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/all
 
 # Build rule for subdir invocation for target.

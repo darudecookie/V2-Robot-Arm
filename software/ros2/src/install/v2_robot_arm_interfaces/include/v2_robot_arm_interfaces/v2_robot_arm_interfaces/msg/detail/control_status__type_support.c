@@ -87,7 +87,7 @@ static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces
     NULL  // resize(index) function pointer
   },
   {
-    "master_controller",  // name
+    "main_controller",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -95,7 +95,7 @@ static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(v2_robot_arm_interfaces__msg__ControlStatus, master_controller),  // bytes offset in struct
+    offsetof(v2_robot_arm_interfaces__msg__ControlStatus, main_controller),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

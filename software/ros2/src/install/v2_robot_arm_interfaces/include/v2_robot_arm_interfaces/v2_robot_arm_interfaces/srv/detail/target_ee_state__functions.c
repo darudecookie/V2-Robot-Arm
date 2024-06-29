@@ -17,8 +17,6 @@ v2_robot_arm_interfaces__srv__TargetEEState_Request__init(v2_robot_arm_interface
     return false;
   }
   // target_end_effector_value
-  // target_end_effector_bool
-  msg->target_end_effector_bool = 0;
   return true;
 }
 
@@ -29,7 +27,6 @@ v2_robot_arm_interfaces__srv__TargetEEState_Request__fini(v2_robot_arm_interface
     return;
   }
   // target_end_effector_value
-  // target_end_effector_bool
 }
 
 bool
@@ -40,10 +37,6 @@ v2_robot_arm_interfaces__srv__TargetEEState_Request__are_equal(const v2_robot_ar
   }
   // target_end_effector_value
   if (lhs->target_end_effector_value != rhs->target_end_effector_value) {
-    return false;
-  }
-  // target_end_effector_bool
-  if (lhs->target_end_effector_bool != rhs->target_end_effector_bool) {
     return false;
   }
   return true;
@@ -59,8 +52,6 @@ v2_robot_arm_interfaces__srv__TargetEEState_Request__copy(
   }
   // target_end_effector_value
   output->target_end_effector_value = input->target_end_effector_value;
-  // target_end_effector_bool
-  output->target_end_effector_bool = input->target_end_effector_bool;
   return true;
 }
 

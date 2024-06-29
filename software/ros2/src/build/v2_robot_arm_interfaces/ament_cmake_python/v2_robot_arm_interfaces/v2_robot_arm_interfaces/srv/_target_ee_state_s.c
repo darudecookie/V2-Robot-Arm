@@ -59,15 +59,6 @@ bool v2_robot_arm_interfaces__srv__target_ee_state__request__convert_from_py(PyO
     ros_message->target_end_effector_value = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // target_end_effector_bool
-    PyObject * field = PyObject_GetAttrString(_pymsg, "target_end_effector_bool");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->target_end_effector_bool = (int8_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -95,17 +86,6 @@ PyObject * v2_robot_arm_interfaces__srv__target_ee_state__request__convert_to_py
     field = PyFloat_FromDouble(ros_message->target_end_effector_value);
     {
       int rc = PyObject_SetAttrString(_pymessage, "target_end_effector_value", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // target_end_effector_bool
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->target_end_effector_bool);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "target_end_effector_bool", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

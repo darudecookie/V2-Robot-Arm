@@ -69,98 +69,120 @@ include CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/progress.ma
 # Include the compile flags for this target's objects.
 include CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/lib/rosidl_typesupport_c/rosidl_typesupport_c
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/lib/python3.12/site-packages/rosidl_typesupport_c/__init__.py
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/action__type_support.c.em
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/ControlStatus.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/CurrentEEInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/CurrentJointInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/SystemDiagnosticInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/TargetCartesian.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/TargetEEInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/TargetJointInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/srv/SystemStatus.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/srv/TargetEEState.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Bool.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Byte.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/ByteMultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Char.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/ColorRGBA.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Empty.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float32.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float32MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float64.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float64MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Header.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int16.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int16MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int32.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int32MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int64.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int64MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int8.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int8MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/MultiArrayDimension.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/MultiArrayLayout.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/String.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt16.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt16MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt32.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt32MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt64.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt64MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt8.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt8MultiArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/builtin_interfaces/msg/Duration.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/builtin_interfaces/msg/Time.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/service_msgs/msg/ServiceEventInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/action_msgs/msg/GoalInfo.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/action_msgs/msg/GoalStatus.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/action_msgs/msg/GoalStatusArray.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/action_msgs/srv/CancelGoal.idl
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: /opt/ros/rolling/share/unique_identifier_msgs/msg/UUID.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/lib/rosidl_typesupport_c/rosidl_typesupport_c
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/lib/python3.12/site-packages/rosidl_typesupport_c/__init__.py
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/action__type_support.c.em
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/ControlStatus.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/CurrentEEInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/CurrentJointInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/CurrentCartesian.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/PeripheralSpeed.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/SystemDiagnosticInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/TargetCartesian.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/TargetEEInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/msg/TargetJointInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/srv/SystemStatus.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_adapter/v2_robot_arm_interfaces/srv/TargetEEState.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Bool.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Byte.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Char.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/ColorRGBA.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Empty.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float32.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float64.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Header.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int16.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int32.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int64.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int8.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/String.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt16.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt32.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt64.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt8.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/builtin_interfaces/msg/Duration.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/builtin_interfaces/msg/Time.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/action_msgs/msg/GoalInfo.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/action_msgs/msg/GoalStatus.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/action_msgs/srv/CancelGoal.idl
+rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: /opt/ros/rolling/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
 	/usr/bin/python3 /opt/ros/rolling/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp
 
-rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp > CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.i
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.s
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.i: cmake_force
@@ -174,7 +196,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.i: cmake_force
@@ -188,7 +210,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.i: cmake_force
@@ -199,10 +221,38 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s
 
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp > CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp > CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
+
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.i: cmake_force
@@ -216,7 +266,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.i: cmake_force
@@ -230,7 +280,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.i: cmake_force
@@ -244,7 +294,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.i: cmake_force
@@ -258,7 +308,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.i: cmake_force
@@ -272,7 +322,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.i: cmake_force
@@ -286,7 +336,7 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.i: cmake_force
@@ -297,40 +347,31 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.s
 
-CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/flags.make
-CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
-CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o -MF CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o.d -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o -c /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
-
-CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp > CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.i
-
-CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp -o CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.s
-
 # Object files for target v2_robot_arm_interfaces__rosidl_typesupport_c
 v2_robot_arm_interfaces__rosidl_typesupport_c_OBJECTS = \
+"CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o" \
+"CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o" \
+"CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o" \
 "CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o" \
-"CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o" \
-"CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o"
+"CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o"
 
 # External object files for target v2_robot_arm_interfaces__rosidl_typesupport_c
 v2_robot_arm_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 
+libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o
+libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o
@@ -338,7 +379,6 @@ libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_int
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o
-libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: libv2_robot_arm_interfaces__rosidl_generator_c.so
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: /opt/ros/rolling/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -355,7 +395,7 @@ libv2_robot_arm_interfaces__rosidl_typesupport_c.so: /opt/ros/rolling/lib/libuni
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: /opt/ros/rolling/lib/librosidl_runtime_c.so
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: /opt/ros/rolling/lib/librcutils.so
 libv2_robot_arm_interfaces__rosidl_typesupport_c.so: CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -368,8 +408,10 @@ CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/clean:
 
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp
+CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp
 CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp

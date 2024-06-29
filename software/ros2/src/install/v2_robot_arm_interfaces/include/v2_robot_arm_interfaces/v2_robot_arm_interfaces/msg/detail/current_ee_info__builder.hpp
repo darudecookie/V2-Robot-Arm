@@ -24,32 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_CurrentEEInfo_current_end_effector_bool
-{
-public:
-  explicit Init_CurrentEEInfo_current_end_effector_bool(::v2_robot_arm_interfaces::msg::CurrentEEInfo & msg)
-  : msg_(msg)
-  {}
-  ::v2_robot_arm_interfaces::msg::CurrentEEInfo current_end_effector_bool(::v2_robot_arm_interfaces::msg::CurrentEEInfo::_current_end_effector_bool_type arg)
-  {
-    msg_.current_end_effector_bool = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::v2_robot_arm_interfaces::msg::CurrentEEInfo msg_;
-};
-
 class Init_CurrentEEInfo_current_end_effector_value
 {
 public:
   explicit Init_CurrentEEInfo_current_end_effector_value(::v2_robot_arm_interfaces::msg::CurrentEEInfo & msg)
   : msg_(msg)
   {}
-  Init_CurrentEEInfo_current_end_effector_bool current_end_effector_value(::v2_robot_arm_interfaces::msg::CurrentEEInfo::_current_end_effector_value_type arg)
+  ::v2_robot_arm_interfaces::msg::CurrentEEInfo current_end_effector_value(::v2_robot_arm_interfaces::msg::CurrentEEInfo::_current_end_effector_value_type arg)
   {
     msg_.current_end_effector_value = std::move(arg);
-    return Init_CurrentEEInfo_current_end_effector_bool(msg_);
+    return std::move(msg_);
   }
 
 private:

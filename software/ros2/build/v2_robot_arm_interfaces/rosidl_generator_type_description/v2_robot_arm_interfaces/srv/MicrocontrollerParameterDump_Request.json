@@ -1,0 +1,176 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Request",
+      "fields": [
+        {
+          "name": "joint_position_limit_update_target",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "-10"
+        },
+        {
+          "name": "joint_position_limit_update_params",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(0.0, 0.0)"
+        },
+        {
+          "name": "joint_velocity_limit_update_target",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "-10"
+        },
+        {
+          "name": "joint_velocity_limit_update_params",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(0.0, 0.0)"
+        },
+        {
+          "name": "joint_torque_limit_update_target",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "-10"
+        },
+        {
+          "name": "joint_torque_limit_update_params",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(0.0, 0.0)"
+        },
+        {
+          "name": "joint_acceleration_limit_update_target",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "-10"
+        },
+        {
+          "name": "joint_acceleration_limit_update_params",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(0.0, 0.0)"
+        },
+        {
+          "name": "joint_jerk_limit_update_target",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "-10"
+        },
+        {
+          "name": "joint_jerk_limit_update_params",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(0.0, 0.0)"
+        },
+        {
+          "name": "x_workspace_bounds",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(-1.0, -1.0)"
+        },
+        {
+          "name": "y_workspace_bounds",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(-1.0, -1.0)"
+        },
+        {
+          "name": "z_workspace_bounds",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(-1.0, -1.0)"
+        },
+        {
+          "name": "pid_update_target",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "-10"
+        },
+        {
+          "name": "pid_update_params",
+          "type": {
+            "type_id": 58,
+            "capacity": 3,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(-1.0, -1.0, -1.0)"
+        },
+        {
+          "name": "joint_home_positions",
+          "type": {
+            "type_id": 58,
+            "capacity": 7,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "(-100.0, -100.0, -100.0, -100.0, -100.0, -100.0, -100.0)"
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump_Request",
+      "hash_string": "RIHS01_2a412bbc1d2e671b7363df5e42dbb8b0bff9e722e11755addb10f82bc9599ba7"
+    }
+  ]
+}

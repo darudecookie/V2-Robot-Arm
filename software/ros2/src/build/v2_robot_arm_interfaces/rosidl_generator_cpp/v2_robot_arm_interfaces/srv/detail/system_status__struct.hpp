@@ -189,8 +189,10 @@ struct SystemStatus_Response_
   explicit SystemStatus_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
     {
+      this->returnsuccess = 0;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->returnsuccess = 0;
     }
   }
@@ -199,8 +201,10 @@ struct SystemStatus_Response_
   {
     (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
     {
+      this->returnsuccess = 0;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->returnsuccess = 0;
     }
   }

@@ -38,7 +38,7 @@ void TargetEEState_Request_fini_function(void * message_memory)
   typed_message->~TargetEEState_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetEEState_Request_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetEEState_Request_message_member_array[1] = {
   {
     "target_end_effector_value",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -56,31 +56,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetEEState
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "target_end_effector_bool",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(v2_robot_arm_interfaces::srv::TargetEEState_Request, target_end_effector_bool),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers TargetEEState_Request_message_members = {
   "v2_robot_arm_interfaces::srv",  // message namespace
   "TargetEEState_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(v2_robot_arm_interfaces::srv::TargetEEState_Request),
   false,  // has_any_key_member_
   TargetEEState_Request_message_member_array,  // message members

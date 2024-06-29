@@ -11,10 +11,10 @@ v2_robot_arm_interfaces__srv__TargetEEState__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xb5, 0x13, 0x6f, 0x64, 0x3a, 0x0c, 0x5f, 0x7f,
-      0x36, 0xa8, 0xa0, 0x3e, 0x71, 0xf0, 0x56, 0xe3,
-      0xe1, 0x8c, 0x97, 0x90, 0xd4, 0x0d, 0x4a, 0xfe,
-      0x1c, 0x2e, 0x61, 0x40, 0xbe, 0x45, 0xb5, 0x3d,
+      0xbf, 0x36, 0x70, 0xc2, 0xd7, 0xb6, 0x23, 0x9a,
+      0xb1, 0xf8, 0xe7, 0x03, 0x9f, 0xfe, 0xbb, 0x72,
+      0x81, 0x2f, 0x54, 0x2b, 0xe5, 0x8b, 0xd0, 0x27,
+      0xe6, 0xfb, 0x51, 0x8d, 0x7f, 0x88, 0xa7, 0xa8,
     }};
   return &hash;
 }
@@ -26,10 +26,10 @@ v2_robot_arm_interfaces__srv__TargetEEState_Request__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x6d, 0xea, 0x7f, 0x85, 0xf3, 0x46, 0xc1, 0xf7,
-      0x57, 0x00, 0xc6, 0xf3, 0xc3, 0x73, 0x66, 0xdc,
-      0x0b, 0x30, 0x61, 0x33, 0x6b, 0xb9, 0x9e, 0x54,
-      0x48, 0x87, 0x38, 0x4e, 0x52, 0x04, 0x2c, 0x03,
+      0xd6, 0x7e, 0xb7, 0x17, 0xac, 0x23, 0x00, 0x7d,
+      0x26, 0xa3, 0x7f, 0xa1, 0xe5, 0x2f, 0x2b, 0x3f,
+      0x94, 0x80, 0xf4, 0x89, 0x38, 0x3d, 0x96, 0x5d,
+      0x2e, 0xca, 0xaa, 0x0f, 0xe8, 0xeb, 0x2b, 0xb8,
     }};
   return &hash;
 }
@@ -56,10 +56,10 @@ v2_robot_arm_interfaces__srv__TargetEEState_Event__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x2a, 0xf3, 0x28, 0x3c, 0x5d, 0x78, 0x6e, 0x22,
-      0x0c, 0xec, 0x12, 0xff, 0x66, 0xc9, 0x53, 0xf7,
-      0x4f, 0xbe, 0x96, 0x1d, 0xd6, 0x0c, 0x42, 0xe5,
-      0x7f, 0xf2, 0xae, 0x49, 0x5c, 0x8e, 0xba, 0xcc,
+      0x55, 0x5e, 0x2f, 0x1c, 0x41, 0xc1, 0x59, 0x9e,
+      0xd8, 0x62, 0xc1, 0xf7, 0xd2, 0xbb, 0xa8, 0x76,
+      0x3b, 0xc5, 0xde, 0x48, 0xc3, 0xbc, 0xa9, 0xcb,
+      0x53, 0xef, 0xac, 0x77, 0xab, 0xbc, 0xc1, 0x7e,
     }};
   return &hash;
 }
@@ -68,8 +68,8 @@ v2_robot_arm_interfaces__srv__TargetEEState_Event__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "service_msgs/msg/detail/service_event_info__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
+#include "service_msgs/msg/detail/service_event_info__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG
@@ -182,8 +182,6 @@ v2_robot_arm_interfaces__srv__TargetEEState__get_type_description(
 }
 // Define type names, field names, and default values
 static char v2_robot_arm_interfaces__srv__TargetEEState_Request__FIELD_NAME__target_end_effector_value[] = "target_end_effector_value";
-static char v2_robot_arm_interfaces__srv__TargetEEState_Request__FIELD_NAME__target_end_effector_bool[] = "target_end_effector_bool";
-static char v2_robot_arm_interfaces__srv__TargetEEState_Request__DEFAULT_VALUE__target_end_effector_bool[] = "0";
 
 static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__srv__TargetEEState_Request__FIELDS[] = {
   {
@@ -196,16 +194,6 @@ static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__srv__T
     },
     {NULL, 0, 0},
   },
-  {
-    {v2_robot_arm_interfaces__srv__TargetEEState_Request__FIELD_NAME__target_end_effector_bool, 24, 24},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {v2_robot_arm_interfaces__srv__TargetEEState_Request__DEFAULT_VALUE__target_end_effector_bool, 1, 1},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -217,7 +205,7 @@ v2_robot_arm_interfaces__srv__TargetEEState_Request__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {v2_robot_arm_interfaces__srv__TargetEEState_Request__TYPE_NAME, 49, 49},
-      {v2_robot_arm_interfaces__srv__TargetEEState_Request__FIELDS, 2, 2},
+      {v2_robot_arm_interfaces__srv__TargetEEState_Request__FIELDS, 1, 1},
     },
     {NULL, 0, 0},
   };
@@ -344,7 +332,6 @@ v2_robot_arm_interfaces__srv__TargetEEState_Event__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "float32 target_end_effector_value\n"
-  "int8 target_end_effector_bool 0\n"
   "---\n"
   "float32 current_end_effector_value";
 
@@ -361,7 +348,7 @@ v2_robot_arm_interfaces__srv__TargetEEState__get_individual_type_description_sou
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {v2_robot_arm_interfaces__srv__TargetEEState__TYPE_NAME, 41, 41},
     {srv_encoding, 3, 3},
-    {toplevel_type_raw_source, 104, 104},
+    {toplevel_type_raw_source, 72, 72},
   };
   return &source;
 }

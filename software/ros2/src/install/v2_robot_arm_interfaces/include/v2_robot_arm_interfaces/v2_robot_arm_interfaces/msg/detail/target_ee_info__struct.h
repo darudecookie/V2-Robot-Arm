@@ -28,7 +28,6 @@ typedef struct v2_robot_arm_interfaces__msg__TargetEEInfo
 {
   std_msgs__msg__Header header;
   float current_end_effector_value;
-  int8_t current_end_effector_bool;
 } v2_robot_arm_interfaces__msg__TargetEEInfo;
 
 // Struct for a sequence of v2_robot_arm_interfaces__msg__TargetEEInfo.

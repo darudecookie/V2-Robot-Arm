@@ -1,0 +1,1014 @@
+[0.000000] (-) TimerEvent: {}
+[0.000492] (ros_controller_interface) JobQueued: {'identifier': 'ros_controller_interface', 'dependencies': OrderedDict()}
+[0.000586] (v2_robot_arm_interfaces) JobQueued: {'identifier': 'v2_robot_arm_interfaces', 'dependencies': OrderedDict()}
+[0.000622] (hardware_interface) JobQueued: {'identifier': 'hardware_interface', 'dependencies': OrderedDict({'v2_robot_arm_interfaces': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces'})}
+[0.000661] (movement_controllers) JobQueued: {'identifier': 'movement_controllers', 'dependencies': OrderedDict({'v2_robot_arm_interfaces': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces'})}
+[0.000696] (v2_robot_arm_interfaces) JobStarted: {'identifier': 'v2_robot_arm_interfaces'}
+[0.010590] (ros_controller_interface) JobStarted: {'identifier': 'ros_controller_interface'}
+[0.022344] (v2_robot_arm_interfaces) JobProgress: {'identifier': 'v2_robot_arm_interfaces', 'progress': 'cmake'}
+[0.023656] (v2_robot_arm_interfaces) JobProgress: {'identifier': 'v2_robot_arm_interfaces', 'progress': 'build'}
+[0.025010] (v2_robot_arm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darudecookie', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/opt/gz_math_vendor/lib:/opt/ros/rolling/opt/gz_utils_vendor/lib:/opt/ros/rolling/opt/gz_cmake_vendor/lib:/opt/ros/rolling/lib', 'HOME': '/home/darudecookie', 'OLDPWD': '/home/darudecookie/Documents/V2-Robot-Arm/software', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1493', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/rolling/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'rolling', 'LOGNAME': 'darudecookie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'darudecookie', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/darudecookie-ThinkPad-X1-Carbon-5th:@/tmp/.ICE-unix/1460,unix/darudecookie-ThinkPad-X1-Carbon-5th:/tmp/.ICE-unix/1460', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4531ad0f_d181_4b26_b216_d8f64cf49577', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NHVNP2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/rolling', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/rolling/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/rolling/opt/gz_math_vendor:/opt/ros/rolling/opt/gz_utils_vendor:/opt/ros/rolling/opt/gz_cmake_vendor:/opt/ros/rolling'}), 'shell': False}
+[0.099319] (-) TimerEvent: {}
+[0.116463] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)\n'}
+[0.149549] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.199438] (-) TimerEvent: {}
+[0.275010] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 5.4.0 (/opt/ros/rolling/share/std_msgs/cmake)\n'}
+[0.299543] (-) TimerEvent: {}
+[0.321096] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.7.0 (/opt/ros/rolling/share/rosidl_generator_c/cmake)\n'}
+[0.336395] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.7.0 (/opt/ros/rolling/share/rosidl_generator_cpp/cmake)\n'}
+[0.356881] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.380384] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.399709] (-) TimerEvent: {}
+[0.436891] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.7.0 (/opt/ros/rolling/share/rosidl_default_generators/cmake)\n'}
+[0.457883] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.7.0 (/opt/ros/rolling/share/rosidl_adapter/cmake)\n'}
+[0.499802] (-) TimerEvent: {}
+[0.600091] (-) TimerEvent: {}
+[0.700384] (-) TimerEvent: {}
+[0.800635] (-) TimerEvent: {}
+[0.900921] (-) TimerEvent: {}
+[1.001214] (-) TimerEvent: {}
+[1.002829] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.13.0 (/opt/ros/rolling/share/ament_cmake_ros/cmake)\n'}
+[1.101342] (-) TimerEvent: {}
+[1.201631] (-) TimerEvent: {}
+[1.281411] (ros_controller_interface) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ros_controller_interface', 'build', '--build-base', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/build', 'install', '--record', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darudecookie', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/opt/gz_math_vendor/lib:/opt/ros/rolling/opt/gz_utils_vendor/lib:/opt/ros/rolling/opt/gz_cmake_vendor/lib:/opt/ros/rolling/lib', 'HOME': '/home/darudecookie', 'OLDPWD': '/home/darudecookie/Documents/V2-Robot-Arm/software', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1493', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/rolling/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'rolling', 'LOGNAME': 'darudecookie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'darudecookie', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/darudecookie-ThinkPad-X1-Carbon-5th:@/tmp/.ICE-unix/1460,unix/darudecookie-ThinkPad-X1-Carbon-5th:/tmp/.ICE-unix/1460', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4531ad0f_d181_4b26_b216_d8f64cf49577', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NHVNP2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/rolling', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/rolling/opt/gz_math_vendor:/opt/ros/rolling/opt/gz_utils_vendor:/opt/ros/rolling/opt/gz_cmake_vendor'}, 'shell': False}
+[1.301756] (-) TimerEvent: {}
+[1.350092] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.401853] (-) TimerEvent: {}
+[1.502124] (-) TimerEvent: {}
+[1.516209] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.519004] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.12.0 (/opt/ros/rolling/share/python_cmake_module/cmake)\n'}
+[1.602226] (-) TimerEvent: {}
+[1.700428] (ros_controller_interface) StdoutLine: {'line': b'running egg_info\n'}
+[1.702315] (-) TimerEvent: {}
+[1.729608] (ros_controller_interface) StdoutLine: {'line': b'writing ../../build/ros_controller_interface/ros_controller_interface.egg-info/PKG-INFO\n'}
+[1.730150] (ros_controller_interface) StdoutLine: {'line': b'writing dependency_links to ../../build/ros_controller_interface/ros_controller_interface.egg-info/dependency_links.txt\n'}
+[1.730369] (ros_controller_interface) StdoutLine: {'line': b'writing entry points to ../../build/ros_controller_interface/ros_controller_interface.egg-info/entry_points.txt\n'}
+[1.730599] (ros_controller_interface) StdoutLine: {'line': b'writing requirements to ../../build/ros_controller_interface/ros_controller_interface.egg-info/requires.txt\n'}
+[1.730810] (ros_controller_interface) StdoutLine: {'line': b'writing top-level names to ../../build/ros_controller_interface/ros_controller_interface.egg-info/top_level.txt\n'}
+[1.781057] (ros_controller_interface) StdoutLine: {'line': b"reading manifest file '../../build/ros_controller_interface/ros_controller_interface.egg-info/SOURCES.txt'\n"}
+[1.782452] (ros_controller_interface) StdoutLine: {'line': b"writing manifest file '../../build/ros_controller_interface/ros_controller_interface.egg-info/SOURCES.txt'\n"}
+[1.782849] (ros_controller_interface) StdoutLine: {'line': b'running build\n'}
+[1.783029] (ros_controller_interface) StdoutLine: {'line': b'running build_py\n'}
+[1.783294] (ros_controller_interface) StdoutLine: {'line': b'running install\n'}
+[1.792237] (ros_controller_interface) StdoutLine: {'line': b'running install_lib\n'}
+[1.802415] (-) TimerEvent: {}
+[1.822129] (ros_controller_interface) StdoutLine: {'line': b'running install_data\n'}
+[1.823092] (ros_controller_interface) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.850053] (ros_controller_interface) StdoutLine: {'line': b"removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages/ros_controller_interface-0.0.1-py3.12.egg-info' (and everything under it)\n"}
+[1.851288] (ros_controller_interface) StdoutLine: {'line': b'Copying ../../build/ros_controller_interface/ros_controller_interface.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages/ros_controller_interface-0.0.1-py3.12.egg-info\n'}
+[1.852989] (ros_controller_interface) StdoutLine: {'line': b'running install_scripts\n'}
+[1.902513] (-) TimerEvent: {}
+[1.934179] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[1.974047] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.18.0 (/opt/ros/rolling/share/ament_lint_auto/cmake)\n'}
+[2.002617] (-) TimerEvent: {}
+[2.007081] (v2_robot_arm_interfaces) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.008686] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[2.008975] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.013159] (v2_robot_arm_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.023373] (v2_robot_arm_interfaces) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.023626] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.026144] (v2_robot_arm_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.031468] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Configuring done (1.9s)\n'}
+[2.053797] (ros_controller_interface) StdoutLine: {'line': b'Installing ROS_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/ros_controller_interface\n'}
+[2.055515] (ros_controller_interface) StdoutLine: {'line': b"writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/install.log'\n"}
+[2.102729] (-) TimerEvent: {}
+[2.109252] (ros_controller_interface) CommandEnded: {'returncode': 0}
+[2.130961] (ros_controller_interface) JobEnded: {'identifier': 'ros_controller_interface', 'rc': 0}
+[2.165339] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[2.170432] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces\n'}
+[2.202857] (-) TimerEvent: {}
+[2.226350] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[2.250985] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_v2_robot_arm_interfaces\n'}
+[2.303070] (-) TimerEvent: {}
+[2.403368] (-) TimerEvent: {}
+[2.503651] (-) TimerEvent: {}
+[2.585591] (v2_robot_arm_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[2.603754] (-) TimerEvent: {}
+[2.614711] (v2_robot_arm_interfaces) StdoutLine: {'line': b'writing v2_robot_arm_interfaces.egg-info/PKG-INFO\n'}
+[2.615261] (v2_robot_arm_interfaces) StdoutLine: {'line': b'writing dependency_links to v2_robot_arm_interfaces.egg-info/dependency_links.txt\n'}
+[2.615761] (v2_robot_arm_interfaces) StdoutLine: {'line': b'writing top-level names to v2_robot_arm_interfaces.egg-info/top_level.txt\n'}
+[2.694373] (v2_robot_arm_interfaces) StdoutLine: {'line': b"reading manifest file 'v2_robot_arm_interfaces.egg-info/SOURCES.txt'\n"}
+[2.696649] (v2_robot_arm_interfaces) StdoutLine: {'line': b"writing manifest file 'v2_robot_arm_interfaces.egg-info/SOURCES.txt'\n"}
+[2.703862] (-) TimerEvent: {}
+[2.738683] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_build_v2_robot_arm_interfaces_egg\n'}
+[2.803984] (-) TimerEvent: {}
+[2.905014] (-) TimerEvent: {}
+[2.944048] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  1%] Built target v2_robot_arm_interfaces__rosidl_generator_type_description\n'}
+[2.957184] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.976390] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.008410] (-) TimerEvent: {}
+[3.108958] (-) TimerEvent: {}
+[3.209258] (-) TimerEvent: {}
+[3.310530] (-) TimerEvent: {}
+[3.410794] (-) TimerEvent: {}
+[3.511075] (-) TimerEvent: {}
+[3.611409] (-) TimerEvent: {}
+[3.713042] (-) TimerEvent: {}
+[3.813320] (-) TimerEvent: {}
+[3.913610] (-) TimerEvent: {}
+[4.013894] (-) TimerEvent: {}
+[4.114225] (-) TimerEvent: {}
+[4.215398] (-) TimerEvent: {}
+[4.315660] (-) TimerEvent: {}
+[4.415931] (-) TimerEvent: {}
+[4.517450] (-) TimerEvent: {}
+[4.617784] (-) TimerEvent: {}
+[4.709138] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  2%] Built target v2_robot_arm_interfaces__cpp\n'}
+[4.717869] (-) TimerEvent: {}
+[4.818136] (-) TimerEvent: {}
+[4.918424] (-) TimerEvent: {}
+[5.019455] (-) TimerEvent: {}
+[5.119795] (-) TimerEvent: {}
+[5.207149] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__functions.c.o\x1b[0m\n'}
+[5.207471] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__description.c.o\x1b[0m\n'}
+[5.207670] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c.o\x1b[0m\n'}
+[5.209227] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.c.o\x1b[0m\n'}
+[5.221469] (-) TimerEvent: {}
+[5.293163] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__functions.c.o\x1b[0m\n'}
+[5.323424] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.c.o\x1b[0m\n'}
+[5.323711] (-) TimerEvent: {}
+[5.323855] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__description.c.o\x1b[0m\n'}
+[5.350642] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__functions.c.o\x1b[0m\n'}
+[5.397412] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.o\x1b[0m\n'}
+[5.414839] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.c.o\x1b[0m\n'}
+[5.425426] (-) TimerEvent: {}
+[5.431497] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__functions.c.o\x1b[0m\n'}
+[5.474185] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.c.o\x1b[0m\n'}
+[5.495318] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_cartesian__description.c.o\x1b[0m\n'}
+[5.520589] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_cartesian__functions.c.o\x1b[0m\n'}
+[5.530578] (-) TimerEvent: {}
+[5.555522] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.c.o\x1b[0m\n'}
+[5.555889] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_ee_info__description.c.o\x1b[0m\n'}
+[5.589448] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_ee_info__functions.c.o\x1b[0m\n'}
+[5.627463] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.c.o\x1b[0m\n'}
+[5.633437] (-) TimerEvent: {}
+[5.636636] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_joint_info__description.c.o\x1b[0m\n'}
+[5.649867] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_joint_info__functions.c.o\x1b[0m\n'}
+[5.709711] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.c.o\x1b[0m\n'}
+[5.719833] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__description.c.o\x1b[0m\n'}
+[5.727840] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__functions.c.o\x1b[0m\n'}
+[5.733547] (-) TimerEvent: {}
+[5.780609] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.c.o\x1b[0m\n'}
+[5.796781] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/system_status__description.c.o\x1b[0m\n'}
+[5.834535] (-) TimerEvent: {}
+[5.851742] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/system_status__functions.c.o\x1b[0m\n'}
+[5.875195] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/system_status__type_support.c.o\x1b[0m\n'}
+[5.918419] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/target_ee_state__description.c.o\x1b[0m\n'}
+[5.930869] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/target_ee_state__functions.c.o\x1b[0m\n'}
+[5.934634] (-) TimerEvent: {}
+[5.988471] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.c.o\x1b[0m\n'}
+[6.034750] (-) TimerEvent: {}
+[6.037454] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__description.c.o\x1b[0m\n'}
+[6.043730] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__functions.c.o\x1b[0m\n'}
+[6.084284] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.c.o\x1b[0m\n'}
+[6.134873] (-) TimerEvent: {}
+[6.237577] (-) TimerEvent: {}
+[6.303243] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking C shared library libv2_robot_arm_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[6.337677] (-) TimerEvent: {}
+[6.368387] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 27%] Built target v2_robot_arm_interfaces__rosidl_generator_c\n'}
+[6.387159] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.387443] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.387610] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.396141] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.437772] (-) TimerEvent: {}
+[6.538056] (-) TimerEvent: {}
+[6.638364] (-) TimerEvent: {}
+[6.738709] (-) TimerEvent: {}
+[6.839042] (-) TimerEvent: {}
+[6.939343] (-) TimerEvent: {}
+[7.042568] (-) TimerEvent: {}
+[7.142875] (-) TimerEvent: {}
+[7.243217] (-) TimerEvent: {}
+[7.343557] (-) TimerEvent: {}
+[7.443857] (-) TimerEvent: {}
+[7.544177] (-) TimerEvent: {}
+[7.644492] (-) TimerEvent: {}
+[7.747556] (-) TimerEvent: {}
+[7.847890] (-) TimerEvent: {}
+[7.948239] (-) TimerEvent: {}
+[8.048572] (-) TimerEvent: {}
+[8.148892] (-) TimerEvent: {}
+[8.234484] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o\x1b[0m\n'}
+[8.248994] (-) TimerEvent: {}
+[8.350549] (-) TimerEvent: {}
+[8.450847] (-) TimerEvent: {}
+[8.553549] (-) TimerEvent: {}
+[8.653901] (-) TimerEvent: {}
+[8.756556] (-) TimerEvent: {}
+[8.859963] (-) TimerEvent: {}
+[8.940220] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c.o\x1b[0m\n'}
+[8.960065] (-) TimerEvent: {}
+[9.040944] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.c.o\x1b[0m\n'}
+[9.060168] (-) TimerEvent: {}
+[9.163428] (-) TimerEvent: {}
+[9.192926] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.o\x1b[0m\n'}
+[9.263527] (-) TimerEvent: {}
+[9.310633] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.c.o\x1b[0m\n'}
+[9.335142] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o\x1b[0m\n'}
+[9.363627] (-) TimerEvent: {}
+[9.410589] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.c.o\x1b[0m\n'}
+[9.463727] (-) TimerEvent: {}
+[9.510100] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.c.o\x1b[0m\n'}
+[9.563834] (-) TimerEvent: {}
+[9.597913] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.c.o\x1b[0m\n'}
+[9.664384] (-) TimerEvent: {}
+[9.699574] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.c.o\x1b[0m\n'}
+[9.764496] (-) TimerEvent: {}
+[9.869581] (-) TimerEvent: {}
+[9.884281] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/srv/detail/system_status__type_support.c.o\x1b[0m\n'}
+[9.969692] (-) TimerEvent: {}
+[9.973447] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/control_status__type_support.cpp.o\x1b[0m\n'}
+[10.029114] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.c.o\x1b[0m\n'}
+[10.069814] (-) TimerEvent: {}
+[10.146508] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.c.o\x1b[0m\n'}
+[10.153436] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o\x1b[0m\n'}
+[10.169966] (-) TimerEvent: {}
+[10.209871] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support_c.cpp.o\x1b[0m\n'}
+[10.271436] (-) TimerEvent: {}
+[10.326031] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking C shared library libv2_robot_arm_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[10.371571] (-) TimerEvent: {}
+[10.413447] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 42%] Built target v2_robot_arm_interfaces__rosidl_typesupport_introspection_c\n'}
+[10.429459] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o\x1b[0m\n'}
+[10.473194] (-) TimerEvent: {}
+[10.573619] (-) TimerEvent: {}
+[10.673974] (-) TimerEvent: {}
+[10.778562] (-) TimerEvent: {}
+[10.878939] (-) TimerEvent: {}
+[10.952025] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.cpp.o\x1b[0m\n'}
+[10.979054] (-) TimerEvent: {}
+[11.083549] (-) TimerEvent: {}
+[11.175604] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.cpp.o\x1b[0m\n'}
+[11.183671] (-) TimerEvent: {}
+[11.218544] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o\x1b[0m\n'}
+[11.283779] (-) TimerEvent: {}
+[11.388577] (-) TimerEvent: {}
+[11.488929] (-) TimerEvent: {}
+[11.515013] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o\x1b[0m\n'}
+[11.589057] (-) TimerEvent: {}
+[11.692609] (-) TimerEvent: {}
+[11.792977] (-) TimerEvent: {}
+[11.893570] (-) TimerEvent: {}
+[11.975708] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o\x1b[0m\n'}
+[11.993684] (-) TimerEvent: {}
+[12.094045] (-) TimerEvent: {}
+[12.167915] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.cpp.o\x1b[0m\n'}
+[12.194165] (-) TimerEvent: {}
+[12.279505] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.cpp.o\x1b[0m\n'}
+[12.294278] (-) TimerEvent: {}
+[12.335489] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o\x1b[0m\n'}
+[12.394399] (-) TimerEvent: {}
+[12.494777] (-) TimerEvent: {}
+[12.595142] (-) TimerEvent: {}
+[12.695524] (-) TimerEvent: {}
+[12.791297] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o\x1b[0m\n'}
+[12.795636] (-) TimerEvent: {}
+[12.900590] (-) TimerEvent: {}
+[13.000955] (-) TimerEvent: {}
+[13.101552] (-) TimerEvent: {}
+[13.201936] (-) TimerEvent: {}
+[13.306594] (-) TimerEvent: {}
+[13.323502] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[13.403213] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.cpp.o\x1b[0m\n'}
+[13.406694] (-) TimerEvent: {}
+[13.489123] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.cpp.o\x1b[0m\n'}
+[13.506798] (-) TimerEvent: {}
+[13.609577] (-) TimerEvent: {}
+[13.712585] (-) TimerEvent: {}
+[13.813150] (-) TimerEvent: {}
+[13.820013] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o\x1b[0m\n'}
+[13.913257] (-) TimerEvent: {}
+[14.013660] (-) TimerEvent: {}
+[14.114543] (-) TimerEvent: {}
+[14.214897] (-) TimerEvent: {}
+[14.317605] (-) TimerEvent: {}
+[14.417957] (-) TimerEvent: {}
+[14.518310] (-) TimerEvent: {}
+[14.605125] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support_c.cpp.o\x1b[0m\n'}
+[14.618425] (-) TimerEvent: {}
+[14.718773] (-) TimerEvent: {}
+[14.754251] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/target_cartesian__type_support.cpp.o\x1b[0m\n'}
+[14.814500] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o\x1b[0m\n'}
+[14.821473] (-) TimerEvent: {}
+[14.921841] (-) TimerEvent: {}
+[15.022179] (-) TimerEvent: {}
+[15.125592] (-) TimerEvent: {}
+[15.225952] (-) TimerEvent: {}
+[15.279997] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.o\x1b[0m\n'}
+[15.326070] (-) TimerEvent: {}
+[15.392510] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o\x1b[0m\n'}
+[15.426190] (-) TimerEvent: {}
+[15.514169] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.o\x1b[0m\n'}
+[15.526313] (-) TimerEvent: {}
+[15.629707] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o\x1b[0m\n'}
+[15.629990] (-) TimerEvent: {}
+[15.712124] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support_c.cpp.o\x1b[0m\n'}
+[15.730120] (-) TimerEvent: {}
+[15.747667] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_cartesian__type_support.cpp.o\x1b[0m\n'}
+[15.830235] (-) TimerEvent: {}
+[15.853498] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_ee_info__type_support.cpp.o\x1b[0m\n'}
+[15.930373] (-) TimerEvent: {}
+[15.959444] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/target_joint_info__type_support.cpp.o\x1b[0m\n'}
+[16.023233] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/target_ee_info__type_support.cpp.o\x1b[0m\n'}
+[16.030429] (-) TimerEvent: {}
+[16.097346] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump__type_support.cpp.o\x1b[0m\n'}
+[16.130548] (-) TimerEvent: {}
+[16.225155] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/system_status__type_support.cpp.o\x1b[0m\n'}
+[16.230666] (-) TimerEvent: {}
+[16.335617] (-) TimerEvent: {}
+[16.349194] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/srv/target_ee_state__type_support.cpp.o\x1b[0m\n'}
+[16.435732] (-) TimerEvent: {}
+[16.465154] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/action/parametric_trajectory_info__type_support.cpp.o\x1b[0m\n'}
+[16.535845] (-) TimerEvent: {}
+[16.589113] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[16.632298] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[16.637457] (-) TimerEvent: {}
+[16.735784] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 65%] Built target v2_robot_arm_interfaces__rosidl_typesupport_c\n'}
+[16.737575] (-) TimerEvent: {}
+[16.756986] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/target_joint_info__type_support.cpp.o\x1b[0m\n'}
+[16.789114] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 66%] Built target v2_robot_arm_interfaces__rosidl_typesupport_cpp\n'}
+[16.806043] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support_c.cpp.o\x1b[0m\n'}
+[16.837682] (-) TimerEvent: {}
+[16.852708] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support_c.cpp.o\x1b[0m\n'}
+[16.937797] (-) TimerEvent: {}
+[17.041548] (-) TimerEvent: {}
+[17.142127] (-) TimerEvent: {}
+[17.242499] (-) TimerEvent: {}
+[17.261531] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/srv/detail/dds_fastrtps/microcontroller_parameter_dump__type_support.cpp.o\x1b[0m\n'}
+[17.342610] (-) TimerEvent: {}
+[17.442992] (-) TimerEvent: {}
+[17.543371] (-) TimerEvent: {}
+[17.643753] (-) TimerEvent: {}
+[17.745662] (-) TimerEvent: {}
+[17.848570] (-) TimerEvent: {}
+[17.951608] (-) TimerEvent: {}
+[18.013477] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[18.041235] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/srv/detail/dds_fastrtps/system_status__type_support.cpp.o\x1b[0m\n'}
+[18.051712] (-) TimerEvent: {}
+[18.154615] (-) TimerEvent: {}
+[18.184529] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/srv/detail/system_status__type_support_c.cpp.o\x1b[0m\n'}
+[18.254720] (-) TimerEvent: {}
+[18.357572] (-) TimerEvent: {}
+[18.457916] (-) TimerEvent: {}
+[18.558283] (-) TimerEvent: {}
+[18.658651] (-) TimerEvent: {}
+[18.760678] (-) TimerEvent: {}
+[18.861041] (-) TimerEvent: {}
+[18.909585] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support_c.cpp.o\x1b[0m\n'}
+[18.961150] (-) TimerEvent: {}
+[19.063597] (-) TimerEvent: {}
+[19.163972] (-) TimerEvent: {}
+[19.264335] (-) TimerEvent: {}
+[19.364698] (-) TimerEvent: {}
+[19.465335] (-) TimerEvent: {}
+[19.465635] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/srv/detail/dds_fastrtps/target_ee_state__type_support.cpp.o\x1b[0m\n'}
+[19.565428] (-) TimerEvent: {}
+[19.666008] (-) TimerEvent: {}
+[19.688451] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/action/detail/dds_fastrtps/parametric_trajectory_info__type_support.cpp.o\x1b[0m\n'}
+[19.766118] (-) TimerEvent: {}
+[19.866696] (-) TimerEvent: {}
+[19.969723] (-) TimerEvent: {}
+[20.070052] (-) TimerEvent: {}
+[20.169567] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support_c.cpp.o\x1b[0m\n'}
+[20.170132] (-) TimerEvent: {}
+[20.273708] (-) TimerEvent: {}
+[20.374066] (-) TimerEvent: {}
+[20.474436] (-) TimerEvent: {}
+[20.551814] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_status__type_support.cpp.o\x1b[0m\n'}
+[20.574553] (-) TimerEvent: {}
+[20.678598] (-) TimerEvent: {}
+[20.778973] (-) TimerEvent: {}
+[20.882600] (-) TimerEvent: {}
+[20.986587] (-) TimerEvent: {}
+[21.071302] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.cpp.o\x1b[0m\n'}
+[21.086707] (-) TimerEvent: {}
+[21.191611] (-) TimerEvent: {}
+[21.294593] (-) TimerEvent: {}
+[21.395915] (-) TimerEvent: {}
+[21.404311] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.cpp.o\x1b[0m\n'}
+[21.497435] (-) TimerEvent: {}
+[21.597807] (-) TimerEvent: {}
+[21.695279] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[21.697917] (-) TimerEvent: {}
+[21.798278] (-) TimerEvent: {}
+[21.864619] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.cpp.o\x1b[0m\n'}
+[21.895060] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 78%] Built target v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[21.899424] (-) TimerEvent: {}
+[21.911523] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.cpp.o\x1b[0m\n'}
+[21.999548] (-) TimerEvent: {}
+[22.099889] (-) TimerEvent: {}
+[22.202681] (-) TimerEvent: {}
+[22.294228] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.cpp.o\x1b[0m\n'}
+[22.302793] (-) TimerEvent: {}
+[22.402663] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[22.403001] (-) TimerEvent: {}
+[22.507377] (-) TimerEvent: {}
+[22.607718] (-) TimerEvent: {}
+[22.640214] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 81%] Built target v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[22.656276] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.cpp.o\x1b[0m\n'}
+[22.707827] (-) TimerEvent: {}
+[22.753482] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.cpp.o\x1b[0m\n'}
+[22.782562] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/srv/detail/system_status__type_support.cpp.o\x1b[0m\n'}
+[22.807943] (-) TimerEvent: {}
+[22.911574] (-) TimerEvent: {}
+[23.012198] (-) TimerEvent: {}
+[23.088061] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.cpp.o\x1b[0m\n'}
+[23.112320] (-) TimerEvent: {}
+[23.212694] (-) TimerEvent: {}
+[23.313057] (-) TimerEvent: {}
+[23.416597] (-) TimerEvent: {}
+[23.519651] (-) TimerEvent: {}
+[23.526824] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.cpp.o\x1b[0m\n'}
+[23.619769] (-) TimerEvent: {}
+[23.720119] (-) TimerEvent: {}
+[23.820432] (-) TimerEvent: {}
+[23.923601] (-) TimerEvent: {}
+[24.023953] (-) TimerEvent: {}
+[24.124312] (-) TimerEvent: {}
+[24.224593] (-) TimerEvent: {}
+[24.324890] (-) TimerEvent: {}
+[24.425203] (-) TimerEvent: {}
+[24.525512] (-) TimerEvent: {}
+[24.625808] (-) TimerEvent: {}
+[24.674178] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX shared library libv2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[24.725943] (-) TimerEvent: {}
+[24.784368] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 85%] Built target v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[24.804784] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 85%] Built target v2_robot_arm_interfaces\n'}
+[24.826079] (-) TimerEvent: {}
+[24.827854] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[24.926187] (-) TimerEvent: {}
+[25.027554] (-) TimerEvent: {}
+[25.127852] (-) TimerEvent: {}
+[25.228140] (-) TimerEvent: {}
+[25.328425] (-) TimerEvent: {}
+[25.428711] (-) TimerEvent: {}
+[25.529007] (-) TimerEvent: {}
+[25.629309] (-) TimerEvent: {}
+[25.729585] (-) TimerEvent: {}
+[25.829874] (-) TimerEvent: {}
+[25.930189] (-) TimerEvent: {}
+[26.030436] (-) TimerEvent: {}
+[26.130736] (-) TimerEvent: {}
+[26.231006] (-) TimerEvent: {}
+[26.331283] (-) TimerEvent: {}
+[26.431539] (-) TimerEvent: {}
+[26.531812] (-) TimerEvent: {}
+[26.632090] (-) TimerEvent: {}
+[26.732391] (-) TimerEvent: {}
+[26.832688] (-) TimerEvent: {}
+[26.932970] (-) TimerEvent: {}
+[27.033246] (-) TimerEvent: {}
+[27.133490] (-) TimerEvent: {}
+[27.233758] (-) TimerEvent: {}
+[27.335184] (-) TimerEvent: {}
+[27.393613] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 86%] Built target v2_robot_arm_interfaces__py\n'}
+[27.435643] (-) TimerEvent: {}
+[27.447579] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.c.o\x1b[0m\n'}
+[27.447852] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.c.o\x1b[0m\n'}
+[27.447994] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.c.o\x1b[0m\n'}
+[27.457472] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.c.o\x1b[0m\n'}
+[27.535766] (-) TimerEvent: {}
+[27.638425] (-) TimerEvent: {}
+[27.740429] (-) TimerEvent: {}
+[27.799844] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_target_cartesian_s.c.o\x1b[0m\n'}
+[27.818010] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_target_ee_info_s.c.o\x1b[0m\n'}
+[27.840547] (-) TimerEvent: {}
+[27.846423] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/srv/_microcontroller_parameter_dump_s.c.o\x1b[0m\n'}
+[27.846949] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_target_joint_info_s.c.o\x1b[0m\n'}
+[27.940658] (-) TimerEvent: {}
+[28.041021] (-) TimerEvent: {}
+[28.141403] (-) TimerEvent: {}
+[28.154593] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/srv/_system_status_s.c.o\x1b[0m\n'}
+[28.185444] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/srv/_target_ee_state_s.c.o\x1b[0m\n'}
+[28.191456] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/action/_parametric_trajectory_info_s.c.o\x1b[0m\n'}
+[28.241520] (-) TimerEvent: {}
+[28.341870] (-) TimerEvent: {}
+[28.442262] (-) TimerEvent: {}
+[28.542608] (-) TimerEvent: {}
+[28.570204] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library libv2_robot_arm_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[28.627078] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 95%] Built target v2_robot_arm_interfaces__rosidl_generator_py\n'}
+[28.644568] (-) TimerEvent: {}
+[28.667420] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/v2_robot_arm_interfaces/_v2_robot_arm_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[28.671494] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/v2_robot_arm_interfaces/_v2_robot_arm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[28.675210] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/v2_robot_arm_interfaces/_v2_robot_arm_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[28.744681] (-) TimerEvent: {}
+[28.847433] (-) TimerEvent: {}
+[28.947805] (-) TimerEvent: {}
+[29.048165] (-) TimerEvent: {}
+[29.109310] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[29.114582] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[ 99%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[29.148285] (-) TimerEvent: {}
+[29.161430] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[29.167798] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[100%] Built target v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[29.170438] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[100%] Built target v2_robot_arm_interfaces_s__rosidl_typesupport_c\n'}
+[29.206213] (v2_robot_arm_interfaces) StdoutLine: {'line': b'[100%] Built target v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[29.221936] (v2_robot_arm_interfaces) CommandEnded: {'returncode': 0}
+[29.248370] (-) TimerEvent: {}
+[29.348639] (-) TimerEvent: {}
+[29.448862] (-) TimerEvent: {}
+[29.484381] (v2_robot_arm_interfaces) JobProgress: {'identifier': 'v2_robot_arm_interfaces', 'progress': 'install'}
+[29.494272] (v2_robot_arm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces'], 'cwd': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darudecookie', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/opt/gz_math_vendor/lib:/opt/ros/rolling/opt/gz_utils_vendor/lib:/opt/ros/rolling/opt/gz_cmake_vendor/lib:/opt/ros/rolling/lib', 'HOME': '/home/darudecookie', 'OLDPWD': '/home/darudecookie/Documents/V2-Robot-Arm/software', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1493', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/rolling/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'rolling', 'LOGNAME': 'darudecookie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'darudecookie', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/darudecookie-ThinkPad-X1-Carbon-5th:@/tmp/.ICE-unix/1460,unix/darudecookie-ThinkPad-X1-Carbon-5th:/tmp/.ICE-unix/1460', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4531ad0f_d181_4b26_b216_d8f64cf49577', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NHVNP2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/rolling', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/rolling/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/rolling/opt/gz_math_vendor:/opt/ros/rolling/opt/gz_utils_vendor:/opt/ros/rolling/opt/gz_cmake_vendor:/opt/ros/rolling'}), 'shell': False}
+[29.502972] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.503309] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/ament_index/resource_index/rosidl_interfaces/v2_robot_arm_interfaces\n'}
+[29.503541] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/ControlStatus.json\n'}
+[29.503736] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/CurrentEEInfo.json\n'}
+[29.503964] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/CurrentJointInfo.json\n'}
+[29.504130] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/SystemDiagnosticInfo.json\n'}
+[29.504316] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetCartesian.json\n'}
+[29.504649] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetEEInfo.json\n'}
+[29.504844] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetJointInfo.json\n'}
+[29.505054] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump.json\n'}
+[29.505244] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/SystemStatus.json\n'}
+[29.505443] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/TargetEEState.json\n'}
+[29.505646] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.json\n'}
+[29.505917] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces\n'}
+[29.506150] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action\n'}
+[29.506295] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail\n'}
+[29.506462] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__functions.h\n'}
+[29.506597] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.c\n'}
+[29.506760] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__functions.c\n'}
+[29.506918] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.h\n'}
+[29.507071] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__description.c\n'}
+[29.507246] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__struct.h\n'}
+[29.507507] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/parametric_trajectory_info.h\n'}
+[29.507711] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg\n'}
+[29.507932] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[29.508137] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/current_ee_info.h\n'}
+[29.508347] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/target_ee_info.h\n'}
+[29.508577] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/current_joint_info.h\n'}
+[29.508775] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail\n'}
+[29.508992] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.c\n'}
+[29.509172] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c\n'}
+[29.509380] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__functions.c\n'}
+[29.509621] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.c\n'}
+[29.509806] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__functions.h\n'}
+[29.510020] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__struct.h\n'}
+[29.510226] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__functions.c\n'}
+[29.510458] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__type_support.h\n'}
+[29.510666] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.c\n'}
+[29.510878] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__struct.h\n'}
+[29.511092] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__functions.c\n'}
+[29.511308] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.c\n'}
+[29.511536] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.h\n'}
+[29.511738] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.h\n'}
+[29.511968] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__functions.h\n'}
+[29.512196] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c\n'}
+[29.512405] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.h\n'}
+[29.512616] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__functions.h\n'}
+[29.512817] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.c\n'}
+[29.513016] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.h\n'}
+[29.513202] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.c\n'}
+[29.513447] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.h\n'}
+[29.513647] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__functions.h\n'}
+[29.513880] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__description.c\n'}
+[29.514067] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__description.c\n'}
+[29.514298] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__description.c\n'}
+[29.514529] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__struct.h\n'}
+[29.514737] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__struct.h\n'}
+[29.514950] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__functions.h\n'}
+[29.515164] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__description.c\n'}
+[29.515388] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__functions.c\n'}
+[29.515610] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__functions.c\n'}
+[29.515820] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__description.c\n'}
+[29.516030] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.h\n'}
+[29.516577] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__functions.h\n'}
+[29.516817] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__struct.h\n'}
+[29.517019] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__functions.h\n'}
+[29.517265] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__struct.h\n'}
+[29.517503] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__struct.h\n'}
+[29.517729] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__functions.c\n'}
+[29.517926] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.c\n'}
+[29.518158] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__functions.c\n'}
+[29.518392] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/target_cartesian.h\n'}
+[29.518614] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/target_joint_info.h\n'}
+[29.518832] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/system_diagnostic_info.h\n'}
+[29.519024] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/control_status.h\n'}
+[29.519269] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv\n'}
+[29.519502] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump.h\n'}
+[29.519741] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/target_ee_state.h\n'}
+[29.519937] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail\n'}
+[29.520160] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__functions.h\n'}
+[29.520385] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__functions.h\n'}
+[29.520614] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.c\n'}
+[29.520832] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.h\n'}
+[29.521054] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__type_support.c\n'}
+[29.521281] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__functions.c\n'}
+[29.521528] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.h\n'}
+[29.521737] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__description.c\n'}
+[29.521998] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__functions.c\n'}
+[29.522202] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__functions.h\n'}
+[29.522456] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.c\n'}
+[29.522664] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__type_support.h\n'}
+[29.522918] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__struct.h\n'}
+[29.523118] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__struct.h\n'}
+[29.523371] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__description.c\n'}
+[29.523581] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__description.c\n'}
+[29.523827] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__struct.h\n'}
+[29.524077] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__functions.c\n'}
+[29.524307] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/system_status.h\n'}
+[29.524531] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/library_path.sh\n'}
+[29.524750] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/library_path.dsv\n'}
+[29.528385] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_generator_c.so\n'}
+[29.529324] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_generator_c.so" to ""\n'}
+[29.529583] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces\n'}
+[29.529745] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action\n'}
+[29.529894] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail\n'}
+[29.530088] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__rosidl_typesupport_fastrtps_c.h\n'}
+[29.530345] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg\n'}
+[29.530516] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail\n'}
+[29.530669] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__rosidl_typesupport_fastrtps_c.h\n'}
+[29.530823] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__rosidl_typesupport_fastrtps_c.h\n'}
+[29.531014] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__rosidl_typesupport_fastrtps_c.h\n'}
+[29.531240] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__rosidl_typesupport_fastrtps_c.h\n'}
+[29.531447] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__rosidl_typesupport_fastrtps_c.h\n'}
+[29.531610] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__rosidl_typesupport_fastrtps_c.h\n'}
+[29.531818] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__rosidl_typesupport_fastrtps_c.h\n'}
+[29.531969] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[29.532121] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv\n'}
+[29.532316] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail\n'}
+[29.532526] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__rosidl_typesupport_fastrtps_c.h\n'}
+[29.532675] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__rosidl_typesupport_fastrtps_c.h\n'}
+[29.532838] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__rosidl_typesupport_fastrtps_c.h\n'}
+[29.533412] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[29.534434] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[29.534764] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces\n'}
+[29.535019] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action\n'}
+[29.535267] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail\n'}
+[29.535551] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.hpp\n'}
+[29.535781] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__traits.hpp\n'}
+[29.536034] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__struct.hpp\n'}
+[29.536304] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__builder.hpp\n'}
+[29.536574] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/parametric_trajectory_info.hpp\n'}
+[29.536815] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg\n'}
+[29.537036] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/control_status.hpp\n'}
+[29.537320] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail\n'}
+[29.537570] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__traits.hpp\n'}
+[29.537790] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__traits.hpp\n'}
+[29.538042] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.hpp\n'}
+[29.538290] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.hpp\n'}
+[29.538548] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__builder.hpp\n'}
+[29.538788] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__traits.hpp\n'}
+[29.539009] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__traits.hpp\n'}
+[29.539262] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__builder.hpp\n'}
+[29.539545] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__struct.hpp\n'}
+[29.539792] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.hpp\n'}
+[29.540011] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__struct.hpp\n'}
+[29.540260] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.hpp\n'}
+[29.540540] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__struct.hpp\n'}
+[29.540764] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__builder.hpp\n'}
+[29.541009] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__builder.hpp\n'}
+[29.541246] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__type_support.hpp\n'}
+[29.541523] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__traits.hpp\n'}
+[29.541743] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__struct.hpp\n'}
+[29.541986] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__struct.hpp\n'}
+[29.542247] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__builder.hpp\n'}
+[29.542521] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__builder.hpp\n'}
+[29.542733] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.hpp\n'}
+[29.542951] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__traits.hpp\n'}
+[29.543199] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__traits.hpp\n'}
+[29.543436] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__builder.hpp\n'}
+[29.543680] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.hpp\n'}
+[29.543894] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__struct.hpp\n'}
+[29.544158] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__struct.hpp\n'}
+[29.544398] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/target_joint_info.hpp\n'}
+[29.544645] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/target_cartesian.hpp\n'}
+[29.544857] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[29.545102] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/system_diagnostic_info.hpp\n'}
+[29.545330] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/current_joint_info.hpp\n'}
+[29.545609] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/current_ee_info.hpp\n'}
+[29.545880] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/target_ee_info.hpp\n'}
+[29.546129] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv\n'}
+[29.546389] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail\n'}
+[29.546645] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__struct.hpp\n'}
+[29.546865] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__struct.hpp\n'}
+[29.547123] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__traits.hpp\n'}
+[29.547339] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.hpp\n'}
+[29.547628] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.hpp\n'}
+[29.547846] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__type_support.hpp\n'}
+[29.548090] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__builder.hpp\n'}
+[29.548314] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__builder.hpp\n'}
+[29.548583] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__traits.hpp\n'}
+[29.548831] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__traits.hpp\n'}
+[29.549162] (-) TimerEvent: {}
+[29.549346] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__struct.hpp\n'}
+[29.549591] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__builder.hpp\n'}
+[29.549852] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/target_ee_state.hpp\n'}
+[29.550024] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/system_status.hpp\n'}
+[29.550313] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/microcontroller_parameter_dump.hpp\n'}
+[29.550604] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces\n'}
+[29.550872] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action\n'}
+[29.551097] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail\n'}
+[29.551294] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/dds_fastrtps\n'}
+[29.551574] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.551829] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg\n'}
+[29.552078] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail\n'}
+[29.552328] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.552598] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/dds_fastrtps\n'}
+[29.552850] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.553123] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.553335] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.553565] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.553782] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.553999] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.554165] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[29.554364] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv\n'}
+[29.554674] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail\n'}
+[29.554871] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/dds_fastrtps\n'}
+[29.555059] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.555275] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.555543] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.555860] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[29.556844] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[29.557233] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces\n'}
+[29.557492] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action\n'}
+[29.557733] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail\n'}
+[29.558056] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__rosidl_typesupport_introspection_c.h\n'}
+[29.558354] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.c\n'}
+[29.558695] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg\n'}
+[29.559039] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail\n'}
+[29.559321] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.c\n'}
+[29.559623] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c\n'}
+[29.559913] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.c\n'}
+[29.560199] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__rosidl_typesupport_introspection_c.h\n'}
+[29.560489] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c\n'}
+[29.560811] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.c\n'}
+[29.561158] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.c\n'}
+[29.561611] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__rosidl_typesupport_introspection_c.h\n'}
+[29.561924] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__rosidl_typesupport_introspection_c.h\n'}
+[29.562372] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__rosidl_typesupport_introspection_c.h\n'}
+[29.562707] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__rosidl_typesupport_introspection_c.h\n'}
+[29.562998] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__rosidl_typesupport_introspection_c.h\n'}
+[29.563310] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__rosidl_typesupport_introspection_c.h\n'}
+[29.563626] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.c\n'}
+[29.563935] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[29.564169] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv\n'}
+[29.564338] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail\n'}
+[29.564575] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__rosidl_typesupport_introspection_c.h\n'}
+[29.564739] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.c\n'}
+[29.564940] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__rosidl_typesupport_introspection_c.h\n'}
+[29.565121] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__type_support.c\n'}
+[29.565339] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.c\n'}
+[29.565618] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__rosidl_typesupport_introspection_c.h\n'}
+[29.565838] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[29.566413] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[29.567225] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_c.so\n'}
+[29.567963] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[29.568195] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces\n'}
+[29.568435] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action\n'}
+[29.568643] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail\n'}
+[29.568792] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.568953] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/action/detail/parametric_trajectory_info__type_support.cpp\n'}
+[29.569154] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg\n'}
+[29.569408] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail\n'}
+[29.569610] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.569771] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.569932] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.cpp\n'}
+[29.570138] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.570294] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.cpp\n'}
+[29.570529] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.570687] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_joint_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.570880] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.571077] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.571282] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_cartesian__type_support.cpp\n'}
+[29.571497] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.cpp\n'}
+[29.571689] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/control_status__type_support.cpp\n'}
+[29.571881] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.cpp\n'}
+[29.572067] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.cpp\n'}
+[29.572244] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv\n'}
+[29.572451] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail\n'}
+[29.572611] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.572798] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.cpp\n'}
+[29.572991] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/system_status__type_support.cpp\n'}
+[29.573175] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__type_support.cpp\n'}
+[29.573379] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/target_ee_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.573581] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/include/v2_robot_arm_interfaces/v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.574662] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[29.576077] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[29.576900] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_cpp.so\n'}
+[29.578084] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[29.578403] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/pythonpath.sh\n'}
+[29.578709] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/pythonpath.dsv\n'}
+[29.578974] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces-0.0.1-py3.12.egg-info\n'}
+[29.579219] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt\n'}
+[29.579524] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt\n'}
+[29.579721] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces-0.0.1-py3.12.egg-info/top_level.txt\n'}
+[29.579996] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces-0.0.1-py3.12.egg-info/PKG-INFO\n'}
+[29.580219] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces\n'}
+[29.580484] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[29.580745] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action\n'}
+[29.580986] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action/__init__.py\n'}
+[29.581207] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action/_parametric_trajectory_info_s.c\n'}
+[29.581458] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action/_parametric_trajectory_info.py\n'}
+[29.581718] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/__init__.py\n'}
+[29.581933] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/_v2_robot_arm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[29.582204] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[29.582462] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/_v2_robot_arm_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[29.582849] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/_v2_robot_arm_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[29.583222] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_c.so\n'}
+[29.583543] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg\n'}
+[29.583768] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_joint_info_s.c\n'}
+[29.583990] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.c\n'}
+[29.584191] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_ee_info_s.c\n'}
+[29.584404] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_cartesian.py\n'}
+[29.584617] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/__init__.py\n'}
+[29.584804] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_current_joint_info.py\n'}
+[29.584994] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_control_status_s.c\n'}
+[29.585177] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_system_diagnostic_info.py\n'}
+[29.585395] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_current_ee_info.py\n'}
+[29.585595] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_current_joint_info_s.c\n'}
+[29.585803] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_cartesian_s.c\n'}
+[29.586003] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_ee_info.py\n'}
+[29.586219] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_control_status.py\n'}
+[29.586451] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_current_ee_info_s.c\n'}
+[29.586655] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_joint_info.py\n'}
+[29.586866] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv\n'}
+[29.587074] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_microcontroller_parameter_dump_s.c\n'}
+[29.587288] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_target_ee_state_s.c\n'}
+[29.587496] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_system_status_s.c\n'}
+[29.587687] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/__init__.py\n'}
+[29.587883] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_microcontroller_parameter_dump.py\n'}
+[29.588146] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_system_status.py\n'}
+[29.588394] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_target_ee_state.py\n'}
+[29.651420] (-) TimerEvent: {}
+[29.751745] (-) TimerEvent: {}
+[29.764604] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Listing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces'...\n"}
+[29.764981] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/__init__.py'...\n"}
+[29.765192] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Listing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action'...\n"}
+[29.765385] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action/__init__.py'...\n"}
+[29.765544] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/action/_parametric_trajectory_info.py'...\n"}
+[29.765692] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Listing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg'...\n"}
+[29.765842] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/__init__.py'...\n"}
+[29.765988] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_control_status.py'...\n"}
+[29.766195] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_current_ee_info.py'...\n"}
+[29.766378] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_current_joint_info.py'...\n"}
+[29.766836] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_system_diagnostic_info.py'...\n"}
+[29.767010] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_cartesian.py'...\n"}
+[29.767169] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_ee_info.py'...\n"}
+[29.767275] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/msg/_target_joint_info.py'...\n"}
+[29.767421] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Listing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv'...\n"}
+[29.767533] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/__init__.py'...\n"}
+[29.767626] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_microcontroller_parameter_dump.py'...\n"}
+[29.767727] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_system_status.py'...\n"}
+[29.767818] (v2_robot_arm_interfaces) StdoutLine: {'line': b"Compiling '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/srv/_target_ee_state.py'...\n"}
+[29.775623] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[29.776332] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[29.776747] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[29.777479] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[29.777898] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_c.so\n'}
+[29.778615] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages/v2_robot_arm_interfaces/v2_robot_arm_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[29.779506] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_generator_py.so\n'}
+[29.780459] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/libv2_robot_arm_interfaces__rosidl_generator_py.so" to ""\n'}
+[29.780737] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/ControlStatus.idl\n'}
+[29.780965] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/CurrentEEInfo.idl\n'}
+[29.781225] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/CurrentJointInfo.idl\n'}
+[29.781432] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/SystemDiagnosticInfo.idl\n'}
+[29.781685] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetCartesian.idl\n'}
+[29.781880] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetEEInfo.idl\n'}
+[29.782077] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetJointInfo.idl\n'}
+[29.782335] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump.idl\n'}
+[29.782563] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/SystemStatus.idl\n'}
+[29.782773] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/TargetEEState.idl\n'}
+[29.782974] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.idl\n'}
+[29.783231] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/ControlStatus.msg\n'}
+[29.783473] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/CurrentEEInfo.msg\n'}
+[29.783702] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/CurrentJointInfo.msg\n'}
+[29.784006] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/SystemDiagnosticInfo.msg\n'}
+[29.784272] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetCartesian.msg\n'}
+[29.784513] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetEEInfo.msg\n'}
+[29.784727] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/msg/TargetJointInfo.msg\n'}
+[29.784941] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump.srv\n'}
+[29.785155] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/SystemStatus.srv\n'}
+[29.785410] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/srv/TargetEEState.srv\n'}
+[29.785600] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.action\n'}
+[29.785792] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/ament_index/resource_index/package_run_dependencies/v2_robot_arm_interfaces\n'}
+[29.785946] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/ament_index/resource_index/parent_prefix_path/v2_robot_arm_interfaces\n'}
+[29.786148] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/ament_prefix_path.sh\n'}
+[29.786354] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/ament_prefix_path.dsv\n'}
+[29.786531] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/path.sh\n'}
+[29.786737] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/environment/path.dsv\n'}
+[29.786906] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.bash\n'}
+[29.787099] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.sh\n'}
+[29.787291] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.zsh\n'}
+[29.787467] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/local_setup.dsv\n'}
+[29.787673] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Installing: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.dsv\n'}
+[29.787840] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/ament_index/resource_index/packages/v2_robot_arm_interfaces\n'}
+[29.788034] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_generator_cExport.cmake\n'}
+[29.788238] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[29.788448] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[29.788655] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[29.788842] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_generator_cppExport.cmake\n'}
+[29.789004] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[29.789238] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[29.789444] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[29.789620] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[29.789856] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[29.790014] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[29.790238] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[29.790471] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[29.790683] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[29.790912] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[29.791139] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_generator_pyExport.cmake\n'}
+[29.791368] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/export_v2_robot_arm_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[29.791609] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[29.791811] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[29.791977] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[29.792158] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[29.792336] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[29.792527] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[29.792679] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[29.792849] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfacesConfig.cmake\n'}
+[29.793003] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/cmake/v2_robot_arm_interfacesConfig-version.cmake\n'}
+[29.793176] (v2_robot_arm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.xml\n'}
+[29.794758] (v2_robot_arm_interfaces) CommandEnded: {'returncode': 0}
+[29.851828] (-) TimerEvent: {}
+[29.952090] (-) TimerEvent: {}
+[30.052402] (-) TimerEvent: {}
+[30.120695] (v2_robot_arm_interfaces) JobEnded: {'identifier': 'v2_robot_arm_interfaces', 'rc': 0}
+[30.121740] (hardware_interface) JobStarted: {'identifier': 'hardware_interface'}
+[30.131413] (movement_controllers) JobStarted: {'identifier': 'movement_controllers'}
+[30.152531] (-) TimerEvent: {}
+[30.252787] (-) TimerEvent: {}
+[30.353077] (-) TimerEvent: {}
+[30.453405] (-) TimerEvent: {}
+[30.553666] (-) TimerEvent: {}
+[30.653946] (-) TimerEvent: {}
+[30.754212] (-) TimerEvent: {}
+[30.857521] (-) TimerEvent: {}
+[30.957808] (-) TimerEvent: {}
+[31.058141] (-) TimerEvent: {}
+[31.158486] (-) TimerEvent: {}
+[31.258779] (-) TimerEvent: {}
+[31.359081] (-) TimerEvent: {}
+[31.459387] (-) TimerEvent: {}
+[31.522622] (hardware_interface) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/hardware_interface', 'build', '--build-base', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/build', 'install', '--record', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darudecookie', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib:/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/opt/gz_math_vendor/lib:/opt/ros/rolling/opt/gz_utils_vendor/lib:/opt/ros/rolling/opt/gz_cmake_vendor/lib:/opt/ros/rolling/lib', 'HOME': '/home/darudecookie', 'OLDPWD': '/home/darudecookie/Documents/V2-Robot-Arm/software', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1493', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/rolling/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'rolling', 'LOGNAME': 'darudecookie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'darudecookie', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/darudecookie-ThinkPad-X1-Carbon-5th:@/tmp/.ICE-unix/1460,unix/darudecookie-ThinkPad-X1-Carbon-5th:/tmp/.ICE-unix/1460', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4531ad0f_d181_4b26_b216_d8f64cf49577', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NHVNP2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:/opt/ros/rolling', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:/opt/ros/rolling/opt/gz_math_vendor:/opt/ros/rolling/opt/gz_utils_vendor:/opt/ros/rolling/opt/gz_cmake_vendor'}, 'shell': False}
+[31.528565] (movement_controllers) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/movement_controllers', 'build', '--build-base', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build', 'install', '--record', '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'darudecookie', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib:/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/opt/gz_math_vendor/lib:/opt/ros/rolling/opt/gz_utils_vendor/lib:/opt/ros/rolling/opt/gz_cmake_vendor/lib:/opt/ros/rolling/lib', 'HOME': '/home/darudecookie', 'OLDPWD': '/home/darudecookie/Documents/V2-Robot-Arm/software', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1493', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/rolling/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'rolling', 'LOGNAME': 'darudecookie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'darudecookie', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/darudecookie-ThinkPad-X1-Carbon-5th:@/tmp/.ICE-unix/1460,unix/darudecookie-ThinkPad-X1-Carbon-5th:/tmp/.ICE-unix/1460', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4531ad0f_d181_4b26_b216_d8f64cf49577', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NHVNP2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:/opt/ros/rolling', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:/opt/ros/rolling/opt/gz_math_vendor:/opt/ros/rolling/opt/gz_utils_vendor:/opt/ros/rolling/opt/gz_cmake_vendor'}, 'shell': False}
+[31.559487] (-) TimerEvent: {}
+[31.659804] (-) TimerEvent: {}
+[31.760094] (-) TimerEvent: {}
+[31.860403] (-) TimerEvent: {}
+[31.897413] (movement_controllers) StdoutLine: {'line': b'running egg_info\n'}
+[31.900821] (hardware_interface) StdoutLine: {'line': b'running egg_info\n'}
+[31.924000] (movement_controllers) StdoutLine: {'line': b'writing ../../build/movement_controllers/movement_controllers.egg-info/PKG-INFO\n'}
+[31.924926] (movement_controllers) StdoutLine: {'line': b'writing dependency_links to ../../build/movement_controllers/movement_controllers.egg-info/dependency_links.txt\n'}
+[31.925139] (movement_controllers) StdoutLine: {'line': b'writing entry points to ../../build/movement_controllers/movement_controllers.egg-info/entry_points.txt\n'}
+[31.925312] (movement_controllers) StdoutLine: {'line': b'writing requirements to ../../build/movement_controllers/movement_controllers.egg-info/requires.txt\n'}
+[31.925555] (movement_controllers) StdoutLine: {'line': b'writing top-level names to ../../build/movement_controllers/movement_controllers.egg-info/top_level.txt\n'}
+[31.927503] (hardware_interface) StdoutLine: {'line': b'writing ../../build/hardware_interface/hardware_interface.egg-info/PKG-INFO\n'}
+[31.927874] (hardware_interface) StdoutLine: {'line': b'writing dependency_links to ../../build/hardware_interface/hardware_interface.egg-info/dependency_links.txt\n'}
+[31.928222] (hardware_interface) StdoutLine: {'line': b'writing entry points to ../../build/hardware_interface/hardware_interface.egg-info/entry_points.txt\n'}
+[31.928499] (hardware_interface) StdoutLine: {'line': b'writing requirements to ../../build/hardware_interface/hardware_interface.egg-info/requires.txt\n'}
+[31.928784] (hardware_interface) StdoutLine: {'line': b'writing top-level names to ../../build/hardware_interface/hardware_interface.egg-info/top_level.txt\n'}
+[31.960503] (-) TimerEvent: {}
+[31.987710] (movement_controllers) StdoutLine: {'line': b"reading manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'\n"}
+[31.988056] (hardware_interface) StdoutLine: {'line': b"reading manifest file '../../build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'\n"}
+[31.989265] (movement_controllers) StdoutLine: {'line': b"writing manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'\n"}
+[31.989644] (hardware_interface) StdoutLine: {'line': b"writing manifest file '../../build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'\n"}
+[31.989947] (hardware_interface) StdoutLine: {'line': b'running build\n'}
+[31.990154] (hardware_interface) StdoutLine: {'line': b'running build_py\n'}
+[31.990434] (movement_controllers) StdoutLine: {'line': b'running build\n'}
+[31.990626] (movement_controllers) StdoutLine: {'line': b'running build_py\n'}
+[31.990792] (movement_controllers) StdoutLine: {'line': b'copying movement_controllers/Peripheral_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers\n'}
+[31.990954] (movement_controllers) StdoutLine: {'line': b'copying movement_controllers/IK_Solver_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers\n'}
+[31.991109] (movement_controllers) StdoutLine: {'line': b'copying movement_controllers/Trajectory_Controller_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers\n'}
+[31.991380] (movement_controllers) StdoutLine: {'line': b'running install\n'}
+[31.991549] (hardware_interface) StdoutLine: {'line': b'running install\n'}
+[31.999304] (movement_controllers) StdoutLine: {'line': b'running install_lib\n'}
+[32.005257] (hardware_interface) StdoutLine: {'line': b'running install_lib\n'}
+[32.027013] (movement_controllers) StdoutLine: {'line': b'copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers/Peripheral_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers\n'}
+[32.027377] (movement_controllers) StdoutLine: {'line': b'copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers/IK_Solver_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers\n'}
+[32.027661] (movement_controllers) StdoutLine: {'line': b'copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers/Trajectory_Controller_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers\n'}
+[32.028391] (movement_controllers) StdoutLine: {'line': b'byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/Peripheral_Interface_Node.py to Peripheral_Interface_Node.cpython-312.pyc\n'}
+[32.029071] (movement_controllers) StdoutLine: {'line': b'byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py to IK_Solver_Node.cpython-312.pyc\n'}
+[32.030192] (movement_controllers) StderrLine: {'line': b'  File "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py", line 42\n'}
+[32.030471] (movement_controllers) StderrLine: {'line': b'    msg.position =  #3 float array\n'}
+[32.030653] (movement_controllers) StderrLine: {'line': b'                    ^^^^^^^^^^^^^^^\n'}
+[32.030851] (movement_controllers) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[32.031029] (movement_controllers) StderrLine: {'line': b'\n'}
+[32.031315] (movement_controllers) StdoutLine: {'line': b'byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/Trajectory_Controller_Node.py to Trajectory_Controller_Node.cpython-312.pyc\n'}
+[32.031536] (movement_controllers) StdoutLine: {'line': b'running install_data\n'}
+[32.031805] (movement_controllers) StdoutLine: {'line': b'copying package.xml -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/share/movement_controllers\n'}
+[32.031980] (movement_controllers) StdoutLine: {'line': b'creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/share/movement_controllers/launch\n'}
+[32.032147] (movement_controllers) StdoutLine: {'line': b'running install_egg_info\n'}
+[32.037931] (hardware_interface) StdoutLine: {'line': b'running install_data\n'}
+[32.040423] (hardware_interface) StdoutLine: {'line': b'copying package.xml -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/share/hardware_interface\n'}
+[32.040644] (hardware_interface) StdoutLine: {'line': b'running install_egg_info\n'}
+[32.060605] (-) TimerEvent: {}
+[32.062256] (movement_controllers) StdoutLine: {'line': b"removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info' (and everything under it)\n"}
+[32.064349] (movement_controllers) StdoutLine: {'line': b'Copying ../../build/movement_controllers/movement_controllers.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info\n'}
+[32.067417] (movement_controllers) StdoutLine: {'line': b'running install_scripts\n'}
+[32.078225] (hardware_interface) StdoutLine: {'line': b"removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info' (and everything under it)\n"}
+[32.079474] (hardware_interface) StdoutLine: {'line': b'Copying ../../build/hardware_interface/hardware_interface.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info\n'}
+[32.080129] (hardware_interface) StdoutLine: {'line': b'running install_scripts\n'}
+[32.160704] (-) TimerEvent: {}
+[32.250081] (movement_controllers) StdoutLine: {'line': b'Installing IK_Solver_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers\n'}
+[32.251041] (movement_controllers) StdoutLine: {'line': b'Installing Peripheral_Interface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers\n'}
+[32.251267] (movement_controllers) StdoutLine: {'line': b'Installing Trajectory_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers\n'}
+[32.251459] (movement_controllers) StdoutLine: {'line': b"writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log'\n"}
+[32.260809] (-) TimerEvent: {}
+[32.263317] (hardware_interface) StdoutLine: {'line': b'Installing End_Effector_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/hardware_interface\n'}
+[32.263667] (hardware_interface) StdoutLine: {'line': b'Installing Microcontroller_Interface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/hardware_interface\n'}
+[32.263837] (hardware_interface) StdoutLine: {'line': b"writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/install.log'\n"}
+[32.301478] (movement_controllers) CommandEnded: {'returncode': 0}
+[32.310529] (movement_controllers) JobEnded: {'identifier': 'movement_controllers', 'rc': 0}
+[32.314805] (hardware_interface) CommandEnded: {'returncode': 0}
+[32.323142] (hardware_interface) JobEnded: {'identifier': 'hardware_interface', 'rc': 0}
+[32.324174] (-) EventReactorShutdown: {}

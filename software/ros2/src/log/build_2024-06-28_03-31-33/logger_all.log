@@ -1,0 +1,293 @@
+[0.335s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.336s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x74f02279a060>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74f0232a9940>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74f0232a9940>>, mixin_verb=('build',))
+[0.442s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.443s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.443s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.443s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.444s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.528s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.528s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extension 'ignore'
+[0.528s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extension 'ignore_ament_install'
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extensions ['colcon_pkg']
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extension 'colcon_pkg'
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extensions ['colcon_meta']
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extension 'colcon_meta'
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extensions ['ros']
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(hardware_interface) by extension 'ros'
+[0.536s] DEBUG:colcon.colcon_core.package_identification:Package 'hardware_interface' with type 'ros.ament_python' and name 'hardware_interface'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extension 'ignore'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extension 'ignore_ament_install'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extensions ['colcon_pkg']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extension 'colcon_pkg'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extensions ['colcon_meta']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extension 'colcon_meta'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extensions ['ros']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(movement_controllers) by extension 'ros'
+[0.541s] DEBUG:colcon.colcon_core.package_identification:Package 'movement_controllers' with type 'ros.ament_python' and name 'movement_controllers'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extension 'ignore'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extension 'ignore_ament_install'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extensions ['colcon_pkg']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extension 'colcon_pkg'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extensions ['colcon_meta']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extension 'colcon_meta'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extensions ['ros']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(ros_controller_interface) by extension 'ros'
+[0.546s] DEBUG:colcon.colcon_core.package_identification:Package 'ros_controller_interface' with type 'ros.ament_python' and name 'ros_controller_interface'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extension 'ignore'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extension 'ignore_ament_install'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extensions ['colcon_pkg']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extension 'colcon_pkg'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extensions ['colcon_meta']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extension 'colcon_meta'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extensions ['ros']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(v2_robot_arm_interfaces) by extension 'ros'
+[0.549s] DEBUG:colcon.colcon_core.package_identification:Package 'v2_robot_arm_interfaces' with type 'ros.ament_cmake' and name 'v2_robot_arm_interfaces'
+[0.550s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.614s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install
+[0.621s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 285 installed packages in /opt/ros/rolling
+[0.627s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'cmake_target' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'ros_controller_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.795s] DEBUG:colcon.colcon_core.verb:Building package 'ros_controller_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface', 'merge_install': False, 'path': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface', 'symlink_install': False, 'test_result_base': None}
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'v2_robot_arm_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.797s] DEBUG:colcon.colcon_core.verb:Building package 'v2_robot_arm_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces', 'merge_install': False, 'path': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'cmake_args' from command line to 'None'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'cmake_target' from command line to 'None'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'hardware_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.800s] DEBUG:colcon.colcon_core.verb:Building package 'hardware_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface', 'merge_install': False, 'path': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface', 'symlink_install': False, 'test_result_base': None}
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'cmake_args' from command line to 'None'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'cmake_target' from command line to 'None'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'cmake_clean_cache' from command line to 'False'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'cmake_clean_first' from command line to 'False'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'cmake_force_configure' from command line to 'False'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'ament_cmake_args' from command line to 'None'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'catkin_cmake_args' from command line to 'None'
+[0.801s] Level 5:colcon.colcon_core.verb:set package 'movement_controllers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.801s] DEBUG:colcon.colcon_core.verb:Building package 'movement_controllers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers', 'merge_install': False, 'path': '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers', 'symlink_install': False, 'test_result_base': None}
+[0.801s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.803s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.803s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces' with build type 'ament_cmake'
+[0.803s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces'
+[0.808s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.808s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.808s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.818s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface' with build type 'ament_python'
+[0.819s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_controller_interface', 'ament_prefix_path')
+[0.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/hook/ament_prefix_path.ps1'
+[0.820s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/hook/ament_prefix_path.dsv'
+[0.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/hook/ament_prefix_path.sh'
+[0.822s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.822s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.839s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4
+[1.595s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface'
+[1.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4
+[5.070s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ros_controller_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface/install.log --single-version-externally-managed install_data
+[5.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces
+[6.116s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(v2_robot_arm_interfaces)
+[6.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces
+[6.134s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces' for CMake module files
+[6.139s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces' for CMake config files
+[6.140s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2_robot_arm_interfaces', 'cmake_prefix_path')
+[6.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/cmake_prefix_path.ps1'
+[6.145s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/cmake_prefix_path.dsv'
+[6.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/cmake_prefix_path.sh'
+[6.147s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib'
+[6.151s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2_robot_arm_interfaces', 'ld_library_path_lib')
+[6.151s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/ld_library_path_lib.ps1'
+[6.152s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/ld_library_path_lib.dsv'
+[6.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/ld_library_path_lib.sh'
+[6.157s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/bin'
+[6.157s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/pkgconfig/v2_robot_arm_interfaces.pc'
+[6.158s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/python3.12/site-packages'
+[6.158s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2_robot_arm_interfaces', 'pythonpath')
+[6.159s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/pythonpath.ps1'
+[6.162s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/pythonpath.dsv'
+[6.162s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/pythonpath.sh'
+[6.164s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/bin'
+[6.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.ps1'
+[6.170s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.dsv'
+[6.174s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.sh'
+[6.179s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.bash'
+[6.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.zsh'
+[6.186s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/colcon-core/packages/v2_robot_arm_interfaces)
+[7.666s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(v2_robot_arm_interfaces)
+[7.670s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces' for CMake module files
+[7.672s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces' for CMake config files
+[7.675s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2_robot_arm_interfaces', 'cmake_prefix_path')
+[7.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/cmake_prefix_path.ps1'
+[7.680s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/cmake_prefix_path.dsv'
+[7.680s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/cmake_prefix_path.sh'
+[7.686s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib'
+[7.686s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2_robot_arm_interfaces', 'ld_library_path_lib')
+[7.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/ld_library_path_lib.ps1'
+[7.687s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/ld_library_path_lib.dsv'
+[7.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/ld_library_path_lib.sh'
+[7.697s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/bin'
+[7.697s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/pkgconfig/v2_robot_arm_interfaces.pc'
+[7.697s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/python3.12/site-packages'
+[7.697s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2_robot_arm_interfaces', 'pythonpath')
+[7.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/pythonpath.ps1'
+[7.698s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/pythonpath.dsv'
+[7.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/hook/pythonpath.sh'
+[7.711s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/bin'
+[7.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.ps1'
+[7.717s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.dsv'
+[7.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.sh'
+[7.722s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.bash'
+[7.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/v2_robot_arm_interfaces/package.zsh'
+[7.724s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/share/colcon-core/packages/v2_robot_arm_interfaces)
+[7.725s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface' with build type 'ament_python'
+[7.725s] Level 1:colcon.colcon_core.shell:create_environment_hook('hardware_interface', 'ament_prefix_path')
+[7.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/hook/ament_prefix_path.ps1'
+[7.729s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/hook/ament_prefix_path.dsv'
+[7.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/hook/ament_prefix_path.sh'
+[7.736s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.736s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.762s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers' with build type 'ament_python'
+[7.762s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_controllers', 'ament_prefix_path')
+[7.763s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/hook/ament_prefix_path.ps1'
+[7.766s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/hook/ament_prefix_path.dsv'
+[7.767s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/hook/ament_prefix_path.sh'
+[7.772s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.772s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.557s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface'
+[8.558s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.558s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.079s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers'
+[9.080s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.080s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.090s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface' for CMake module files
+[9.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ros_controller_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/ros_controller_interface/install.log --single-version-externally-managed install_data
+[9.092s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface' for CMake config files
+[9.095s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib'
+[9.095s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/bin'
+[9.095s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/pkgconfig/ros_controller_interface.pc'
+[9.096s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages'
+[9.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_controller_interface', 'pythonpath')
+[9.096s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/hook/pythonpath.ps1'
+[9.099s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/hook/pythonpath.dsv'
+[9.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/hook/pythonpath.sh'
+[9.102s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/bin'
+[9.103s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_controller_interface)
+[9.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/package.ps1'
+[9.105s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/package.dsv'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/package.sh'
+[9.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/package.bash'
+[9.109s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/ros_controller_interface/package.zsh'
+[9.111s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/share/colcon-core/packages/ros_controller_interface)
+[10.845s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/install.log --single-version-externally-managed install_data
+[10.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/install.log --single-version-externally-managed install_data
+[12.195s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface' for CMake module files
+[12.197s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface' for CMake config files
+[12.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/hardware_interface/install.log --single-version-externally-managed install_data
+[12.201s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib'
+[12.201s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/bin'
+[12.201s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/pkgconfig/hardware_interface.pc'
+[12.202s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages'
+[12.202s] Level 1:colcon.colcon_core.shell:create_environment_hook('hardware_interface', 'pythonpath')
+[12.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/hook/pythonpath.ps1'
+[12.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/hook/pythonpath.dsv'
+[12.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/hook/pythonpath.sh'
+[12.206s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/bin'
+[12.206s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hardware_interface)
+[12.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/package.ps1'
+[12.207s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/package.dsv'
+[12.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/package.sh'
+[12.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/package.bash'
+[12.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/hardware_interface/package.zsh'
+[12.213s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/share/colcon-core/packages/hardware_interface)
+[12.614s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers' for CMake module files
+[12.616s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/movement_controllers/install.log --single-version-externally-managed install_data
+[12.617s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers' for CMake config files
+[12.618s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib'
+[12.619s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/bin'
+[12.619s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/pkgconfig/movement_controllers.pc'
+[12.619s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/lib/python3.12/site-packages'
+[12.620s] Level 1:colcon.colcon_core.shell:create_environment_hook('movement_controllers', 'pythonpath')
+[12.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/hook/pythonpath.ps1'
+[12.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/hook/pythonpath.dsv'
+[12.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/hook/pythonpath.sh'
+[12.623s] Level 1:colcon.colcon_core.environment:checking '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/bin'
+[12.623s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movement_controllers)
+[12.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/package.ps1'
+[12.625s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/package.dsv'
+[12.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/package.sh'
+[12.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/package.bash'
+[12.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/movement_controllers/package.zsh'
+[12.628s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers/share/colcon-core/packages/movement_controllers)
+[12.629s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.629s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.629s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[12.629s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.643s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.644s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.644s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[12.680s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.682s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/local_setup.ps1'
+[12.689s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/_local_setup_util_ps1.py'
+[12.694s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/setup.ps1'
+[12.698s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/local_setup.sh'
+[12.699s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/_local_setup_util_sh.py'
+[12.700s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/setup.sh'
+[12.703s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/local_setup.bash'
+[12.705s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/setup.bash'
+[12.707s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/local_setup.zsh'
+[12.708s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/setup.zsh'

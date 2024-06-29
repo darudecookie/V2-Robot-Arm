@@ -57,13 +57,7 @@ class Metaclass_TargetEEState_Request(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'TARGET_END_EFFECTOR_BOOL__DEFAULT': 0,
         }
-
-    @property
-    def TARGET_END_EFFECTOR_BOOL__DEFAULT(cls):
-        """Return default value for message field 'target_end_effector_bool'."""
-        return 0
 
 
 class TargetEEState_Request(metaclass=Metaclass_TargetEEState_Request):
@@ -71,20 +65,17 @@ class TargetEEState_Request(metaclass=Metaclass_TargetEEState_Request):
 
     __slots__ = [
         '_target_end_effector_value',
-        '_target_end_effector_bool',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'target_end_effector_value': 'float',
-        'target_end_effector_bool': 'int8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -97,8 +88,6 @@ class TargetEEState_Request(metaclass=Metaclass_TargetEEState_Request):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.target_end_effector_value = kwargs.get('target_end_effector_value', float())
-        self.target_end_effector_bool = kwargs.get(
-            'target_end_effector_bool', TargetEEState_Request.TARGET_END_EFFECTOR_BOOL__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -132,8 +121,6 @@ class TargetEEState_Request(metaclass=Metaclass_TargetEEState_Request):
             return False
         if self.target_end_effector_value != other.target_end_effector_value:
             return False
-        if self.target_end_effector_bool != other.target_end_effector_bool:
-            return False
         return True
 
     @classmethod
@@ -155,21 +142,6 @@ class TargetEEState_Request(metaclass=Metaclass_TargetEEState_Request):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'target_end_effector_value' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._target_end_effector_value = value
-
-    @builtins.property
-    def target_end_effector_bool(self):
-        """Message field 'target_end_effector_bool'."""
-        return self._target_end_effector_bool
-
-    @target_end_effector_bool.setter
-    def target_end_effector_bool(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'target_end_effector_bool' field must be of type 'int'"
-            assert value >= -128 and value < 128, \
-                "The 'target_end_effector_bool' field must be an integer in [-128, 127]"
-        self._target_end_effector_bool = value
 
 
 # Import statements for member types

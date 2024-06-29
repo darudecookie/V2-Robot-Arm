@@ -241,6 +241,12 @@ CMakeFiles/v2_robot_arm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_g
  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.h \
  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__struct.h \
  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__functions.h \
+ /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.h \
+ /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__struct.h \
+ /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.h \
+ /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.h \
+ /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__struct.h \
+ /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.h \
  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.h \
  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__struct.h \
  /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__functions.h \

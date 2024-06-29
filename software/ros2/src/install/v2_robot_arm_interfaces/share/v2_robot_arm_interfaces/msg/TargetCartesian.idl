@@ -13,6 +13,12 @@ module v2_robot_arm_interfaces {
       float__3 position;
 
       float__3 rotation;
+
+      @default (value=10.0)
+      float translation_speed;
+
+      @default (value=0.523599)
+      float rotation_speed;
     };
   };
 };

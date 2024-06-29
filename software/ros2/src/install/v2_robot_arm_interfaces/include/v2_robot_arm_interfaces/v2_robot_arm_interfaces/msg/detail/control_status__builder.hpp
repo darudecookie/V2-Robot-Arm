@@ -24,15 +24,15 @@ namespace msg
 namespace builder
 {
 
-class Init_ControlStatus_master_controller
+class Init_ControlStatus_main_controller
 {
 public:
-  explicit Init_ControlStatus_master_controller(::v2_robot_arm_interfaces::msg::ControlStatus & msg)
+  explicit Init_ControlStatus_main_controller(::v2_robot_arm_interfaces::msg::ControlStatus & msg)
   : msg_(msg)
   {}
-  ::v2_robot_arm_interfaces::msg::ControlStatus master_controller(::v2_robot_arm_interfaces::msg::ControlStatus::_master_controller_type arg)
+  ::v2_robot_arm_interfaces::msg::ControlStatus main_controller(::v2_robot_arm_interfaces::msg::ControlStatus::_main_controller_type arg)
   {
-    msg_.master_controller = std::move(arg);
+    msg_.main_controller = std::move(arg);
     return std::move(msg_);
   }
 
@@ -46,10 +46,10 @@ public:
   explicit Init_ControlStatus_peripheral_interface(::v2_robot_arm_interfaces::msg::ControlStatus & msg)
   : msg_(msg)
   {}
-  Init_ControlStatus_master_controller peripheral_interface(::v2_robot_arm_interfaces::msg::ControlStatus::_peripheral_interface_type arg)
+  Init_ControlStatus_main_controller peripheral_interface(::v2_robot_arm_interfaces::msg::ControlStatus::_peripheral_interface_type arg)
   {
     msg_.peripheral_interface = std::move(arg);
-    return Init_ControlStatus_master_controller(msg_);
+    return Init_ControlStatus_main_controller(msg_);
   }
 
 private:

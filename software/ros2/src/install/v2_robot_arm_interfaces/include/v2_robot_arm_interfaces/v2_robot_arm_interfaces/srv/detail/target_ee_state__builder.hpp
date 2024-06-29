@@ -24,32 +24,16 @@ namespace srv
 namespace builder
 {
 
-class Init_TargetEEState_Request_target_end_effector_bool
-{
-public:
-  explicit Init_TargetEEState_Request_target_end_effector_bool(::v2_robot_arm_interfaces::srv::TargetEEState_Request & msg)
-  : msg_(msg)
-  {}
-  ::v2_robot_arm_interfaces::srv::TargetEEState_Request target_end_effector_bool(::v2_robot_arm_interfaces::srv::TargetEEState_Request::_target_end_effector_bool_type arg)
-  {
-    msg_.target_end_effector_bool = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::v2_robot_arm_interfaces::srv::TargetEEState_Request msg_;
-};
-
 class Init_TargetEEState_Request_target_end_effector_value
 {
 public:
   Init_TargetEEState_Request_target_end_effector_value()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_TargetEEState_Request_target_end_effector_bool target_end_effector_value(::v2_robot_arm_interfaces::srv::TargetEEState_Request::_target_end_effector_value_type arg)
+  ::v2_robot_arm_interfaces::srv::TargetEEState_Request target_end_effector_value(::v2_robot_arm_interfaces::srv::TargetEEState_Request::_target_end_effector_value_type arg)
   {
     msg_.target_end_effector_value = std::move(arg);
-    return Init_TargetEEState_Request_target_end_effector_bool(msg_);
+    return std::move(msg_);
   }
 
 private:

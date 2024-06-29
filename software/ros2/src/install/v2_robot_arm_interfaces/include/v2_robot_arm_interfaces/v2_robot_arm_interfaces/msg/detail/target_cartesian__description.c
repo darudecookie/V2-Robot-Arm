@@ -11,10 +11,10 @@ v2_robot_arm_interfaces__msg__TargetCartesian__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x38, 0x31, 0x3b, 0x26, 0xcb, 0xc8, 0xc7, 0x7c,
-      0xb8, 0xae, 0x5f, 0x70, 0x0f, 0xda, 0xb5, 0x4a,
-      0x89, 0xa6, 0x44, 0x71, 0xba, 0xeb, 0x10, 0x0c,
-      0xe1, 0x29, 0x47, 0x27, 0x62, 0x9f, 0xa2, 0xd8,
+      0x7a, 0x6c, 0xdb, 0x2e, 0xbd, 0x83, 0xf6, 0xf8,
+      0xa8, 0xef, 0x85, 0x75, 0x88, 0xab, 0x24, 0x1a,
+      0x05, 0x6e, 0x0c, 0xd3, 0x57, 0x5b, 0x81, 0xfd,
+      0x37, 0x8c, 0x93, 0x0a, 0xd7, 0x69, 0x21, 0x28,
     }};
   return &hash;
 }
@@ -50,6 +50,10 @@ static char std_msgs__msg__Header__TYPE_NAME[] = "std_msgs/msg/Header";
 static char v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__header[] = "header";
 static char v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__position[] = "position";
 static char v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__rotation[] = "rotation";
+static char v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__translation_speed[] = "translation_speed";
+static char v2_robot_arm_interfaces__msg__TargetCartesian__DEFAULT_VALUE__translation_speed[] = "10.0";
+static char v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__rotation_speed[] = "rotation_speed";
+static char v2_robot_arm_interfaces__msg__TargetCartesian__DEFAULT_VALUE__rotation_speed[] = "0.523599";
 
 static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__msg__TargetCartesian__FIELDS[] = {
   {
@@ -82,6 +86,26 @@ static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__msg__T
     },
     {NULL, 0, 0},
   },
+  {
+    {v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__translation_speed, 17, 17},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {v2_robot_arm_interfaces__msg__TargetCartesian__DEFAULT_VALUE__translation_speed, 4, 4},
+  },
+  {
+    {v2_robot_arm_interfaces__msg__TargetCartesian__FIELD_NAME__rotation_speed, 14, 14},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {v2_robot_arm_interfaces__msg__TargetCartesian__DEFAULT_VALUE__rotation_speed, 8, 8},
+  },
 };
 
 static rosidl_runtime_c__type_description__IndividualTypeDescription v2_robot_arm_interfaces__msg__TargetCartesian__REFERENCED_TYPE_DESCRIPTIONS[] = {
@@ -104,7 +128,7 @@ v2_robot_arm_interfaces__msg__TargetCartesian__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {v2_robot_arm_interfaces__msg__TargetCartesian__TYPE_NAME, 43, 43},
-      {v2_robot_arm_interfaces__msg__TargetCartesian__FIELDS, 3, 3},
+      {v2_robot_arm_interfaces__msg__TargetCartesian__FIELDS, 5, 5},
     },
     {v2_robot_arm_interfaces__msg__TargetCartesian__REFERENCED_TYPE_DESCRIPTIONS, 2, 2},
   };
@@ -122,7 +146,11 @@ static char toplevel_type_raw_source[] =
   "std_msgs/Header header\n"
   "\n"
   "float32[3] position\n"
-  "float32[3] rotation";
+  "float32[3] rotation\n"
+  "\n"
+  "float32 translation_speed 10\n"
+  "float32 rotation_speed 0.523599\n"
+  " ";
 
 static char msg_encoding[] = "msg";
 
@@ -136,7 +164,7 @@ v2_robot_arm_interfaces__msg__TargetCartesian__get_individual_type_description_s
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {v2_robot_arm_interfaces__msg__TargetCartesian__TYPE_NAME, 43, 43},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 63, 63},
+    {toplevel_type_raw_source, 127, 127},
   };
   return &source;
 }

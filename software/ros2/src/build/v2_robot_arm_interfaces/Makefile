@@ -562,6 +562,78 @@ rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_suppo
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c.s
 .PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c.s
 
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.o
+
+# target to build an object file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.o
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.i: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.i
+
+# target to preprocess a source file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.i
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.s: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.s
+
+# target to generate assembly for a file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.c.s
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.o
+
+# target to build an object file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.o
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.i: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.i
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.s: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.c.s
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o
+
+# target to build an object file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i
+
+# target to preprocess a source file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s
+
+# target to generate assembly for a file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s
+
 rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.c.o
 .PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.o
 
@@ -705,6 +777,78 @@ rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_s
 rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.s
 .PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.s
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.o
+
+# target to build an object file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.o
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.i: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.i
+
+# target to preprocess a source file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.i
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.s: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.s
+
+# target to generate assembly for a file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.c.s
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.o
+
+# target to build an object file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.o
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.i: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.i
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.s: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.c.s
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o
+
+# target to build an object file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i
+
+# target to preprocess a source file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i
+
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s
+
+# target to generate assembly for a file
+rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s
+.PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s
 
 rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.o: rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.c.o
 .PHONY : rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.o
@@ -1330,6 +1474,30 @@ rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.c.s
 .PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.c.s
 
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.o: rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.o
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.o
+
+# target to build an object file
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.o
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.o
+
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.i: rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.i
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.i
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.i
+
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.s: rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.s
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.s
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.c.s
+
 rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.o: rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.c.o
 .PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.o
 
@@ -1377,6 +1545,30 @@ rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.s: rosidl_
 rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.c.s
 .PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.c.s
+
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.o: rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.o
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.o
+
+# target to build an object file
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.o
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.o
+
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.i: rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.i
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.i
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.i
+
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.s: rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.s
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.s
+.PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.c.s
 
 rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.o: rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.c.o
 .PHONY : rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.o
@@ -1594,6 +1786,30 @@ rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.s
 
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.i: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.s: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+
 rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.o
 
@@ -1641,6 +1857,30 @@ rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_suppor
 rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.i: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.s: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
 
 rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.o: rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.o
@@ -1858,6 +2098,30 @@ rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.cpp.s
 
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.o: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.o
+
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.i: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.i
+
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.s: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.cpp.s
+
 rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.o: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.o
 
@@ -1905,6 +2169,30 @@ rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_supp
 rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.cpp.s
+
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.o: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.o
+
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.i: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.i
+
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.s: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.cpp.s
 
 rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.o: rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.o
@@ -2122,6 +2410,30 @@ rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support_c.cpp.s
 
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.o: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.i: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.s: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.cpp.s
+
 rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.o: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.o
 
@@ -2169,6 +2481,30 @@ rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_i
 rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.o: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.i: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.s: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.o: rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.o
@@ -2386,6 +2722,30 @@ rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/control_status__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/control_status__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.o: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.i: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.s: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.o: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.o
 
@@ -2433,6 +2793,30 @@ rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/
 rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.o: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.i: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.s: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.o: rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.o
@@ -2650,6 +3034,30 @@ rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_st
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.c.s
 
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.o
+
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.i
+
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.c.s
+
 rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.o: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.o
 
@@ -2697,6 +3105,30 @@ rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_jo
 rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.c.s
+
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.o
+
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.i
+
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.c.s
 
 rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.o: rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.o
@@ -2914,6 +3346,30 @@ rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_status__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_status__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.o: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.o
 
@@ -2961,6 +3417,30 @@ rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_
 rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2_robot_arm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.cpp.s
 
 rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.o: rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.o
@@ -3180,6 +3660,15 @@ help:
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.o"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.i"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.s"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.o"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.i"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__description.s"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.o"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.i"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__functions.s"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.o"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.i"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__description.s"
@@ -3198,6 +3687,15 @@ help:
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.o"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.i"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.s"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.o"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.i"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__description.s"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.o"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.i"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__functions.s"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i"
+	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.o"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.i"
 	@echo "... rosidl_generator_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__description.s"
@@ -3276,12 +3774,18 @@ help:
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.o"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.i"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_control_status_s.s"
+	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.o"
+	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.i"
+	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_cartesian_s.s"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.o"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.i"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_ee_info_s.s"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.o"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.i"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_current_joint_info_s.s"
+	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.o"
+	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.i"
+	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_peripheral_speed_s.s"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.o"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.i"
 	@echo "... rosidl_generator_py/v2_robot_arm_interfaces/msg/_system_diagnostic_info_s.s"
@@ -3309,12 +3813,18 @@ help:
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.o"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.i"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/control_status__type_support.s"
+	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.o"
+	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.i"
+	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_cartesian__type_support.s"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.o"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.i"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_ee_info__type_support.s"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.o"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.i"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/current_joint_info__type_support.s"
+	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.o"
+	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.i"
+	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.s"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.o"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.i"
 	@echo "... rosidl_typesupport_c/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.s"
@@ -3342,12 +3852,18 @@ help:
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.o"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.i"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/control_status__type_support.s"
+	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.o"
+	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.i"
+	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_cartesian__type_support.s"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.o"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.i"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_ee_info__type_support.s"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.o"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.i"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/current_joint_info__type_support.s"
+	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.o"
+	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.i"
+	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/peripheral_speed__type_support.s"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.o"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.i"
 	@echo "... rosidl_typesupport_cpp/v2_robot_arm_interfaces/msg/system_diagnostic_info__type_support.s"
@@ -3375,12 +3891,18 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support_c.s"
@@ -3408,12 +3930,18 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/control_status__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/control_status__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/control_status__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_cartesian__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_ee_info__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/current_joint_info__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/peripheral_speed__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/v2_robot_arm_interfaces/msg/detail/dds_fastrtps/system_diagnostic_info__type_support.s"
@@ -3441,12 +3969,18 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/control_status__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.s"
@@ -3474,12 +4008,18 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_status__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_status__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/control_status__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_cartesian__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_ee_info__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/current_joint_info__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/peripheral_speed__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/v2_robot_arm_interfaces/msg/detail/system_diagnostic_info__type_support.s"

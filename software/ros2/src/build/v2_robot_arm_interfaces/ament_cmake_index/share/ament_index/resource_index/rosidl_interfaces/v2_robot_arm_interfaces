@@ -2,10 +2,14 @@ action/ParametricTrajectoryInfo.action
 action/ParametricTrajectoryInfo.idl
 msg/ControlStatus.idl
 msg/ControlStatus.msg
+msg/CurrentCartesian.idl
+msg/CurrentCartesian.msg
 msg/CurrentEEInfo.idl
 msg/CurrentEEInfo.msg
 msg/CurrentJointInfo.idl
 msg/CurrentJointInfo.msg
+msg/PeripheralSpeed.idl
+msg/PeripheralSpeed.msg
 msg/SystemDiagnosticInfo.idl
 msg/SystemDiagnosticInfo.msg
 msg/TargetCartesian.idl

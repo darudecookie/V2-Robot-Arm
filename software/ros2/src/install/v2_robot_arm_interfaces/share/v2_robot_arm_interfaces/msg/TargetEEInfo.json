@@ -22,16 +22,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "current_end_effector_bool",
-          "type": {
-            "type_id": 2,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": "0"
         }
       ]
     },
@@ -91,7 +81,7 @@
   "type_hashes": [
     {
       "type_name": "v2_robot_arm_interfaces/msg/TargetEEInfo",
-      "hash_string": "RIHS01_3de7bcd376bc8e7d86ce0ef3a4dff5a5d43621d2f43a8ed440b7d692b46a9cd2"
+      "hash_string": "RIHS01_57382209c9e2b92da2572befb2ced2e85956619c83cfd9b81ce9c46204f22674"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",

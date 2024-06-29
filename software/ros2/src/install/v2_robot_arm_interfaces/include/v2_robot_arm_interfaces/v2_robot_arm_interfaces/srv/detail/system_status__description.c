@@ -68,8 +68,8 @@ v2_robot_arm_interfaces__srv__SystemStatus_Event__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "service_msgs/msg/detail/service_event_info__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
+#include "service_msgs/msg/detail/service_event_info__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG
@@ -241,6 +241,7 @@ v2_robot_arm_interfaces__srv__SystemStatus_Request__get_type_description(
 }
 // Define type names, field names, and default values
 static char v2_robot_arm_interfaces__srv__SystemStatus_Response__FIELD_NAME__returnsuccess[] = "returnsuccess";
+static char v2_robot_arm_interfaces__srv__SystemStatus_Response__DEFAULT_VALUE__returnsuccess[] = "0";
 
 static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__srv__SystemStatus_Response__FIELDS[] = {
   {
@@ -251,7 +252,7 @@ static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__srv__S
       0,
       {NULL, 0, 0},
     },
-    {NULL, 0, 0},
+    {v2_robot_arm_interfaces__srv__SystemStatus_Response__DEFAULT_VALUE__returnsuccess, 1, 1},
   },
 };
 
@@ -360,7 +361,7 @@ static char toplevel_type_raw_source[] =
   "int8 jointhold 0\n"
   "int8 move_home 0\n"
   "---\n"
-  "int8 returnsuccess";
+  "int8 returnsuccess 0";
 
 static char srv_encoding[] = "srv";
 static char implicit_encoding[] = "implicit";
@@ -375,7 +376,7 @@ v2_robot_arm_interfaces__srv__SystemStatus__get_individual_type_description_sour
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {v2_robot_arm_interfaces__srv__SystemStatus__TYPE_NAME, 40, 40},
     {srv_encoding, 3, 3},
-    {toplevel_type_raw_source, 69, 69},
+    {toplevel_type_raw_source, 71, 71},
   };
   return &source;
 }

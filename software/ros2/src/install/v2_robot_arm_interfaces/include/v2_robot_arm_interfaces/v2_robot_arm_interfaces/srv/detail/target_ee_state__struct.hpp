@@ -39,14 +39,6 @@ struct TargetEEState_Request_
   explicit TargetEEState_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
-    {
-      this->target_end_effector_bool = 0;
-    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
-      this->target_end_effector_value = 0.0f;
-      this->target_end_effector_bool = 0;
-    }
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->target_end_effector_value = 0.0f;
@@ -56,14 +48,6 @@ struct TargetEEState_Request_
   explicit TargetEEState_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
     (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
-    {
-      this->target_end_effector_bool = 0;
-    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
-      this->target_end_effector_value = 0.0f;
-      this->target_end_effector_bool = 0;
-    }
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -75,21 +59,12 @@ struct TargetEEState_Request_
   using _target_end_effector_value_type =
     float;
   _target_end_effector_value_type target_end_effector_value;
-  using _target_end_effector_bool_type =
-    int8_t;
-  _target_end_effector_bool_type target_end_effector_bool;
 
   // setters for named parameter idiom
   Type & set__target_end_effector_value(
     const float & _arg)
   {
     this->target_end_effector_value = _arg;
-    return *this;
-  }
-  Type & set__target_end_effector_bool(
-    const int8_t & _arg)
-  {
-    this->target_end_effector_bool = _arg;
     return *this;
   }
 
@@ -136,9 +111,6 @@ struct TargetEEState_Request_
   bool operator==(const TargetEEState_Request_ & other) const
   {
     if (this->target_end_effector_value != other.target_end_effector_value) {
-      return false;
-    }
-    if (this->target_end_effector_bool != other.target_end_effector_bool) {
       return false;
     }
     return true;

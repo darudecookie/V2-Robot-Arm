@@ -1,0 +1,29 @@
+[1.386s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers': AMENT_PREFIX_PATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log --single-version-externally-managed install_data
+[1.721s] running egg_info
+[1.745s] writing ../../build/movement_controllers/movement_controllers.egg-info/PKG-INFO
+[1.746s] writing dependency_links to ../../build/movement_controllers/movement_controllers.egg-info/dependency_links.txt
+[1.746s] writing entry points to ../../build/movement_controllers/movement_controllers.egg-info/entry_points.txt
+[1.746s] writing requirements to ../../build/movement_controllers/movement_controllers.egg-info/requires.txt
+[1.747s] writing top-level names to ../../build/movement_controllers/movement_controllers.egg-info/top_level.txt
+[1.806s] reading manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[1.808s] writing manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[1.808s] running build
+[1.808s] running build_py
+[1.809s] running install
+[1.816s] running install_lib
+[1.857s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py to IK_Solver_Node.cpython-312.pyc
+[1.859s]   File "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py", line 42
+[1.859s]     msg.position =  #3 float array
+[1.859s]                     ^^^^^^^^^^^^^^^
+[1.859s] SyntaxError: invalid syntax
+[1.859s] 
+[1.859s] running install_data
+[1.860s] running install_egg_info
+[1.890s] removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info' (and everything under it)
+[1.891s] Copying ../../build/movement_controllers/movement_controllers.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info
+[1.891s] running install_scripts
+[2.060s] Installing IK_Solver_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[2.060s] Installing Peripheral_Interface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[2.061s] Installing Trajectory_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[2.061s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log'
+[2.112s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers' returned '0': AMENT_PREFIX_PATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log --single-version-externally-managed install_data

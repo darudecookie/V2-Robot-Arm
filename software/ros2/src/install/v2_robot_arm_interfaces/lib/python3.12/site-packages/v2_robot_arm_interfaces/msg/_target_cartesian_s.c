@@ -116,6 +116,24 @@ bool v2_robot_arm_interfaces__msg__target_cartesian__convert_from_py(PyObject * 
     }
     Py_DECREF(field);
   }
+  {  // translation_speed
+    PyObject * field = PyObject_GetAttrString(_pymsg, "translation_speed");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->translation_speed = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // rotation_speed
+    PyObject * field = PyObject_GetAttrString(_pymsg, "rotation_speed");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->rotation_speed = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -187,6 +205,28 @@ PyObject * v2_robot_arm_interfaces__msg__target_cartesian__convert_to_py(void * 
     float * src = &(ros_message->rotation[0]);
     memcpy(dst, src, 3 * sizeof(float));
     Py_DECREF(field);
+  }
+  {  // translation_speed
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->translation_speed);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "translation_speed", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // rotation_speed
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->rotation_speed);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "rotation_speed", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
   }
 
   // ownership of _pymessage is transferred to the caller

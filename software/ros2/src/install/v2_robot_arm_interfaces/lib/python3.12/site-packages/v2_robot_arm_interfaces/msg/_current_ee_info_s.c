@@ -74,15 +74,6 @@ bool v2_robot_arm_interfaces__msg__current_ee_info__convert_from_py(PyObject * _
     ros_message->current_end_effector_value = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // current_end_effector_bool
-    PyObject * field = PyObject_GetAttrString(_pymsg, "current_end_effector_bool");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->current_end_effector_bool = (int8_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -124,17 +115,6 @@ PyObject * v2_robot_arm_interfaces__msg__current_ee_info__convert_to_py(void * r
     field = PyFloat_FromDouble(ros_message->current_end_effector_value);
     {
       int rc = PyObject_SetAttrString(_pymessage, "current_end_effector_value", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // current_end_effector_bool
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->current_end_effector_bool);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "current_end_effector_bool", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

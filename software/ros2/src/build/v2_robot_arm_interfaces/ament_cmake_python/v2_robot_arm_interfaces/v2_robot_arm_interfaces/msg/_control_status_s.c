@@ -77,13 +77,13 @@ bool v2_robot_arm_interfaces__msg__control_status__convert_from_py(PyObject * _p
     ros_message->peripheral_interface = (int8_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // master_controller
-    PyObject * field = PyObject_GetAttrString(_pymsg, "master_controller");
+  {  // main_controller
+    PyObject * field = PyObject_GetAttrString(_pymsg, "main_controller");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->master_controller = (int8_t)PyLong_AsLong(field);
+    ros_message->main_controller = (int8_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -141,11 +141,11 @@ PyObject * v2_robot_arm_interfaces__msg__control_status__convert_to_py(void * ra
       }
     }
   }
-  {  // master_controller
+  {  // main_controller
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->master_controller);
+    field = PyLong_FromLong(ros_message->main_controller);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "master_controller", field);
+      int rc = PyObject_SetAttrString(_pymessage, "main_controller", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -1,0 +1,42 @@
+[0.899s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/install.log --single-version-externally-managed install_data
+[1.188s] running egg_info
+[1.188s] creating build/hardware_interface/hardware_interface.egg-info
+[1.210s] writing build/hardware_interface/hardware_interface.egg-info/PKG-INFO
+[1.211s] writing dependency_links to build/hardware_interface/hardware_interface.egg-info/dependency_links.txt
+[1.211s] writing entry points to build/hardware_interface/hardware_interface.egg-info/entry_points.txt
+[1.211s] writing requirements to build/hardware_interface/hardware_interface.egg-info/requires.txt
+[1.211s] writing top-level names to build/hardware_interface/hardware_interface.egg-info/top_level.txt
+[1.211s] writing manifest file 'build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[1.255s] reading manifest file 'build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[1.256s] writing manifest file 'build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[1.256s] running build
+[1.256s] running build_py
+[1.256s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build
+[1.256s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib
+[1.256s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface
+[1.257s] copying hardware_interface/__init__.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface
+[1.257s] copying hardware_interface/End_Effector_Controller_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface
+[1.257s] copying hardware_interface/Microcontroller_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface
+[1.257s] running install
+[1.266s] running install_lib
+[1.288s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface
+[1.288s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface/__init__.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface
+[1.288s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface/End_Effector_Controller_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface
+[1.288s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build/lib/hardware_interface/Microcontroller_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface
+[1.289s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface/__init__.py to __init__.cpython-312.pyc
+[1.289s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface/End_Effector_Controller_Node.py to End_Effector_Controller_Node.cpython-312.pyc
+[1.289s] Sorry: IndentationError: expected an indented block after function definition on line 13 (End_Effector_Controller_Node.py, line 15)
+[1.290s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface/Microcontroller_Interface_Node.py to Microcontroller_Interface_Node.cpython-312.pyc
+[1.293s] running install_data
+[1.293s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/share/ament_index
+[1.293s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/share/ament_index/resource_index
+[1.293s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/share/ament_index/resource_index/packages
+[1.293s] copying resource/hardware_interface -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/share/ament_index/resource_index/packages
+[1.294s] copying package.xml -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/share/hardware_interface
+[1.294s] creating /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/share/hardware_interface/launch
+[1.294s] running install_egg_info
+[1.318s] Copying build/hardware_interface/hardware_interface.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info
+[1.319s] running install_scripts
+[1.464s] Installing Microcontroller_Interface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/hardware_interface
+[1.464s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/install.log'
+[1.497s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/install/hardware_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface/build/hardware_interface/install.log --single-version-externally-managed install_data

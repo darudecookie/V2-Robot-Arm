@@ -31,7 +31,7 @@ void v2_robot_arm_interfaces__srv__TargetEEState_Request__rosidl_typesupport_int
   v2_robot_arm_interfaces__srv__TargetEEState_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces__srv__TargetEEState_Request__rosidl_typesupport_introspection_c__TargetEEState_Request_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces__srv__TargetEEState_Request__rosidl_typesupport_introspection_c__TargetEEState_Request_message_member_array[1] = {
   {
     "target_end_effector_value",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
@@ -49,31 +49,13 @@ static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "target_end_effector_bool",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(v2_robot_arm_interfaces__srv__TargetEEState_Request, target_end_effector_bool),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers v2_robot_arm_interfaces__srv__TargetEEState_Request__rosidl_typesupport_introspection_c__TargetEEState_Request_message_members = {
   "v2_robot_arm_interfaces__srv",  // message namespace
   "TargetEEState_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(v2_robot_arm_interfaces__srv__TargetEEState_Request),
   false,  // has_any_key_member_
   v2_robot_arm_interfaces__srv__TargetEEState_Request__rosidl_typesupport_introspection_c__TargetEEState_Request_message_member_array,  // message members

@@ -1,0 +1,21 @@
+[2.312s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log --single-version-externally-managed install_data
+[2.839s] running egg_info
+[2.882s] writing ../../build/movement_controllers/movement_controllers.egg-info/PKG-INFO
+[2.883s] writing dependency_links to ../../build/movement_controllers/movement_controllers.egg-info/dependency_links.txt
+[2.883s] writing entry points to ../../build/movement_controllers/movement_controllers.egg-info/entry_points.txt
+[2.883s] writing requirements to ../../build/movement_controllers/movement_controllers.egg-info/requires.txt
+[2.883s] writing top-level names to ../../build/movement_controllers/movement_controllers.egg-info/top_level.txt
+[2.964s] reading manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[2.965s] writing manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[2.965s] running build
+[2.965s] running build_py
+[2.967s] running install
+[2.981s] running install_lib
+[3.021s] running install_data
+[3.021s] running install_egg_info
+[3.080s] removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info' (and everything under it)
+[3.081s] Copying ../../build/movement_controllers/movement_controllers.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info
+[3.083s] running install_scripts
+[3.323s] Installing Peripheral_Intreface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[3.325s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log'
+[3.383s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log --single-version-externally-managed install_data

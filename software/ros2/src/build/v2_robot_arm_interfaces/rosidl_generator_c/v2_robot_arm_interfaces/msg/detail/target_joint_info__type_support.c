@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.h"
 #include "v2_robot_arm_interfaces/msg/detail/target_joint_info__struct.h"
+#include "v2_robot_arm_interfaces/msg/detail/target_joint_info__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "v2_robot_arm_interfaces/msg/detail/target_joint_info__functions.h"
 

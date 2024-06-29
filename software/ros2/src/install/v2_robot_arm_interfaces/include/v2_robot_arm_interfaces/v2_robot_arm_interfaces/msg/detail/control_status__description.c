@@ -11,10 +11,10 @@ v2_robot_arm_interfaces__msg__ControlStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xd8, 0x1b, 0x64, 0xbc, 0xc4, 0xea, 0x03, 0x3e,
-      0x45, 0x37, 0xe3, 0xf4, 0x55, 0x43, 0x2b, 0x25,
-      0x5a, 0xe2, 0x8a, 0x73, 0xc3, 0x53, 0x5b, 0x9a,
-      0xba, 0x7e, 0x2b, 0x78, 0x00, 0x43, 0xed, 0x24,
+      0xc9, 0xd0, 0xbc, 0x74, 0x2d, 0x0e, 0xb6, 0x92,
+      0xf1, 0x53, 0xc6, 0x56, 0x28, 0xfc, 0x71, 0x6d,
+      0x31, 0x17, 0xd4, 0x08, 0xc1, 0xf1, 0xab, 0x45,
+      0x60, 0xca, 0x13, 0x82, 0x15, 0x59, 0xf3, 0xcd,
     }};
   return &hash;
 }
@@ -37,8 +37,8 @@ static char v2_robot_arm_interfaces__msg__ControlStatus__FIELD_NAME__ik_solver[]
 static char v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__ik_solver[] = "1";
 static char v2_robot_arm_interfaces__msg__ControlStatus__FIELD_NAME__peripheral_interface[] = "peripheral_interface";
 static char v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__peripheral_interface[] = "0";
-static char v2_robot_arm_interfaces__msg__ControlStatus__FIELD_NAME__master_controller[] = "master_controller";
-static char v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__master_controller[] = "1";
+static char v2_robot_arm_interfaces__msg__ControlStatus__FIELD_NAME__main_controller[] = "main_controller";
+static char v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__main_controller[] = "1";
 
 static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__msg__ControlStatus__FIELDS[] = {
   {
@@ -72,14 +72,14 @@ static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__msg__C
     {v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__peripheral_interface, 1, 1},
   },
   {
-    {v2_robot_arm_interfaces__msg__ControlStatus__FIELD_NAME__master_controller, 17, 17},
+    {v2_robot_arm_interfaces__msg__ControlStatus__FIELD_NAME__main_controller, 15, 15},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT8,
       0,
       0,
       {NULL, 0, 0},
     },
-    {v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__master_controller, 1, 1},
+    {v2_robot_arm_interfaces__msg__ControlStatus__DEFAULT_VALUE__main_controller, 1, 1},
   },
 };
 
@@ -106,7 +106,7 @@ static char toplevel_type_raw_source[] =
   "int8 trajectory_controller 0\n"
   "int8 ik_solver 1\n"
   "int8 peripheral_interface 0 \n"
-  "int8 master_controller 1";
+  "int8 main_controller 1";
 
 static char msg_encoding[] = "msg";
 
@@ -120,7 +120,7 @@ v2_robot_arm_interfaces__msg__ControlStatus__get_individual_type_description_sou
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {v2_robot_arm_interfaces__msg__ControlStatus__TYPE_NAME, 41, 41},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 100, 100},
+    {toplevel_type_raw_source, 98, 98},
   };
   return &source;
 }

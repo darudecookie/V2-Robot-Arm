@@ -33,50 +33,53 @@ def encode_command(command: int):
         print("command >255; cannot be converted to byte")
 
 
-command_list = (("E_Stop", 0, False),
-                ("Joint_Hold", 1, False),
-                )
 
 
-MCU_start_string = b"<MCU_init>" 
-ser = serial.Serial("COM4", 115200)
-    
-
-    
+MCU_start_string = rb"<MCU_init>\n" 
+ser = serial.Serial("/dev/ttyACM0", 115200)
 
 while(True):
-    meow = ser.readline()
+
+    meow = ser.readline
     print(meow)
-    if  MCU_start_string in meow:
+
+
+    if  str(meow):
         print("MCU initialized")
         break
-time.sleep(2)
 
 
 
+cmd = 0
+
+while True:
     
-cmd = 49
 
-
+        print("estop on off?")
+        arg= int(input("? "))
+        meow = rb'<' + encode_command(cmd) + encode_command(arg) + rb'>'
+        print(meow)
+        ser.write(meow)
         
-for i in range(1):
-    float_array = []
-    for i in range(7):
-        float_array.append(random.uniform(-100,100))
-    print(float_array)
-        
-    int_part = 29
-    mantissa1 = 1
-    mantissa2=1
+
     
+
+
+if False:    
+    for i in range(1):
+        float_array = []
+        for i in range(7):
+            float_array.append(random.uniform(-100,100))
+        print(float_array)
+            
+        int_part = 29
+        mantissa1 = 1
+        mantissa2=1
     
-    meow = rb'<' + encode_command(cmd) + encode_float_array(float_array) + rb'>'
-    
-    ser.write(meow)
     
     x = 0
     start = time.time()
-    while x<10:
+    while False: #x<10:
         meow = ser.readline()
         if  meow:
             start -= time.time()

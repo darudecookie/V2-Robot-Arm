@@ -152,7 +152,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": ""
+            "default_value": "0"
           }
         ]
       }

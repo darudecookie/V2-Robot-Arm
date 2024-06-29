@@ -10,9 +10,6 @@ module v2_robot_arm_interfaces {
       std_msgs::msg::Header header;
 
       float current_end_effector_value;
-
-      @default (value=0)
-      int8 current_end_effector_bool;
     };
   };
 };

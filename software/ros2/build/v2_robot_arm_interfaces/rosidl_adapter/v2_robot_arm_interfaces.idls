@@ -1,0 +1,13 @@
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:action/ParametricTrajectoryInfo.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/ControlStatus.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/CurrentEEInfo.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/CurrentJointInfo.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/CurrentCartesian.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/PeripheralSpeed.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/SystemDiagnosticInfo.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/TargetCartesian.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/TargetEEInfo.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:msg/TargetJointInfo.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:srv/MicrocontrollerParameterDump.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:srv/SystemStatus.idl
+/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces:srv/TargetEEState.idl

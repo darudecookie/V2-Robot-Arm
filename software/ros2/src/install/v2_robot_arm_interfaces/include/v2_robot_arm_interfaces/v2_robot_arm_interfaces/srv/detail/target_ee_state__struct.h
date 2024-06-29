@@ -24,7 +24,6 @@ extern "C"
 typedef struct v2_robot_arm_interfaces__srv__TargetEEState_Request
 {
   float target_end_effector_value;
-  int8_t target_end_effector_bool;
 } v2_robot_arm_interfaces__srv__TargetEEState_Request;
 
 // Struct for a sequence of v2_robot_arm_interfaces__srv__TargetEEState_Request.

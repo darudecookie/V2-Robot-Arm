@@ -44,6 +44,17 @@ struct TargetCartesian_
   : header(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+    {
+      this->translation_speed = 10.0f;
+      this->rotation_speed = 0.523599f;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
+      std::fill<typename std::array<float, 3>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
+      std::fill<typename std::array<float, 3>::iterator, float>(this->rotation.begin(), this->rotation.end(), 0.0f);
+      this->translation_speed = 0.0f;
+      this->rotation_speed = 0.0f;
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       std::fill<typename std::array<float, 3>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
@@ -56,6 +67,17 @@ struct TargetCartesian_
     position(_alloc),
     rotation(_alloc)
   {
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+    {
+      this->translation_speed = 10.0f;
+      this->rotation_speed = 0.523599f;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
+      std::fill<typename std::array<float, 3>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
+      std::fill<typename std::array<float, 3>::iterator, float>(this->rotation.begin(), this->rotation.end(), 0.0f);
+      this->translation_speed = 0.0f;
+      this->rotation_speed = 0.0f;
+    }
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -74,6 +96,12 @@ struct TargetCartesian_
   using _rotation_type =
     std::array<float, 3>;
   _rotation_type rotation;
+  using _translation_speed_type =
+    float;
+  _translation_speed_type translation_speed;
+  using _rotation_speed_type =
+    float;
+  _rotation_speed_type rotation_speed;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -92,6 +120,18 @@ struct TargetCartesian_
     const std::array<float, 3> & _arg)
   {
     this->rotation = _arg;
+    return *this;
+  }
+  Type & set__translation_speed(
+    const float & _arg)
+  {
+    this->translation_speed = _arg;
+    return *this;
+  }
+  Type & set__rotation_speed(
+    const float & _arg)
+  {
+    this->rotation_speed = _arg;
     return *this;
   }
 
@@ -144,6 +184,12 @@ struct TargetCartesian_
       return false;
     }
     if (this->rotation != other.rotation) {
+      return false;
+    }
+    if (this->translation_speed != other.translation_speed) {
+      return false;
+    }
+    if (this->rotation_speed != other.rotation_speed) {
       return false;
     }
     return true;

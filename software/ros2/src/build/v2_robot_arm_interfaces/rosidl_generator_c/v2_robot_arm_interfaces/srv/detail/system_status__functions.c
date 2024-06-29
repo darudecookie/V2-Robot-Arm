@@ -261,6 +261,7 @@ v2_robot_arm_interfaces__srv__SystemStatus_Response__init(v2_robot_arm_interface
     return false;
   }
   // returnsuccess
+  msg->returnsuccess = 0;
   return true;
 }
 

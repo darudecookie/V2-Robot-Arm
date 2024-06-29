@@ -24,16 +24,48 @@ namespace msg
 namespace builder
 {
 
+class Init_TargetCartesian_rotation_speed
+{
+public:
+  explicit Init_TargetCartesian_rotation_speed(::v2_robot_arm_interfaces::msg::TargetCartesian & msg)
+  : msg_(msg)
+  {}
+  ::v2_robot_arm_interfaces::msg::TargetCartesian rotation_speed(::v2_robot_arm_interfaces::msg::TargetCartesian::_rotation_speed_type arg)
+  {
+    msg_.rotation_speed = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::v2_robot_arm_interfaces::msg::TargetCartesian msg_;
+};
+
+class Init_TargetCartesian_translation_speed
+{
+public:
+  explicit Init_TargetCartesian_translation_speed(::v2_robot_arm_interfaces::msg::TargetCartesian & msg)
+  : msg_(msg)
+  {}
+  Init_TargetCartesian_rotation_speed translation_speed(::v2_robot_arm_interfaces::msg::TargetCartesian::_translation_speed_type arg)
+  {
+    msg_.translation_speed = std::move(arg);
+    return Init_TargetCartesian_rotation_speed(msg_);
+  }
+
+private:
+  ::v2_robot_arm_interfaces::msg::TargetCartesian msg_;
+};
+
 class Init_TargetCartesian_rotation
 {
 public:
   explicit Init_TargetCartesian_rotation(::v2_robot_arm_interfaces::msg::TargetCartesian & msg)
   : msg_(msg)
   {}
-  ::v2_robot_arm_interfaces::msg::TargetCartesian rotation(::v2_robot_arm_interfaces::msg::TargetCartesian::_rotation_type arg)
+  Init_TargetCartesian_translation_speed rotation(::v2_robot_arm_interfaces::msg::TargetCartesian::_rotation_type arg)
   {
     msg_.rotation = std::move(arg);
-    return std::move(msg_);
+    return Init_TargetCartesian_translation_speed(msg_);
   }
 
 private:

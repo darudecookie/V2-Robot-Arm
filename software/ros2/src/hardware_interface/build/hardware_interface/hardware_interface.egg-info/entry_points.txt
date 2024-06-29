@@ -1,0 +1,2 @@
+[console_scripts]
+Microcontroller_Interface_Node = hardware_interface.Microcontroller_Interface_Node:main

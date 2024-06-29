@@ -1,0 +1,25 @@
+int16 joint_position_limit_update_target -10
+float32[2] joint_position_limit_update_params [0,0]
+
+int16 joint_velocity_limit_update_target -10
+float32[2] joint_velocity_limit_update_params [0,0]
+
+int16 joint_torque_limit_update_target -10
+float32[2] joint_torque_limit_update_params [0,0]
+
+int16 joint_acceleration_limit_update_target -10
+float32[2] joint_acceleration_limit_update_params [0,0]
+
+int16 joint_jerk_limit_update_target -10
+float32[2] joint_jerk_limit_update_params [0,0]
+
+float32[2] x_workspace_bounds [-1, -1]
+float32[2] y_workspace_bounds [-1, -1]
+float32[2] z_workspace_bounds [-1, -1]
+
+int16 pid_update_target -10
+float32[3] pid_update_params [-1, -1, -1]
+
+float32[7] joint_home_positions [-100, -100, -100, -100, -100, -100, -100]
+---
+int8 returnsuccess

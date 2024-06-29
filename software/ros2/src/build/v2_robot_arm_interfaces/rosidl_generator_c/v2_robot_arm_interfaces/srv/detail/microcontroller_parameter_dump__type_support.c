@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__struct.h"
 #include "v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "v2_robot_arm_interfaces/srv/detail/microcontroller_parameter_dump__struct.h"
 
 #ifdef __cplusplus
 extern "C"

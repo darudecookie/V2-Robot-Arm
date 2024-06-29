@@ -16,6 +16,7 @@ module v2_robot_arm_interfaces {
       int8 move_home;
     };
     struct SystemStatus_Response {
+      @default (value=0)
       int8 returnsuccess;
     };
   };

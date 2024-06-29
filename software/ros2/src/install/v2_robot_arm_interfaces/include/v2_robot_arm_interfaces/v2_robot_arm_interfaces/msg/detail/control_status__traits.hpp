@@ -49,10 +49,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: master_controller
+  // member: main_controller
   {
-    out << "master_controller: ";
-    rosidl_generator_traits::value_to_yaml(msg.master_controller, out);
+    out << "main_controller: ";
+    rosidl_generator_traits::value_to_yaml(msg.main_controller, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -91,13 +91,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: master_controller
+  // member: main_controller
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "master_controller: ";
-    rosidl_generator_traits::value_to_yaml(msg.master_controller, out);
+    out << "main_controller: ";
+    rosidl_generator_traits::value_to_yaml(msg.main_controller, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

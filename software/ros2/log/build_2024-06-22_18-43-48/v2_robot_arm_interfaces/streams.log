@@ -1,0 +1,58 @@
+[0.019s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces -- -j4 -l4
+[0.073s] -- Found ament_cmake: 2.6.0 (/opt/ros/rolling/share/ament_cmake/cmake)
+[0.209s] -- Found std_msgs: 5.4.0 (/opt/ros/rolling/share/std_msgs/cmake)
+[0.245s] -- Found rosidl_generator_c: 4.7.0 (/opt/ros/rolling/share/rosidl_generator_c/cmake)
+[0.258s] -- Found rosidl_generator_cpp: 4.7.0 (/opt/ros/rolling/share/rosidl_generator_cpp/cmake)
+[0.281s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.305s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.349s] -- Found rosidl_default_generators: 1.7.0 (/opt/ros/rolling/share/rosidl_default_generators/cmake)
+[0.360s] -- Found rosidl_adapter: 4.7.0 (/opt/ros/rolling/share/rosidl_adapter/cmake)
+[0.600s] [31mCMake Error at /opt/ros/rolling/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[0.601s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.601s]   v2_robot_arm_interfaces --arguments-file
+[0.601s]   /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter__arguments__v2_robot_arm_interfaces.json
+[0.601s]   --output-dir
+[0.601s]   /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces
+[0.601s]   --output-file
+[0.602s]   /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces/rosidl_adapter/v2_robot_arm_interfaces.idls)
+[0.602s]   returned error code 1:
+[0.602s] 
+[0.602s]   Error processing 'float 32 translation_speed 10' of
+[0.602s]   'v2_robot_arm_interfaces/PeripheralSpeed': ''float' is an invalid message
+[0.603s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$''
+[0.603s] 
+[0.603s]   Traceback (most recent call last):
+[0.603s] 
+[0.603s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[0.604s]     File "<frozen runpy>", line 88, in _run_code
+[0.604s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.604s]       sys.exit(main())
+[0.604s]                ^^^^^^
+[0.604s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.604s]       abs_idl_file = convert_to_idl(
+[0.605s]                      ^^^^^^^^^^^^^^^
+[0.605s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.605s]       return convert_msg_to_idl(
+[0.605s]              ^^^^^^^^^^^^^^^^^^^
+[0.605s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.605s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.605s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0.606s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 521, in parse_message_string
+[0.606s]       Type(type_string, context_package_name=pkg_name),
+[0.606s]       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0.606s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 278, in __init__
+[0.606s]       super(Type, self).__init__(
+[0.606s]     File "/opt/ros/rolling/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 206, in __init__
+[0.607s]       raise InvalidResourceName(
+[0.607s] 
+[0.607s]   rosidl_adapter.parser.InvalidResourceName: 'float' is an invalid message
+[0.607s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[0.607s] 
+[0.607s] Call Stack (most recent call first):
+[0.607s]   /opt/ros/rolling/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[0.608s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[0.608s] 
+[0.608s] [0m
+[0.608s] -- Configuring incomplete, errors occurred!
+[0.611s] gmake: *** [Makefile:3785: cmake_check_build_system] Error 1
+[0.619s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/v2_robot_arm_interfaces -- -j4 -l4

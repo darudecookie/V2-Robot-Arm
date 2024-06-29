@@ -127,7 +127,7 @@ void v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspec
   *item = *value;
 }
 
-static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspection_c__TargetCartesian_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspection_c__TargetCartesian_message_member_array[5] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -181,13 +181,49 @@ static rosidl_typesupport_introspection_c__MessageMember v2_robot_arm_interfaces
     v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspection_c__fetch_function__TargetCartesian__rotation,  // fetch(index, &value) function pointer
     v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspection_c__assign_function__TargetCartesian__rotation,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "translation_speed",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(v2_robot_arm_interfaces__msg__TargetCartesian, translation_speed),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "rotation_speed",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(v2_robot_arm_interfaces__msg__TargetCartesian, rotation_speed),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspection_c__TargetCartesian_message_members = {
   "v2_robot_arm_interfaces__msg",  // message namespace
   "TargetCartesian",  // message name
-  3,  // number of fields
+  5,  // number of fields
   sizeof(v2_robot_arm_interfaces__msg__TargetCartesian),
   false,  // has_any_key_member_
   v2_robot_arm_interfaces__msg__TargetCartesian__rosidl_typesupport_introspection_c__TargetCartesian_message_member_array,  // message members

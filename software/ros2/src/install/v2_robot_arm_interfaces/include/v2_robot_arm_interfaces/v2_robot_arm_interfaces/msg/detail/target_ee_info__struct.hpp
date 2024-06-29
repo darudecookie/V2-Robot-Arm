@@ -44,14 +44,6 @@ struct TargetEEInfo_
   : header(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
-    {
-      this->current_end_effector_bool = 0;
-    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
-      this->current_end_effector_value = 0.0f;
-      this->current_end_effector_bool = 0;
-    }
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->current_end_effector_value = 0.0f;
@@ -61,14 +53,6 @@ struct TargetEEInfo_
   explicit TargetEEInfo_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : header(_alloc, _init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
-    {
-      this->current_end_effector_bool = 0;
-    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
-      this->current_end_effector_value = 0.0f;
-      this->current_end_effector_bool = 0;
-    }
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -83,9 +67,6 @@ struct TargetEEInfo_
   using _current_end_effector_value_type =
     float;
   _current_end_effector_value_type current_end_effector_value;
-  using _current_end_effector_bool_type =
-    int8_t;
-  _current_end_effector_bool_type current_end_effector_bool;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -98,12 +79,6 @@ struct TargetEEInfo_
     const float & _arg)
   {
     this->current_end_effector_value = _arg;
-    return *this;
-  }
-  Type & set__current_end_effector_bool(
-    const int8_t & _arg)
-  {
-    this->current_end_effector_bool = _arg;
     return *this;
   }
 
@@ -153,9 +128,6 @@ struct TargetEEInfo_
       return false;
     }
     if (this->current_end_effector_value != other.current_end_effector_value) {
-      return false;
-    }
-    if (this->current_end_effector_bool != other.current_end_effector_bool) {
       return false;
     }
     return true;

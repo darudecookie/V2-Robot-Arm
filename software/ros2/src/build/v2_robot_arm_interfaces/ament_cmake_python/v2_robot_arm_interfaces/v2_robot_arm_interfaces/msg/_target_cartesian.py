@@ -65,7 +65,19 @@ class Metaclass_TargetCartesian(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
+            'TRANSLATION_SPEED__DEFAULT': 10.0,
+            'ROTATION_SPEED__DEFAULT': 0.523599,
         }
+
+    @property
+    def TRANSLATION_SPEED__DEFAULT(cls):
+        """Return default value for message field 'translation_speed'."""
+        return 10.0
+
+    @property
+    def ROTATION_SPEED__DEFAULT(cls):
+        """Return default value for message field 'rotation_speed'."""
+        return 0.523599
 
 
 class TargetCartesian(metaclass=Metaclass_TargetCartesian):
@@ -75,6 +87,8 @@ class TargetCartesian(metaclass=Metaclass_TargetCartesian):
         '_header',
         '_position',
         '_rotation',
+        '_translation_speed',
+        '_rotation_speed',
         '_check_fields',
     ]
 
@@ -82,6 +96,8 @@ class TargetCartesian(metaclass=Metaclass_TargetCartesian):
         'header': 'std_msgs/Header',
         'position': 'float[3]',
         'rotation': 'float[3]',
+        'translation_speed': 'float',
+        'rotation_speed': 'float',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -90,6 +106,8 @@ class TargetCartesian(metaclass=Metaclass_TargetCartesian):
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -113,6 +131,10 @@ class TargetCartesian(metaclass=Metaclass_TargetCartesian):
         else:
             self.rotation = numpy.array(kwargs.get('rotation'), dtype=numpy.float32)
             assert self.rotation.shape == (3, )
+        self.translation_speed = kwargs.get(
+            'translation_speed', TargetCartesian.TRANSLATION_SPEED__DEFAULT)
+        self.rotation_speed = kwargs.get(
+            'rotation_speed', TargetCartesian.ROTATION_SPEED__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -149,6 +171,10 @@ class TargetCartesian(metaclass=Metaclass_TargetCartesian):
         if all(self.position != other.position):
             return False
         if all(self.rotation != other.rotation):
+            return False
+        if self.translation_speed != other.translation_speed:
+            return False
+        if self.rotation_speed != other.rotation_speed:
             return False
         return True
 
@@ -232,3 +258,33 @@ class TargetCartesian(metaclass=Metaclass_TargetCartesian):
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
                 "The 'rotation' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
         self._rotation = numpy.array(value, dtype=numpy.float32)
+
+    @builtins.property
+    def translation_speed(self):
+        """Message field 'translation_speed'."""
+        return self._translation_speed
+
+    @translation_speed.setter
+    def translation_speed(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'translation_speed' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'translation_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._translation_speed = value
+
+    @builtins.property
+    def rotation_speed(self):
+        """Message field 'rotation_speed'."""
+        return self._rotation_speed
+
+    @rotation_speed.setter
+    def rotation_speed(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'rotation_speed' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'rotation_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._rotation_speed = value

@@ -58,7 +58,7 @@ class Metaclass_ControlStatus(type):
             'TRAJECTORY_CONTROLLER__DEFAULT': 0,
             'IK_SOLVER__DEFAULT': 1,
             'PERIPHERAL_INTERFACE__DEFAULT': 0,
-            'MASTER_CONTROLLER__DEFAULT': 1,
+            'MAIN_CONTROLLER__DEFAULT': 1,
         }
 
     @property
@@ -77,8 +77,8 @@ class Metaclass_ControlStatus(type):
         return 0
 
     @property
-    def MASTER_CONTROLLER__DEFAULT(cls):
-        """Return default value for message field 'master_controller'."""
+    def MAIN_CONTROLLER__DEFAULT(cls):
+        """Return default value for message field 'main_controller'."""
         return 1
 
 
@@ -89,7 +89,7 @@ class ControlStatus(metaclass=Metaclass_ControlStatus):
         '_trajectory_controller',
         '_ik_solver',
         '_peripheral_interface',
-        '_master_controller',
+        '_main_controller',
         '_check_fields',
     ]
 
@@ -97,7 +97,7 @@ class ControlStatus(metaclass=Metaclass_ControlStatus):
         'trajectory_controller': 'int8',
         'ik_solver': 'int8',
         'peripheral_interface': 'int8',
-        'master_controller': 'int8',
+        'main_controller': 'int8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -124,8 +124,8 @@ class ControlStatus(metaclass=Metaclass_ControlStatus):
             'ik_solver', ControlStatus.IK_SOLVER__DEFAULT)
         self.peripheral_interface = kwargs.get(
             'peripheral_interface', ControlStatus.PERIPHERAL_INTERFACE__DEFAULT)
-        self.master_controller = kwargs.get(
-            'master_controller', ControlStatus.MASTER_CONTROLLER__DEFAULT)
+        self.main_controller = kwargs.get(
+            'main_controller', ControlStatus.MAIN_CONTROLLER__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -163,7 +163,7 @@ class ControlStatus(metaclass=Metaclass_ControlStatus):
             return False
         if self.peripheral_interface != other.peripheral_interface:
             return False
-        if self.master_controller != other.master_controller:
+        if self.main_controller != other.main_controller:
             return False
         return True
 
@@ -218,16 +218,16 @@ class ControlStatus(metaclass=Metaclass_ControlStatus):
         self._peripheral_interface = value
 
     @builtins.property
-    def master_controller(self):
-        """Message field 'master_controller'."""
-        return self._master_controller
+    def main_controller(self):
+        """Message field 'main_controller'."""
+        return self._main_controller
 
-    @master_controller.setter
-    def master_controller(self, value):
+    @main_controller.setter
+    def main_controller(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, int), \
-                "The 'master_controller' field must be of type 'int'"
+                "The 'main_controller' field must be of type 'int'"
             assert value >= -128 and value < 128, \
-                "The 'master_controller' field must be an integer in [-128, 127]"
-        self._master_controller = value
+                "The 'main_controller' field must be an integer in [-128, 127]"
+        self._main_controller = value

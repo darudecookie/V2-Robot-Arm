@@ -1,0 +1,32 @@
+[1.408s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log --single-version-externally-managed install_data
+[1.772s] running egg_info
+[1.798s] writing ../../build/movement_controllers/movement_controllers.egg-info/PKG-INFO
+[1.798s] writing dependency_links to ../../build/movement_controllers/movement_controllers.egg-info/dependency_links.txt
+[1.798s] writing entry points to ../../build/movement_controllers/movement_controllers.egg-info/entry_points.txt
+[1.799s] writing requirements to ../../build/movement_controllers/movement_controllers.egg-info/requires.txt
+[1.799s] writing top-level names to ../../build/movement_controllers/movement_controllers.egg-info/top_level.txt
+[1.855s] reading manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[1.857s] writing manifest file '../../build/movement_controllers/movement_controllers.egg-info/SOURCES.txt'
+[1.858s] running build
+[1.858s] running build_py
+[1.858s] copying movement_controllers/Peripheral_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers
+[1.859s] running install
+[1.868s] running install_lib
+[1.895s] copying /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build/lib/movement_controllers/Peripheral_Interface_Node.py -> /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers
+[1.896s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/Peripheral_Interface_Node.py to Peripheral_Interface_Node.cpython-312.pyc
+[1.898s] byte-compiling /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py to IK_Solver_Node.cpython-312.pyc
+[1.899s]   File "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py", line 42
+[1.899s]     msg.position =  #3 float array
+[1.899s]                     ^^^^^^^^^^^^^^^
+[1.900s] SyntaxError: invalid syntax
+[1.900s] 
+[1.900s] running install_data
+[1.900s] running install_egg_info
+[1.927s] removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info' (and everything under it)
+[1.928s] Copying ../../build/movement_controllers/movement_controllers.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers-0.0.1-py3.12.egg-info
+[1.929s] running install_scripts
+[2.111s] Installing IK_Solver_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[2.112s] Installing Peripheral_Interface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[2.112s] Installing Trajectory_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/movement_controllers
+[2.112s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log'
+[2.161s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/movement_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/movement_controllers build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/movement_controllers/install.log --single-version-externally-managed install_data

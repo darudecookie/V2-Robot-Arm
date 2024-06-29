@@ -11,10 +11,10 @@ v2_robot_arm_interfaces__msg__CurrentEEInfo__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x64, 0xf8, 0xad, 0x7a, 0x31, 0x36, 0xad, 0xfd,
-      0x07, 0x49, 0x0c, 0x31, 0x02, 0xc6, 0x15, 0x61,
-      0xb0, 0x0d, 0x1b, 0x74, 0xd5, 0x04, 0x05, 0x42,
-      0xf7, 0x1a, 0x15, 0x7a, 0x79, 0x7d, 0x4f, 0x61,
+      0x7a, 0xef, 0x27, 0x85, 0x36, 0x0f, 0x3d, 0xe4,
+      0x4c, 0xfa, 0x60, 0xb0, 0xdc, 0x50, 0xd2, 0xc3,
+      0x79, 0x0a, 0xb6, 0xbb, 0x09, 0x4f, 0x77, 0xbb,
+      0x57, 0x23, 0xd3, 0xa4, 0xdf, 0x76, 0x1a, 0x1e,
     }};
   return &hash;
 }
@@ -49,8 +49,6 @@ static char std_msgs__msg__Header__TYPE_NAME[] = "std_msgs/msg/Header";
 // Define type names, field names, and default values
 static char v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELD_NAME__header[] = "header";
 static char v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELD_NAME__current_end_effector_value[] = "current_end_effector_value";
-static char v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELD_NAME__current_end_effector_bool[] = "current_end_effector_bool";
-static char v2_robot_arm_interfaces__msg__CurrentEEInfo__DEFAULT_VALUE__current_end_effector_bool[] = "0";
 
 static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELDS[] = {
   {
@@ -72,16 +70,6 @@ static rosidl_runtime_c__type_description__Field v2_robot_arm_interfaces__msg__C
       {NULL, 0, 0},
     },
     {NULL, 0, 0},
-  },
-  {
-    {v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELD_NAME__current_end_effector_bool, 25, 25},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {v2_robot_arm_interfaces__msg__CurrentEEInfo__DEFAULT_VALUE__current_end_effector_bool, 1, 1},
   },
 };
 
@@ -105,7 +93,7 @@ v2_robot_arm_interfaces__msg__CurrentEEInfo__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {v2_robot_arm_interfaces__msg__CurrentEEInfo__TYPE_NAME, 41, 41},
-      {v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELDS, 3, 3},
+      {v2_robot_arm_interfaces__msg__CurrentEEInfo__FIELDS, 2, 2},
     },
     {v2_robot_arm_interfaces__msg__CurrentEEInfo__REFERENCED_TYPE_DESCRIPTIONS, 2, 2},
   };
@@ -122,8 +110,7 @@ v2_robot_arm_interfaces__msg__CurrentEEInfo__get_type_description(
 static char toplevel_type_raw_source[] =
   "std_msgs/Header header\n"
   "\n"
-  "float32 current_end_effector_value\n"
-  "int8 current_end_effector_bool 0";
+  "float32 current_end_effector_value";
 
 static char msg_encoding[] = "msg";
 
@@ -137,7 +124,7 @@ v2_robot_arm_interfaces__msg__CurrentEEInfo__get_individual_type_description_sou
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {v2_robot_arm_interfaces__msg__CurrentEEInfo__TYPE_NAME, 41, 41},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 91, 91},
+    {toplevel_type_raw_source, 59, 59},
   };
   return &source;
 }

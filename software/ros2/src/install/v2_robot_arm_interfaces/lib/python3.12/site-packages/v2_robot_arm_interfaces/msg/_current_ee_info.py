@@ -61,13 +61,7 @@ class Metaclass_CurrentEEInfo(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'CURRENT_END_EFFECTOR_BOOL__DEFAULT': 0,
         }
-
-    @property
-    def CURRENT_END_EFFECTOR_BOOL__DEFAULT(cls):
-        """Return default value for message field 'current_end_effector_bool'."""
-        return 0
 
 
 class CurrentEEInfo(metaclass=Metaclass_CurrentEEInfo):
@@ -76,14 +70,12 @@ class CurrentEEInfo(metaclass=Metaclass_CurrentEEInfo):
     __slots__ = [
         '_header',
         '_current_end_effector_value',
-        '_current_end_effector_bool',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'header': 'std_msgs/Header',
         'current_end_effector_value': 'float',
-        'current_end_effector_bool': 'int8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -91,7 +83,6 @@ class CurrentEEInfo(metaclass=Metaclass_CurrentEEInfo):
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -106,8 +97,6 @@ class CurrentEEInfo(metaclass=Metaclass_CurrentEEInfo):
         from std_msgs.msg import Header
         self.header = kwargs.get('header', Header())
         self.current_end_effector_value = kwargs.get('current_end_effector_value', float())
-        self.current_end_effector_bool = kwargs.get(
-            'current_end_effector_bool', CurrentEEInfo.CURRENT_END_EFFECTOR_BOOL__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -142,8 +131,6 @@ class CurrentEEInfo(metaclass=Metaclass_CurrentEEInfo):
         if self.header != other.header:
             return False
         if self.current_end_effector_value != other.current_end_effector_value:
-            return False
-        if self.current_end_effector_bool != other.current_end_effector_bool:
             return False
         return True
 
@@ -180,18 +167,3 @@ class CurrentEEInfo(metaclass=Metaclass_CurrentEEInfo):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'current_end_effector_value' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._current_end_effector_value = value
-
-    @builtins.property
-    def current_end_effector_bool(self):
-        """Message field 'current_end_effector_bool'."""
-        return self._current_end_effector_bool
-
-    @current_end_effector_bool.setter
-    def current_end_effector_bool(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'current_end_effector_bool' field must be of type 'int'"
-            assert value >= -128 and value < 128, \
-                "The 'current_end_effector_bool' field must be an integer in [-128, 127]"
-        self._current_end_effector_bool = value

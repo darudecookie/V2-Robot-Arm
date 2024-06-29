@@ -28,6 +28,10 @@ v2_robot_arm_interfaces__msg__TargetCartesian__init(v2_robot_arm_interfaces__msg
   }
   // position
   // rotation
+  // translation_speed
+  msg->translation_speed = 10.0f;
+  // rotation_speed
+  msg->rotation_speed = 0.523599f;
   return true;
 }
 
@@ -41,6 +45,8 @@ v2_robot_arm_interfaces__msg__TargetCartesian__fini(v2_robot_arm_interfaces__msg
   std_msgs__msg__Header__fini(&msg->header);
   // position
   // rotation
+  // translation_speed
+  // rotation_speed
 }
 
 bool
@@ -67,6 +73,14 @@ v2_robot_arm_interfaces__msg__TargetCartesian__are_equal(const v2_robot_arm_inte
       return false;
     }
   }
+  // translation_speed
+  if (lhs->translation_speed != rhs->translation_speed) {
+    return false;
+  }
+  // rotation_speed
+  if (lhs->rotation_speed != rhs->rotation_speed) {
+    return false;
+  }
   return true;
 }
 
@@ -92,6 +106,10 @@ v2_robot_arm_interfaces__msg__TargetCartesian__copy(
   for (size_t i = 0; i < 3; ++i) {
     output->rotation[i] = input->rotation[i];
   }
+  // translation_speed
+  output->translation_speed = input->translation_speed;
+  // rotation_speed
+  output->rotation_speed = input->rotation_speed;
   return true;
 }
 

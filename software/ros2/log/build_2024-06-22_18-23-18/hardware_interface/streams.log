@@ -1,0 +1,22 @@
+[1.730s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/install.log --single-version-externally-managed install_data
+[2.203s] running egg_info
+[2.229s] writing ../../build/hardware_interface/hardware_interface.egg-info/PKG-INFO
+[2.229s] writing dependency_links to ../../build/hardware_interface/hardware_interface.egg-info/dependency_links.txt
+[2.230s] writing entry points to ../../build/hardware_interface/hardware_interface.egg-info/entry_points.txt
+[2.230s] writing requirements to ../../build/hardware_interface/hardware_interface.egg-info/requires.txt
+[2.231s] writing top-level names to ../../build/hardware_interface/hardware_interface.egg-info/top_level.txt
+[2.294s] reading manifest file '../../build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[2.295s] writing manifest file '../../build/hardware_interface/hardware_interface.egg-info/SOURCES.txt'
+[2.296s] running build
+[2.296s] running build_py
+[2.296s] running install
+[2.304s] running install_lib
+[2.333s] running install_data
+[2.333s] running install_egg_info
+[2.364s] removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info' (and everything under it)
+[2.366s] Copying ../../build/hardware_interface/hardware_interface.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages/hardware_interface-0.0.1-py3.12.egg-info
+[2.366s] running install_scripts
+[2.555s] Installing End_Effector_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/hardware_interface
+[2.555s] Installing Microcontroller_Interface_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/hardware_interface
+[2.556s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/install.log'
+[2.598s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/hardware_interface' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/v2_robot_arm_interfaces/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/hardware_interface/lib/python3.12/site-packages:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:/opt/ros/rolling/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/hardware_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/hardware_interface/install.log --single-version-externally-managed install_data

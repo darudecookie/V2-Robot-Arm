@@ -1,0 +1,3 @@
+[console_scripts]
+End_Effector_Controller_Node = hardware_interface.End_Effector_Controller_Node:main
+Microcontroller_Interface_Node = hardware_interface.Microcontroller_Interface_Node:main

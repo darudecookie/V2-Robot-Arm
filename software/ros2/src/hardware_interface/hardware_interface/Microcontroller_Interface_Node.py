@@ -1,12 +1,13 @@
 import serial 
 import time
 from collections import deque
+import threading
 
 import rclpy
 from rclpy.node import Node
 import rclpy.parameter
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo
-from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump
+from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump, SystemStatus
 
 # ********** both of these dicts/lists are copied here and on the mcu, and ensuring that they match is absolutely critical to proper function **********
 MCU_arguments = {
@@ -35,7 +36,6 @@ MCU_arguments = {
 
     40: "Set_Target_Joint_PID_Params",
     41: "Set_Home_Joint_Positions",
-
         
     50: "Get_EE_Float",
     51: "Set_EE_Float",
@@ -47,9 +47,9 @@ MCU_arguments = {
 class Serial_Interface(Node):
     def __init__(
         self,
-        port: str = "/dev/ttyACM0",
+        port: str = "/dev/ttyACM1",
         baud_rate: int = 115200,
-        MCU_init_sequence=rb"<MCU_init>\n",
+        MCU_init_sequence=b"<MCU_init>\n",
     ):
         super().__init__("Microcontroller_Interface_Node", allow_undeclared_parameters=True)  
         self.get_logger().info("initiating node")
@@ -60,10 +60,18 @@ class Serial_Interface(Node):
         self.start_char = rb"<"
         self.stop_char = rb">"
         self.end_char = rb"\n"
+        self.string_from_serial = b''
 
         self.MCU_key_list = tuple(MCU_arguments.keys())
         self.MCU_val_list= tuple(MCU_arguments.values())
+        self.clear_queue = True
 
+        MCU_communication_frequency = 200
+        ros_communication_frequency = 2 * MCU_communication_frequency
+
+        self.declare_parameter("estop_cooldown", 20)
+        self.estop_cooldown = self.get_parameter("safe_startup")
+        self.time_since_last_estop = time.time() - self.estop_cooldown.value
 
         # queue of decoded received messages from the MCU
         self.MCU_report_queue = deque([])
@@ -74,25 +82,25 @@ class Serial_Interface(Node):
         if safe_startup.value:
             while True:
                 try:
-                    self.Serial_port = serial.Serial(port, baud_rate)
+                    self.Serial_port = serial.Serial(port, baud_rate, )
                     self.get_logger().info("Opened mcu serial port")
                     break
                 except serial.SerialException:
                     self.get_logger().warn(f"failed to open serial port to MCU, port: {port}, retrying in 0.5 seconds")
                     time.sleep(0.5)
         
-        time.sleep(0.5)
         
         self.get_logger().info("establishing communication with microcontroller")
         if safe_startup.value:
-            while False:
-                read_msg = self.Serial_port.readline()
-                if read_msg == MCU_init_sequence:
-                    self.get_logger().info(f"established MCU connection")
-                    break
-                self.get_logger().warn(f"failed to establish MCU connection, retrying in 0.15 seconds")
-                time.sleep(0.15)
-        self.get_logger().info(f"established MCU connection")
+            while True:
+                if self.Serial_port.in_waiting>0:
+                    read_msg = self.Serial_port.readline()
+                    if MCU_init_sequence == read_msg:
+                        self.get_logger().info(f"established MCU connection")
+                        break
+                self.get_logger().warn(f"failed to establish MCU connection, retrying in 0.5 seconds")
+                time.sleep(0.5)
+
 
         # creating all of the publishers and subscirbers for appropriate topics
         self.current_Joint_Info_pub = self.create_publisher(CurrentJointInfo, "current_joint_information", 10)
@@ -106,17 +114,18 @@ class Serial_Interface(Node):
         self.target_EE_Info_sub = self.create_subscription(TargetEEInfo, "target_end_effector_information", self.send_end_effector_information , 10)
 
         # creating clients/servers for communication
-        self.System_Status_server = self.create_service(MicrocontrollerParameterDump, "microcontroller_parameter_dump", self.send_MCU_parameter_dump)
+        self.MCU_param_dump_server = self.create_service(MicrocontrollerParameterDump, "microcontroller_parameter_dump", self.send_MCU_parameter_dump)
+        self.System_Status_server = self.create_service(SystemStatus, "system_status", self.send_system_status)
 
         # creating timer callbacks communicating with system
         # there are two callbacks, one for this node <-> MCU and one for this node <-> rest of ROS
         # frequency (hz) for program to read and then write an mcu message
-        MCU_communication_frequency = 200
         self.MCU_communication_timer = self.create_timer(1/MCU_communication_frequency, self.read_from_MCU_write_to_MCU)
 
         # frequency for messages to be pulled from queue and sent to ros (hz)
-        ros_communication_frequency = 2 * MCU_communication_frequency
         self.ros_communication_timer = self.create_timer(1/ros_communication_frequency, self.parse_queue_from_MCU)
+
+        self.conditional_queue_len_print()
 
         self.get_logger().info("node initiated!")
 
@@ -125,6 +134,15 @@ class Serial_Interface(Node):
             self.Serial_port.close()
         except AttributeError:
             return
+        
+    def conditional_queue_len_print(self):
+        if len(self.MCU_report_queue)> 0 or len(self.MCU_send_queue)>0:
+            self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
+            self.clear_queue = False
+        elif not self.clear_queue:
+            self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
+            self.clear_queue = True
+
 
     def key_from_val(self, value: str) -> int:
         return self.MCU_key_list[self.MCU_val_list.index(value)]
@@ -133,26 +151,16 @@ class Serial_Interface(Node):
         should_parse = False
         command_byte = True
 
+
         parsed_message = [-1, rb""]
 
-        for character in str(serial_input):
-            if character == self.start_char:
-                should_parse = True
+        serial_input = list(serial_input)
+        serial_input.pop(-1)    
 
-            elif should_parse:
-                if character == self.end_char:
-                    if parsed_message[0] != -1:
-                        return tuple(parsed_message)
-                    return
-                elif command_byte:
-                    parsed_message[0] = int(character)
-                    command_byte = False
-                else:
-                    parsed_message[1] += character
+        parsed_message[0] = serial_input[0]
+        parsed_message[1] = bytes(serial_input[1:])
+        return tuple(parsed_message)
 
-    def write_bytes_to_serial(self, arg_cmd_bytes: str) -> None:
-        output_bytes = self.start_char + arg_cmd_bytes + self.stop_char + self.end_char
-        self.Serial_port.write(output_bytes)
 
     def command_to_bytes(self, command: int) -> str:
         try:
@@ -218,53 +226,63 @@ class Serial_Interface(Node):
         return float_array
 
 
-    def read_from_MCU_write_to_MCU(self):       #MCU
-        read_line = self.Serial_port.readline()
-        if read_line:
-            self.MCU_report_queue.append(self.decode_from_serial(read_line))
-            self.get_logger().debug("reading command-arg from MCU")
+    def read_from_MCU_write_to_MCU(self):       #MCU comm loop
+        if self.Serial_port.in_waiting > 0:
+            read_data = rb""
+            should_parse = False
+            byte_num = 0
 
-        if len(self.MCU_send_queue) > 0:
-            to_send_line = self.MCU_send_queue.popleft()
+            read_byte = self.Serial_port.read()
+            if read_byte == self.start_char:
+                self.get_logger().debug("reading command-arg from MCU")
+                read_data = self.Serial_port.read_until(expected = self.stop_char)
+                self.MCU_report_queue.append(self.decode_from_serial(read_data))
+                self.conditional_queue_len_print()
+
+        self.conditional_queue_len_print()
+        
+        if len(self.MCU_send_queue) > 0 and ((time.time() - self.time_since_last_estop) > self.estop_cooldown.value):
+            to_send_line = self.start_char+self.MCU_send_queue.popleft()+self.stop_char
             self.Serial_port.write(to_send_line)
             self.get_logger().debug("sending command-arg to MCU")
 
-        self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
 
+        return
+    
     def send_system_status(self, request, response):
-        msg = SystemDiagnosticInfo
+        system_diag_msg = SystemDiagnosticInfo()
+        system_diag_msg.temperatures = [-1]
 
         if request.estop != 0:
-            msg.estop = request.estop
+            system_diag_msg.estop = request.estop
 
             estop_byte_msg = self.command_to_bytes(self.key_from_val("Estop"))
             if request.estop == 1:
                 estop_byte_msg += self.command_to_bytes(1)
                                 
-                self.get_logger().warn("E-Stop activated -- origin: software")
+                self.get_logger().warn("E-Stop activated - origin: software")
             elif request.estop == -1:
-                estop_byte_msg += self.command_to_bytes(2)
+                estop_byte_msg += self.command_to_bytes(0)
 
                 self.get_logger().warn("E-Stop deactivated")
             self.MCU_send_queue.appendleft(estop_byte_msg)
             
 
         if request.jointhold != 0:
-            msg.jointhold = request.jointhold
+            system_diag_msg.jointhold = request.jointhold
 
-            estop_byte_msg = self.command_to_bytes(self.key_from_val("JointHold"))
+            jointhold_byte_msg = self.command_to_bytes(self.key_from_val("JointHold"))
             if request.jointhold == 1:
-                estop_byte_msg += self.command_to_bytes(1)
+                jointhold_byte_msg += self.command_to_bytes(1)
 
                 self.get_logger().warn("joint hold activated")
             elif request.jointhold == -1:
-                estop_byte_msg += self.command_to_bytes(2)
+                jointhold_byte_msg += self.command_to_bytes(0)
                                
                 self.get_logger().warn("joint hold dectivated")
-            self.MCU_send_queue.appendleft(estop_byte_msg)
+            self.MCU_send_queue.appendleft(jointhold_byte_msg)
         
-        self.System_Diagnostic_pub.publish(msg)
-        
+        self.System_Diagnostic_pub.publish(system_diag_msg)        
         if request.move_home == 1:
             self.MCU_send_queue.appendleft(self.command_to_bytes(self.key_from_val("Move_Home")))
 
@@ -336,39 +354,44 @@ class Serial_Interface(Node):
     def parse_queue_from_MCU(self):   #MCU to ros system
         if len(self.MCU_report_queue) > 0:
             information_to_report = self.MCU_report_queue.popleft()
-            if information_to_report[0] != -1:   
-                match MCU_arguments[information_to_report[0]]:
-                    case "Estop":
-                        self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
-                    case "JointHold":
-                        self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
-                        
-                    case  "Get_Joint_Positions":
-                        self.report_joint_information(information_to_report[0], information_to_report[1])
-                    case  "Get_Joint_Velocities":
-                        self.report_joint_information(information_to_report[0], information_to_report[1])
-                    case  "Get_Joint_Torques":
-                        self.report_joint_information(information_to_report[0], information_to_report[1])
-                    case  "Get_Joint_Accelerations":
-                        self.report_joint_information(information_to_report[0], information_to_report[1])
-                    case  "Get_Joint_Jerks":
-                        self.report_joint_information(information_to_report[0], information_to_report[1])
+            if information_to_report!= None:
+                if information_to_report[0]!= -1:   
+                    match MCU_arguments[information_to_report[0]]:
+                        case "Estop":
+                            self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
+                        case "JointHold":
+                            self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
+                            
+                        case  "Get_Joint_Positions":
+                            self.report_joint_information(information_to_report[0], information_to_report[1])
+                        case  "Get_Joint_Velocities":
+                            self.report_joint_information(information_to_report[0], information_to_report[1])
+                        case  "Get_Joint_Torques":
+                            self.report_joint_information(information_to_report[0], information_to_report[1])
+                        case  "Get_Joint_Accelerations":
+                            self.report_joint_information(information_to_report[0], information_to_report[1])
+                        case  "Get_Joint_Jerks":
+                            self.report_joint_information(information_to_report[0], information_to_report[1])
 
-                    case  "Get_EE_Float":
-                        self.report_end_effector_information(information_to_report[1])
+                        case  "Get_EE_Float":
+                            self.report_end_effector_information(information_to_report[1])
+        return 
 
     def report_system_diagnostic_information(self, passed_cmd: int, passed_arg: str) -> None:
         argument = int.from_bytes(passed_arg, "little")
 
         if passed_cmd == self.key_from_val("Estop"):
-            msg = SystemDiagnosticInfo
+            msg = SystemDiagnosticInfo()
+            msg.temperatures = [-1]
             if argument == 1:
+                self.get_logger().warn("E-Stop activated - origin: hardware")
+                self.time_since_last_estop = time.time()
                 msg.estop = 1
             elif argument == 0:
                 msg.estop = -1
                 
         elif passed_cmd == self.key_from_val("Get_Temperatures"):
-            msg = SystemDiagnosticInfo
+            msg = SystemDiagnosticInfo()
             msg.temperatures = self.decode_n_floats(passed_arg, 7)
             
         self.System_Diagnostic_pub.publish(msg)
@@ -390,7 +413,7 @@ class Serial_Interface(Node):
             self.current_Joint_Info_components[4] = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
 
         if len(all(self.current_Joint_Info_components)) != 0:
-            msg = CurrentJointInfo
+            msg = CurrentJointInfo()
             
             msg.current_joint_positions = self.current_Joint_Info_components[0]
             msg.current_joint_velocity = self.current_Joint_Info_components[1]
@@ -403,7 +426,7 @@ class Serial_Interface(Node):
             self.current_Joint_Info_components =  [[], [], [], [], []]
 
     def report_end_effector_information(self,  passed_arg: str) -> None:
-        msg = CurrentEEInfo
+        msg = CurrentEEInfo()
         
         msg.current_end_effector_value =  self.decode_1_float(passed_arg)
         

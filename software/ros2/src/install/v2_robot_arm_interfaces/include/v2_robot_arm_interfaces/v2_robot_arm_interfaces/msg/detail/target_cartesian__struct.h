@@ -29,6 +29,8 @@ typedef struct v2_robot_arm_interfaces__msg__TargetCartesian
   std_msgs__msg__Header header;
   float position[3];
   float rotation[3];
+  float translation_speed;
+  float rotation_speed;
 } v2_robot_arm_interfaces__msg__TargetCartesian;
 
 // Struct for a sequence of v2_robot_arm_interfaces__msg__TargetCartesian.

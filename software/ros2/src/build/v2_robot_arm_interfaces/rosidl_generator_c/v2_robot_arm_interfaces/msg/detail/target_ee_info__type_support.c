@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "v2_robot_arm_interfaces/msg/detail/target_ee_info__struct.h"
 #include "v2_robot_arm_interfaces/msg/detail/target_ee_info__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "v2_robot_arm_interfaces/msg/detail/target_ee_info__type_support.h"
+#include "v2_robot_arm_interfaces/msg/detail/target_ee_info__struct.h"
 
 #ifdef __cplusplus
 extern "C"

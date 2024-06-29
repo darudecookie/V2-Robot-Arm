@@ -153,16 +153,6 @@
               "nested_type_name": ""
             },
             "default_value": ""
-          },
-          {
-            "name": "target_end_effector_bool",
-            "type": {
-              "type_id": 2,
-              "capacity": 0,
-              "string_capacity": 0,
-              "nested_type_name": ""
-            },
-            "default_value": "0"
           }
         ]
       },
@@ -186,7 +176,7 @@
   "type_hashes": [
     {
       "type_name": "v2_robot_arm_interfaces/srv/TargetEEState",
-      "hash_string": "RIHS01_b5136f643a0c5f7f36a8a03e71f056e3e18c9790d40d4afe1c2e6140be45b53d"
+      "hash_string": "RIHS01_bf3670c2d7b6239ab1f8e7039ffebb72812f542be58bd027e6fb518d7f88a7a8"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",
@@ -198,11 +188,11 @@
     },
     {
       "type_name": "v2_robot_arm_interfaces/srv/TargetEEState_Event",
-      "hash_string": "RIHS01_2af3283c5d786e220cec12ff66c953f74fbe961dd60c42e57ff2ae495c8ebacc"
+      "hash_string": "RIHS01_555e2f1c41c1599ed862c1f7d2bba8763bc5de48c3bca9cb53efac77abbcc17e"
     },
     {
       "type_name": "v2_robot_arm_interfaces/srv/TargetEEState_Request",
-      "hash_string": "RIHS01_6dea7f85f346c1f75700c6f3c37366dc0b3061336bb99e544887384e52042c03"
+      "hash_string": "RIHS01_d67eb717ac23007d26a37fa1e52f2b3f9480f489383d965d2ecaaa0fe8eb2bb8"
     },
     {
       "type_name": "v2_robot_arm_interfaces/srv/TargetEEState_Response",

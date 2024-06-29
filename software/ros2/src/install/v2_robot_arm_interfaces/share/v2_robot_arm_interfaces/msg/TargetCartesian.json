@@ -32,6 +32,26 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "translation_speed",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "10.0"
+        },
+        {
+          "name": "rotation_speed",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "0.523599"
         }
       ]
     },
@@ -91,7 +111,7 @@
   "type_hashes": [
     {
       "type_name": "v2_robot_arm_interfaces/msg/TargetCartesian",
-      "hash_string": "RIHS01_38313b26cbc8c77cb8ae5f700fdab54a89a64471baeb100ce1294727629fa2d8"
+      "hash_string": "RIHS01_7a6cdb2ebd83f6f8a8ef857588ab241a056e0cd3575b81fd378c930ad7692128"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",

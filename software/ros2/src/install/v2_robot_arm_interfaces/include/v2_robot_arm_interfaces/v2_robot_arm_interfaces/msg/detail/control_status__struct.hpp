@@ -44,12 +44,12 @@ struct ControlStatus_
       this->trajectory_controller = 0;
       this->ik_solver = 1;
       this->peripheral_interface = 0;
-      this->master_controller = 1;
+      this->main_controller = 1;
     } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->trajectory_controller = 0;
       this->ik_solver = 0;
       this->peripheral_interface = 0;
-      this->master_controller = 0;
+      this->main_controller = 0;
     }
   }
 
@@ -62,12 +62,12 @@ struct ControlStatus_
       this->trajectory_controller = 0;
       this->ik_solver = 1;
       this->peripheral_interface = 0;
-      this->master_controller = 1;
+      this->main_controller = 1;
     } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->trajectory_controller = 0;
       this->ik_solver = 0;
       this->peripheral_interface = 0;
-      this->master_controller = 0;
+      this->main_controller = 0;
     }
   }
 
@@ -81,9 +81,9 @@ struct ControlStatus_
   using _peripheral_interface_type =
     int8_t;
   _peripheral_interface_type peripheral_interface;
-  using _master_controller_type =
+  using _main_controller_type =
     int8_t;
-  _master_controller_type master_controller;
+  _main_controller_type main_controller;
 
   // setters for named parameter idiom
   Type & set__trajectory_controller(
@@ -104,10 +104,10 @@ struct ControlStatus_
     this->peripheral_interface = _arg;
     return *this;
   }
-  Type & set__master_controller(
+  Type & set__main_controller(
     const int8_t & _arg)
   {
-    this->master_controller = _arg;
+    this->main_controller = _arg;
     return *this;
   }
 
@@ -162,7 +162,7 @@ struct ControlStatus_
     if (this->peripheral_interface != other.peripheral_interface) {
       return false;
     }
-    if (this->master_controller != other.master_controller) {
+    if (this->main_controller != other.main_controller) {
       return false;
     }
     return true;

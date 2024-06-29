@@ -21,7 +21,7 @@ class Thrustmaster_TFlight_X:
             print("no gamepads found\nretrying in 1 second")
             time.sleep(1)   
 
-    def parse_event_from_peripheral(self) -> None:      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
+    def parse_event_from_peripheral(self):      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
         gamepad_events = inputs.get_gamepad()
 
         if gamepad_events:
@@ -57,8 +57,9 @@ class Peripheral_Controller(Node):
         self.declare_parameter("safe_startup",True)
         safe_startup = self.get_parameter("safe_startup")
 
-        self.System_Status_Req = SystemStatus        
+        self.System_Status_Req = SystemStatus.Request()        
         self.System_Status_Req.jointhold = -1
+
         
         self.joy_values = [0,0,0]
         self.should_output = False
@@ -86,14 +87,14 @@ class Peripheral_Controller(Node):
         self.cartesian_update_timer = self.create_timer(1/self.cartesian_update_frequency, self.update_cartesian_from_peripheral,)
         
         
-        self.System_Status_client = self.create_client(SystemStatus, "system_status", )
+        self.System_Status_client = self.create_client(SystemStatus, "system_status")
         if safe_startup.value:    
             while not self.System_Status_client.wait_for_service(timeout_sec = 1):
                 self.get_logger().warn("'system_status' service not available\nretrying in 1 second")
         self.get_logger().info("'system_status' service found\nproceeding with initiation!")
 
 
-        self.System_Diagnostic_sub = self.create_subscription(SystemDiagnosticInfo, "system_diagnostic_info", self.update_jointhold_from_system, 10)
+        self.System_Diagnostic_sub = self.create_subscription(SystemDiagnosticInfo, "system_diagnostic_information", self.update_jointhold_from_system, 10)
         self.Control_Status_sub = self.create_subscription(ControlStatus, "control_status", self.update_output_from_system, 10)
         self.Current_Cartesian_sub = self.create_subscription(CurrentCartesian, "current_cartesian", self.update_current_cartesian_from_system, 10)
         self.Peripheral_Speed_sub = self.create_subscription(PeripheralSpeed, "peripheral_speed", self.update_speeds_from_system, 10) 
@@ -102,8 +103,8 @@ class Peripheral_Controller(Node):
         
         self.get_logger().info(f"node initiated!\nperipheral name: '{inputs.GamePad}'")
 
-    def update_jointhold_from_system(self, msg) -> None:
-        if msg.joint_hold !=0:
+    def update_jointhold_from_system(self, msg):
+        if msg.jointhold !=0:
             self.System_Status_Req.jointhold = msg.jointhold            
         self.get_logger().info(f"receiving updated jointhold information\njointhold status: {self.System_Status_Req.jointhold}")
 
@@ -119,14 +120,14 @@ class Peripheral_Controller(Node):
         
         self.get_logger().debug("receiving updated current cartesian coords")
 
-    def update_speeds_from_system(self, msg) -> None:
+    def update_speeds_from_system(self, msg):
         self.translation_speed = msg.translation_speed 
         self.rotation_speed = msg.rotation_speed
 
         self.get_logger().debug(f"updating peripheral translation and rotation speeds to {self.translation_speed}, {self.rotation_speed}")
 
 
-    def parse_event_from_peripheral(self) -> None:      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
+    def parse_event_from_peripheral(self):      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
         gamepad_events = inputs.get_gamepad()
 
         if gamepad_events:
@@ -164,7 +165,7 @@ class Peripheral_Controller(Node):
             self.get_logger().debug("parsing new peripheral event(s)")
     
 
-    def update_cartesian_from_peripheral(self) -> None:
+    def update_cartesian_from_peripheral(self):
         if self.should_output and self.System_Status_Req.jointhold == 0 and self.System_Status_Req.move_home == 0:
             msg = TargetCartesian
             

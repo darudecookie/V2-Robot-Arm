@@ -23,8 +23,8 @@ v2_robot_arm_interfaces__msg__ControlStatus__init(v2_robot_arm_interfaces__msg__
   msg->ik_solver = 1;
   // peripheral_interface
   msg->peripheral_interface = 0;
-  // master_controller
-  msg->master_controller = 1;
+  // main_controller
+  msg->main_controller = 1;
   return true;
 }
 
@@ -37,7 +37,7 @@ v2_robot_arm_interfaces__msg__ControlStatus__fini(v2_robot_arm_interfaces__msg__
   // trajectory_controller
   // ik_solver
   // peripheral_interface
-  // master_controller
+  // main_controller
 }
 
 bool
@@ -58,8 +58,8 @@ v2_robot_arm_interfaces__msg__ControlStatus__are_equal(const v2_robot_arm_interf
   if (lhs->peripheral_interface != rhs->peripheral_interface) {
     return false;
   }
-  // master_controller
-  if (lhs->master_controller != rhs->master_controller) {
+  // main_controller
+  if (lhs->main_controller != rhs->main_controller) {
     return false;
   }
   return true;
@@ -79,8 +79,8 @@ v2_robot_arm_interfaces__msg__ControlStatus__copy(
   output->ik_solver = input->ik_solver;
   // peripheral_interface
   output->peripheral_interface = input->peripheral_interface;
-  // master_controller
-  output->master_controller = input->master_controller;
+  // main_controller
+  output->main_controller = input->main_controller;
   return true;
 }
 

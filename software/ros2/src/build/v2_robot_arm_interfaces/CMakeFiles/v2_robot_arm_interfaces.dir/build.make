@@ -66,9 +66,12 @@ include CMakeFiles/v2_robot_arm_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/v2_robot_arm_interfaces.dir/progress.make
 
+CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.action
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/ControlStatus.msg
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/CurrentEEInfo.msg
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/CurrentJointInfo.msg
+CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/CurrentCartesian.msg
+CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/PeripheralSpeed.msg
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/SystemDiagnosticInfo.msg
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/TargetCartesian.msg
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/msg/TargetEEInfo.msg
@@ -76,7 +79,6 @@ CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/so
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/srv/MicrocontrollerParameterDump.srv
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/srv/SystemStatus.srv
 CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/srv/TargetEEState.srv
-CMakeFiles/v2_robot_arm_interfaces: /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/v2_robot_arm_interfaces/action/ParametricTrajectoryInfo.action
 CMakeFiles/v2_robot_arm_interfaces: /opt/ros/rolling/share/std_msgs/msg/Bool.idl
 CMakeFiles/v2_robot_arm_interfaces: /opt/ros/rolling/share/std_msgs/msg/Byte.idl
 CMakeFiles/v2_robot_arm_interfaces: /opt/ros/rolling/share/std_msgs/msg/ByteMultiArray.idl

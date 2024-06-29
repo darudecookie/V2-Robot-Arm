@@ -25,7 +25,7 @@ typedef struct v2_robot_arm_interfaces__msg__ControlStatus
   int8_t trajectory_controller;
   int8_t ik_solver;
   int8_t peripheral_interface;
-  int8_t master_controller;
+  int8_t main_controller;
 } v2_robot_arm_interfaces__msg__ControlStatus;
 
 // Struct for a sequence of v2_robot_arm_interfaces__msg__ControlStatus.

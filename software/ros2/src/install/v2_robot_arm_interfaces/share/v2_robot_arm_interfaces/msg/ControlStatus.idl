@@ -16,7 +16,7 @@ module v2_robot_arm_interfaces {
       int8 peripheral_interface;
 
       @default (value=1)
-      int8 master_controller;
+      int8 main_controller;
     };
   };
 };

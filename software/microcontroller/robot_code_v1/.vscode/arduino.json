@@ -1,0 +1,6 @@
+{
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "sketch": "robot_code_v1.ino",
+    "port": "/dev/ttyACM0"
+}

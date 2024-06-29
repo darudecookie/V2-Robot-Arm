@@ -1,0 +1,21 @@
+[1.520s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros_controller_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/install.log --single-version-externally-managed install_data
+[1.952s] running egg_info
+[1.976s] writing ../../build/ros_controller_interface/ros_controller_interface.egg-info/PKG-INFO
+[1.976s] writing dependency_links to ../../build/ros_controller_interface/ros_controller_interface.egg-info/dependency_links.txt
+[1.977s] writing entry points to ../../build/ros_controller_interface/ros_controller_interface.egg-info/entry_points.txt
+[1.977s] writing requirements to ../../build/ros_controller_interface/ros_controller_interface.egg-info/requires.txt
+[1.977s] writing top-level names to ../../build/ros_controller_interface/ros_controller_interface.egg-info/top_level.txt
+[2.041s] reading manifest file '../../build/ros_controller_interface/ros_controller_interface.egg-info/SOURCES.txt'
+[2.043s] writing manifest file '../../build/ros_controller_interface/ros_controller_interface.egg-info/SOURCES.txt'
+[2.043s] running build
+[2.043s] running build_py
+[2.043s] running install
+[2.051s] running install_lib
+[2.077s] running install_data
+[2.078s] running install_egg_info
+[2.107s] removing '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages/ros_controller_interface-0.0.1-py3.12.egg-info' (and everything under it)
+[2.108s] Copying ../../build/ros_controller_interface/ros_controller_interface.egg-info to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages/ros_controller_interface-0.0.1-py3.12.egg-info
+[2.109s] running install_scripts
+[2.277s] Installing ROS_Controller_Node script to /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/ros_controller_interface
+[2.278s] writing list of installed files to '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/install.log'
+[2.329s] Invoked command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/ros_controller_interface' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/prefix_override:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/ros_controller_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros_controller_interface build --build-base /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/build install --record /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/build/ros_controller_interface/install.log --single-version-externally-managed install_data
