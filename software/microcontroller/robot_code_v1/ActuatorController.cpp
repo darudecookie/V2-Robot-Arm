@@ -1,22 +1,22 @@
 #include "ActuatorController.h"
 
 #include "Arduino.h"
-#include <AccelStepper.h>
-#include <FastPID.h>
+#include "AccelStepper.h"
+#include "FastPID.h"
 
-Actuator::Actuator(const uint8_t step_pin, const uint8_t dir_pin, int steps, int microsteps, const float reduction_ratio, const int PID_frequency)
+Actuator::Actuator(const uint8_t step_pin, const uint8_t dir_pin, int steps, int microsteps, const float reduction_ratio, const int PID_frequency, const float angle_modifiers[2])
 {
-  Actuator::stepper_object = new AccelStepper(AccelStepper::DRIVER, step_pin, dir_pin);
-  Actuator::stepper_object->setMaxSpeed(10 * microsteps * reduction_ratio * Actuator::_m_steps_rev);
+  Actuator::stepper_object = new AccelStepper(AccelStepper::DRIVER, step_pin, dir_pin);              // setup stepper driver w passed params
+  Actuator::stepper_object->setMaxSpeed(10 * microsteps * reduction_ratio * Actuator::_m_steps_rev); // PLACEHOLDER values, rela values are set after init
   Actuator::stepper_object->setAcceleration(2 * microsteps * reduction_ratio * Actuator::_m_steps_rev);
 
-  Actuator::_m_steps_rev = steps * microsteps;
+  Actuator::_m_steps_rev = steps * microsteps; // setting up internal vars
   Actuator::_m_reduction_ratio = reduction_ratio;
   Actuator::_m_PID_frequency = PID_frequency;
-  Actuator::PID_object = new FastPID(2, 0, 0, PID_frequency, 16, true);
+  Actuator::PID_object = new FastPID(2, 0, 0, PID_frequency, 16, true); // setting PID loop with PLACEHOLDER vals
 }
 
-void Actuator::conditional_run()
+void Actuator::conditional_run() // if no bad flags set; run, should be on intterupt every 50ns or so
 {
   if (!(Actuator::joint_hold) && (Actuator::should_run))
   {
@@ -26,32 +26,36 @@ void Actuator::conditional_run()
 
 void Actuator::set_position(float position)
 {
-  if (Actuator::joint_position_limits[0] <= position <= Actuator::joint_position_limits[1])
+  if (Actuator::joint_position_limits[0] <= position <= Actuator::joint_position_limits[1]) // check if position allowed
   {
-    Actuator::angle_setpoint = position;
-    Actuator::control_mode = 0;
+    Actuator::angle_setpoint = position; // set angle setpoint
+    Actuator::control_mode = 0;          // set control mode to 0 for position
   }
 }
 void Actuator::set_velocity(float velocity)
 {
-  if (abs(velocity) <= Actuator::joint_velocity_limit)
+  if (abs(velocity) <= Actuator::joint_velocity_limit) // check if veloicty allowed, note the abs()
   {
-    Actuator::stepper_object->setSpeed(velocity * Actuator::_m_reduction_ratio * Actuator::_m_steps_rev);
-    Actuator::control_mode = 1;
+    Actuator::stepper_object->setSpeed(velocity * Actuator::_m_reduction_ratio * Actuator::_m_steps_rev); // set speed
+    Actuator::control_mode = 1;                                                                           // set control mode to 1 for velocity
   }
 }
-void Actuator::set_torque(float torque)
+void Actuator::set_torque(float torque) // not yet supported idk if torque sensing on steppers is possible wo expensive drivers
 {
   if (abs(torque) <= Actuator::joint_torque_limit)
   {
+    // do nothing, not supported
   }
-  Serial.println("WARNING: TORQUE CONTROL NOT YET SUPPORTED");
+  Serial.println("WARNING: TORQUE CONTROL NOT YET SUPPORTED"); // might get rid of this bc it wouldnt be seen
 }
 
-float Actuator::check_current_angle()
+float Actuator::check_current_angle() // returns current angle, should include angle offset arg prob
 {
-  float position = 0; /////////PAY ATTENTION BITCH U NEED TO CHANGE THIS
-  // normalizes angle to +- 180 value
+  float reading = 0; /////////PAY ATTENTION BITCH U NEED TO CHANGE THIS
+
+  float position = (reading * Actuator::_m_angle_multiply_offset) + Actuator::_m_angle_add_offset; // modify read angle val
+
+  // normalize angle val to -180<=angle val<=180
   if (position > 180)
   {
     position -= 360;
@@ -65,9 +69,11 @@ float Actuator::check_current_angle()
 
 void Actuator::calculate_joint_kinematics()
 {
-  float most_current_position = Actuator::check_current_angle();
+  //calculate joint veloicty, acceleration, and jerk
 
-  const float time_since_last = ((micros() - Actuator::last_joint_info_check) / pow(10, 6));
+  float most_current_position = Actuator::check_current_angle();    //check angle
+
+  const float time_since_last = ((micros() - Actuator::last_joint_info_check) / pow(10, 6));    //pow(10,6) = 10^6: normalize microsecs to secs
   Actuator::last_joint_info_check = micros();
 
   float last_velocity = _m_current_velocity;
