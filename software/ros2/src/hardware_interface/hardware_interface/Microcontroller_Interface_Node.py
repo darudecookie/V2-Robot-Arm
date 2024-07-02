@@ -6,6 +6,7 @@ import threading
 import rclpy
 from rclpy.node import Node
 import rclpy.parameter
+import rclpy.time
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo
 from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump, SystemStatus
 
@@ -47,7 +48,7 @@ MCU_arguments = {
 class Serial_Interface(Node):
     def __init__(
         self,
-        port: str = "/dev/ttyACM1",
+        port: str = "/dev/ttyACM0",
         baud_rate: int = 115200,
         MCU_init_sequence=b"<MCU_init>\n",
     ):
@@ -66,7 +67,7 @@ class Serial_Interface(Node):
         self.MCU_val_list= tuple(MCU_arguments.values())
         self.clear_queue = True
 
-        MCU_communication_frequency = 200
+        MCU_communication_frequency = 300
         ros_communication_frequency = 2 * MCU_communication_frequency
 
         self.declare_parameter("estop_cooldown", 20)
@@ -104,7 +105,8 @@ class Serial_Interface(Node):
 
         # creating all of the publishers and subscirbers for appropriate topics
         self.current_Joint_Info_pub = self.create_publisher(CurrentJointInfo, "current_joint_information", 10)
-        self.current_Joint_Info_components = [[], [], [], [], []]
+        self.current_Joint_Info_components = CurrentJointInfo()
+        self.joint_info_reported = [False, False, False, False,False]
         self.target_Joint_Info_sub = self.create_subscription(TargetJointInfo, "target_joint_information", self.send_joint_information, 10)
 
         self.System_Diagnostic_pub = self.create_publisher(SystemDiagnosticInfo, "system_diagnostic_information", 10)
@@ -137,10 +139,10 @@ class Serial_Interface(Node):
         
     def conditional_queue_len_print(self):
         if len(self.MCU_report_queue)> 0 or len(self.MCU_send_queue)>0:
-            self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
+            self.get_logger().debug(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
             self.clear_queue = False
         elif not self.clear_queue:
-            self.get_logger().info(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
+            self.get_logger().debug(f"report queue: {len(self.MCU_report_queue)}, send queue: {len(self.MCU_send_queue)}")
             self.clear_queue = True
 
 
@@ -234,7 +236,7 @@ class Serial_Interface(Node):
 
             read_byte = self.Serial_port.read()
             if read_byte == self.start_char:
-                self.get_logger().debug("reading command-arg from MCU")
+                #self.get_logger().debug("reading command-arg from MCU")
                 read_data = self.Serial_port.read_until(expected = self.stop_char)
                 self.MCU_report_queue.append(self.decode_from_serial(read_data))
                 self.conditional_queue_len_print()
@@ -244,7 +246,7 @@ class Serial_Interface(Node):
         if len(self.MCU_send_queue) > 0 and ((time.time() - self.time_since_last_estop) > self.estop_cooldown.value):
             to_send_line = self.start_char+self.MCU_send_queue.popleft()+self.stop_char
             self.Serial_port.write(to_send_line)
-            self.get_logger().debug("sending command-arg to MCU")
+            #self.get_logger().debug("sending command-arg to MCU")
 
 
         return
@@ -355,7 +357,7 @@ class Serial_Interface(Node):
         if len(self.MCU_report_queue) > 0:
             information_to_report = self.MCU_report_queue.popleft()
             if information_to_report!= None:
-                if information_to_report[0]!= -1:   
+                if information_to_report[0]!= -1:
                     match MCU_arguments[information_to_report[0]]:
                         case "Estop":
                             self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
@@ -372,7 +374,6 @@ class Serial_Interface(Node):
                             self.report_joint_information(information_to_report[0], information_to_report[1])
                         case  "Get_Joint_Jerks":
                             self.report_joint_information(information_to_report[0], information_to_report[1])
-
                         case  "Get_EE_Float":
                             self.report_end_effector_information(information_to_report[1])
         return 
@@ -397,33 +398,53 @@ class Serial_Interface(Node):
         self.System_Diagnostic_pub.publish(msg)
 
     def report_joint_information(self, passed_cmd: int, passed_arg: str) -> None:
+        def checkdem(array):
+            if type(array[0])==type([0,0]):
+                return True
+            return False
+        
         if passed_cmd == self.key_from_val("Get_Joint_Positions"):
-            self.current_Joint_Info_components[0] = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            if checkdem(self.current_Joint_Info_components.positions):
+                print("joint positon", rclpy.time.Time.seconds_nanoseconds())
+                
+            self.current_Joint_Info_components.positions = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            self.joint_info_reported[0] = True
             
         elif passed_cmd == self.key_from_val("Get_Joint_Velocities"):
-            self.current_Joint_Info_components[1] = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            if checkdem(self.current_Joint_Info_components.positions):
+                print("joint velocity", rclpy.time.Time.seconds_nanoseconds())
+            self.current_Joint_Info_components.velocities = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            self.joint_info_reported[1] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Torques"):
-            self.current_Joint_Info_components[2] = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            if checkdem(self.current_Joint_Info_components.positions):
+                print("joint tprqie", rclpy.time.Time.seconds_nanoseconds())
+            self.current_Joint_Info_components.torques = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            self.joint_info_reported[2] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Accelerations"):
-            self.current_Joint_Info_components[3] = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            if checkdem(self.current_Joint_Info_components.positions):
+                print("joint accel", rclpy.time.Time.seconds_nanoseconds())
+            self.current_Joint_Info_components.accelerations = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            self.joint_info_reported[3] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Jerks"):
-            self.current_Joint_Info_components[4] = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            if checkdem(self.current_Joint_Info_components.positions):
+                print("joint jerk", rclpy.time.Time.seconds_nanoseconds())
+            self.current_Joint_Info_components.torques = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            self.joint_info_reported[4] = True
 
-        if len(all(self.current_Joint_Info_components)) != 0:
-            msg = CurrentJointInfo()
+        #print(self.joint_info_reported)
+        #for i in range(5):
+        #    if self.joint_info_reported[i] == False:
+        #        return
             
-            msg.current_joint_positions = self.current_Joint_Info_components[0]
-            msg.current_joint_velocity = self.current_Joint_Info_components[1]
-            msg.current_joint_torques = self.current_Joint_Info_components[2]
-            msg.current_joint_acceleration = self.current_Joint_Info_components[3]
-            msg.current_joint_jerks = self.current_Joint_Info_components[4]
+        if all(self.joint_info_reported) == True:
+            self.current_Joint_Info_pub.publish(self.current_Joint_Info_components)
+            self.joint_info_reported = [False,False,False,False,False]
+            #self.current_Joint_Info_components = CurrentJointInfo()
+            
 
-            self.current_Joint_Info_pub.publish(msg)
-            
-            self.current_Joint_Info_components =  [[], [], [], [], []]
 
     def report_end_effector_information(self,  passed_arg: str) -> None:
         msg = CurrentEEInfo()
