@@ -26,7 +26,7 @@ void Actuator::conditional_run() // if no bad flags set; run, should be on intte
 
 void Actuator::set_position(float position)
 {
-  if (Actuator::joint_position_limits[0] <= position <= Actuator::joint_position_limits[1]) // check if position allowed
+  if ((Actuator::joint_position_limits[0] <= position) && (position <= Actuator::joint_position_limits[1])) // check if position allowed
   {
     Actuator::angle_setpoint = position; // set angle setpoint
     Actuator::control_mode = 0;          // set control mode to 0 for position
@@ -46,46 +46,48 @@ void Actuator::set_torque(float torque) // not yet supported idk if torque sensi
   {
     // do nothing, not supported
   }
-  Serial.println("WARNING: TORQUE CONTROL NOT YET SUPPORTED"); // might get rid of this bc it wouldnt be seen
+  //Serial.println("WARNING: TORQUE CONTROL NOT YET SUPPORTED"); // might get rid of this bc it wouldnt be seen
 }
 
-float Actuator::check_current_angle() // returns current angle, should include angle offset arg prob
+void Actuator::check_current_angle(float unparsed_angle_data) // returns current angle, should include angle offset arg prob
 {
+    //Serial.println("angle");
   float reading = 0; /////////PAY ATTENTION BITCH U NEED TO CHANGE THIS
 
   float position = (reading * Actuator::_m_angle_multiply_offset) + Actuator::_m_angle_add_offset; // modify read angle val
 
-  // normalize angle val to -180<=angle val<=180
-  if (position > 180)
+  // normalize angle val to -1<=angle val<=1 (radians)
+  if (position > 1)
   {
-    position -= 360;
+    position -= 2;
   }
-  else if (position < -180)
+  else if (position < -1)
   {
-    position += 360;
+    position += 2;
   }
-  return position;
+  Actuator::_m_position = position;
 }
 
-void Actuator::calculate_joint_kinematics()
+void Actuator::calculate_joint_kinematics(float unparsed_angle_input)
 {
-  //calculate joint veloicty, acceleration, and jerk
+    //Serial.println("kin");
 
-  float most_current_position = Actuator::check_current_angle();    //check angle
+  // calculate joint veloicty, acceleration, and jerk
 
-  const float time_since_last = ((micros() - Actuator::last_joint_info_check) / pow(10, 6));    //pow(10,6) = 10^6: normalize microsecs to secs
+  float old_position = Actuator::_m_position;
+  Actuator::check_current_angle(unparsed_angle_input); // check angle
+
+  const float time_since_last = ((micros() - Actuator::last_joint_info_check) / pow(10, 6)); // pow(10,6) = 10^6: normalize microsecs to secs
   Actuator::last_joint_info_check = micros();
 
-  float last_velocity = _m_current_velocity;
-  float last_acceleration = _m_current_acceleration;
+  float last_velocity = _m_velocity;
+  float last_acceleration = _m_acceleration;
 
-  Actuator::_m_current_velocity = (Actuator::_m_current_position - most_current_position) / time_since_last; // velocity = (current position - last position) / secs between two measurements
-  Actuator::_m_current_acceleration = (Actuator::_m_current_velocity - last_velocity) / time_since_last;     // acceleration = (current velocity - last velocity) / secs between two measurements
-  Actuator::_m_current_jerk = (Actuator::_m_current_acceleration - last_acceleration) / time_since_last;     // jerk = (current acceleration - last acceleration) / secs between two measurements
+  Actuator::_m_velocity = (Actuator::_m_position - old_position) / time_since_last;      // velocity = (current position - last position) / secs between two measurements
+  Actuator::_m_acceleration = (Actuator::_m_velocity - last_velocity) / time_since_last; // acceleration = (current velocity - last velocity) / secs between two measurements
+  Actuator::_m_jerk = (Actuator::_m_acceleration - last_acceleration) / time_since_last; // jerk = (current acceleration - last acceleration) / secs between two measurements
 
-  Actuator::_m_current_position = most_current_position;
-
-  if ((Actuator::joint_position_limits[0] <= Actuator::_m_current_position <= Actuator::joint_position_limits[1]) && (Actuator::_m_current_velocity <= Actuator::joint_velocity_limit) && (Actuator::_m_current_acceleration <= Actuator::joint_acceleraton_limit) && (Actuator::_m_current_jerk <= Actuator::joint_jerk_limit))
+  if (((Actuator::joint_position_limits[0] <= Actuator::_m_position) && (Actuator::_m_position <= Actuator::joint_position_limits[1])) && (Actuator::_m_velocity <= Actuator::joint_velocity_limit) && (Actuator::_m_acceleration <= Actuator::joint_acceleraton_limit) && (Actuator::_m_jerk <= Actuator::joint_jerk_limit))
   {
     Actuator::should_run = true;
   }
@@ -95,12 +97,14 @@ void Actuator::calculate_joint_kinematics()
   }
 }
 
-void Actuator::Kinematics_PID_Calc()
+void Actuator::Kinematics_PID_Calc(float unparsed_angle_input)
 {
-  Actuator::calculate_joint_kinematics();
+    //Serial.println("kin-pid");
+
+  Actuator::calculate_joint_kinematics(unparsed_angle_input);
   if ((Actuator::control_mode == 0) && (Actuator::joint_hold == true) && (Actuator::should_run = true))
   {
-    float PID_output = Actuator::PID_object->step(Actuator::angle_setpoint, Actuator::_m_current_position);
+    float PID_output = Actuator::PID_object->step(Actuator::angle_setpoint, Actuator::_m_position);
     Actuator::stepper_object->move(PID_output * Actuator::_m_steps_rev * Actuator::_m_reduction_ratio);
   }
 }

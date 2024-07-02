@@ -7,7 +7,6 @@
 #include "TimerThree.h"
 #include "Deque.h"
 
-
 const uint8_t MCU_key_array[] = {
     0,
     1,
@@ -49,6 +48,10 @@ const String MCU_val_array[] = {
     "Set_Joint_Positions",
     "Set_Joint_Velocities",
     "Set_Joint_Torques",
+
+    "Get_Joint_Positions",
+    "Get_Joint_Velocities",
+    "Get_Joint_Torques",
     "Get_Joint_Accelerations",
     "Get_Joint_Jerks",
 
@@ -81,7 +84,7 @@ volatile bool command_flag = false;
 
 struct to_send_msg
 {
-  byte msg[max_serial_input + 2];
+  byte msg[max_serial_input + 5];
 };
 Deque<to_send_msg> to_send_queue = Deque<to_send_msg>(50);
 
@@ -98,14 +101,7 @@ Actuator *Actuator_Array[7];
 const uint8_t step_dir_pins[7][2] = {{1, 2}, {1, 2}, {1, 2}, {1, 2}, {1, 2}, {1, 2}, {1, 2}};
 const int microsteps[7] = {16, 16, 16, 256, 256, 256, 256};
 const float reduction_ratio[7] = {20, 20, 20, 20, 20, 20, 20};
-const float angle_modifiers[7][2] = {
-    {0, 1},
-    {0, 1},
-    {0, 1},
-    {0, 1},
-    {0, 1},
-    {0, 1},
-    {0, 1}};
+const float angle_modifiers[7][2] = {{0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}};
 const int default_PID[3] = {1, 0, 0};
 
 float home_joint_angles[7] = {0, 0, 0, 0, 0, 0, 0};
@@ -119,12 +115,15 @@ float current_end_effector = 0;
 
 float current_temps[7] = {0, 0, 0, 0, 0, 0, 0};
 
-
-
 const int serial_print_inverval_micro = 250;
-const int serial_input_time_micro = 250;
+const int serial_input_interval_micro = 250;
 
-const int estop_interval_time_milli = 2;
+const int estop_interval_interval_milli = 2;
+
+const int kinematics_PID_recalc_joint_interval_milli = 75;
+const int joint_kinematics_report_interval_micro = 250; // note that it takes 5 cycles to publish a message with all joint info, so in ros the system will publish joint info at 1/5 this rate
+
+const int serial_check_interval_milli = 1000;
 
 void setup()
 {
@@ -157,14 +156,16 @@ void setup()
 
 void loop()
 {
-  // Serial.println(digitalRead(estop_NO_button_pin));
   static long last_estop_check = 0;
-  if ((millis() - last_estop_check > estop_interval_time_milli) && (digitalRead(estop_NO_button_pin) == HIGH && !global_estop))
+  if ((millis() - last_estop_check > estop_interval_interval_milli))
   {
-    Estop_on();
-    report_Estop_if_on();
-    last_estop_check = millis();
-  } // else if (((millis() - last_estop_check > 2) && (digitalRead(estop_NC_button_pin) == HIGH && !global_estop)){Estop_on();report_Estop_if_on();last_estop_check = millis();}
+    if (digitalRead(estop_NO_button_pin) == HIGH && !global_estop)
+    {
+      Estop_on();
+      report_Estop_if_on();
+      last_estop_check = millis();
+    } //    else if (digitalRead(estop_NC_button_pin) == HIGH && !global_estop){Estop_on();report_Estop_if_on();last_estop_check = millis();}
+  }
 
   static long last_serial_print = 0;
   if (micros() - last_serial_print > serial_print_inverval_micro)
@@ -174,16 +175,41 @@ void loop()
   }
 
   static long last_serial_input = 0;
-  if (micros() - last_serial_input > serial_input_time_micro)
+  if (micros() - last_serial_input > serial_input_interval_micro)
   {
     decode_data_from_serial();
     last_serial_input = micros();
   }
+
+  static long last_joint_PID = 0;
+  if (millis() - last_joint_PID > kinematics_PID_recalc_joint_interval_milli)
+  {
+    for (uint8_t i = 0; i < 7; i++)
+    {
+      (i == 3) ? Actuator_Array[i]->Kinematics_PID_Calc(check_I2C_encoder(i)) : Actuator_Array[i]->Kinematics_PID_Calc(check_offbore_encoder());
+    }
+    last_joint_PID = millis();
+  }
+
+  static long last_joint_kinematic_report = 0;
+  if (micros() - last_joint_kinematic_report > joint_kinematics_report_interval_micro)
+  {
+    report_current_joint_info();
+    last_joint_kinematic_report = micros();
+  }
+
+  static long last_serial_check = 0;
+  if (millis() - last_serial_check > serial_check_interval_milli)
+  {
+    if (!Serial)
+    {
+      SCB_AIRCR = 0x05FA0004;
+    }
+    last_serial_check = millis();
+  }
 }
 
 //--------------------SERIAL READING FUNCTIONS--------------------//
-// higher frequency timer interrupt that just grabs a string from serial
-
 void get_string_from_serial()
 {
 
@@ -244,8 +270,10 @@ void send_bytes_to_serial()
       }
     }
   }
+  Serial.write(stop_char);
 }
 
+//--------------------SERIAL INTERPRETATION FUNCTIONS - TAKE DATA AND DO STUFF WITH IT--------------------//
 void decode_data_from_serial()
 {
   if (command_flag)
@@ -366,8 +394,6 @@ void update_target_joint_positions()
   byte _internal_current_arg[21];
   memcpy(_internal_current_arg, current_arg, 21);
 
-  uint8_t float_position = 0;
-
   float positions[7];
   decode_7_floats(positions, _internal_current_arg);
 
@@ -403,27 +429,25 @@ void update_target_joint_torques()
   }
 }
 
-void update_position_limits(){}
-void update_velocity_limits(){}
-void update_torque_limits(){}
-void update_accleration_limits(){}
-void update_jerk_limits(){}
+void update_position_limits() {}
+void update_velocity_limits() {}
+void update_torque_limits() {}
+void update_accleration_limits() {}
+void update_jerk_limits() {}
 
-void update_X_workspace_limits(){}
-void update_Y_workspace_limits(){}
-void update_Z_workspace_limits(){}
+void update_X_workspace_limits() {}
+void update_Y_workspace_limits() {}
+void update_Z_workspace_limits() {}
 
-void update_joint_PID(){}
+void update_joint_PID() {}
 
-void update_home_position(){}
-
+void update_home_position() {}
 
 void update_ee_value(byte arg[3])
 {
 }
 
 //--------------------SERIAL WRITING/REPORTING FUNCTIONS--------------------//
-
 
 void read_Estop_from_serial(uint8_t arg)
 {
@@ -440,9 +464,76 @@ void read_Estop_from_serial(uint8_t arg)
   }
 }
 
-
 void report_current_joint_info()
 {
+  static int info_to_be_reported = 0;
+  // Serial.println("start report");
+  to_send_msg current_joint_info;
+
+  // Serial.println("init vals");
+
+  switch (info_to_be_reported)
+  {
+  case 0:
+    current_joint_info.msg[0] = key_from_val("Get_Joint_Positions");
+    break;
+  case 1:
+    current_joint_info.msg[0] = key_from_val("Get_Joint_Velocities");
+    break;
+  case 2:
+    current_joint_info.msg[0] = key_from_val("Get_Joint_Torques");
+    break;
+  case 3:
+    current_joint_info.msg[0] = key_from_val("Get_Joint_Accelerations");
+    break;
+  case 4:
+    current_joint_info.msg[0] = key_from_val("Get_Joint_Jerks");
+    break;
+  }
+  for (int i = 0; i < 7; i++)
+  {
+    byte joint_info_float[3];
+    switch (info_to_be_reported)
+    {
+    case 0:
+      encode_1_float(Actuator_Array[i]->_m_position, joint_info_float);
+      current_joint_info.msg[0] = key_from_val("Get_Joint_Positions");
+      break;
+    case 1:
+      encode_1_float(Actuator_Array[i]->_m_velocity, joint_info_float);
+      current_joint_info.msg[0] = key_from_val("Get_Joint_Velocities");
+      break;
+    case 2:
+      encode_1_float(Actuator_Array[i]->_m_torque, joint_info_float);
+      current_joint_info.msg[0] = key_from_val("Get_Joint_Torques");
+      break;
+    case 3:
+      encode_1_float(Actuator_Array[i]->_m_acceleration, joint_info_float);
+      current_joint_info.msg[0] = key_from_val("Get_Joint_Accelerations");
+      break;
+    case 4:
+      encode_1_float(Actuator_Array[i]->_m_jerk, joint_info_float);
+      current_joint_info.msg[0] = key_from_val("Get_Joint_Jerks");
+      break;
+    }
+
+    for (int j = 0; j < 3; j++)
+    {
+      current_joint_info.msg[(i * 3) + j + 1] = joint_info_float[j];
+    }
+    // memcpy(current_joint_info.msg[i], joint_position, sizeof(joint_position));
+    // Serial.println("memcpy");
+
+    // Serial.println(i);
+  }
+
+  // Serial.println("finish calc");
+  current_joint_info.msg[22] = stop_char;
+
+  to_send_queue.push_back(current_joint_info);
+  // Serial.println("end report");
+  
+  (info_to_be_reported == 4) ? info_to_be_reported = 0 : info_to_be_reported++;
 }
 
 void report_ee_value()
@@ -453,6 +544,16 @@ void report_ee_value()
 
 void report_temperatures() {}
 
+//--------------------HARDWARE/ACTUATOR INTERFACE STUFF--------------------//
+float check_I2C_encoder(uint8_t encoder_num)
+{
+  return .1;
+}
+float check_offbore_encoder()
+{
+  return 0;
+}
+
 void run_steppers()
 {
   for (uint8_t i = 0; i < 7; i++)
@@ -461,7 +562,7 @@ void run_steppers()
   }
 }
 
-//random utility funcs 
+//--------------------RANDOM UTILITY FUNCS--------------------//
 const String val_from_key(const uint8_t key)
 {
   for (uint8_t i = 0; i < sizeof(MCU_key_array) / sizeof(MCU_key_array[0]); i++)

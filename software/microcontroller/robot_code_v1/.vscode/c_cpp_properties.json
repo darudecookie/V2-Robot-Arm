@@ -9,7 +9,7 @@
                 //"C:/Users/darud/AppData/Local/Arduino15/libraries/AccelStepper/AccelStepper-1.64.0/src",
                 //"C:/Users/darud/AppData/Local/Arduino15/libraries/TimerThree/",
                 //"C:/Users/darud/AppData/Local/Arduino15/libraries/ArduinoDeque-master/ArduinoDeque-master/",
-                "C:/Users/darud/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.5/cores/arduino/**",
+              //  "C:/Users/darud/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.5/cores/arduino/**",
                 "C:/Users/darud/AppData/Local/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/avr/include/**",
                 "C:/Users/darud/Documents/**"
             ],
@@ -20,7 +20,7 @@
                 "ARDUINO=10813"
             ],
             "forcedInclude": [
-                "C:/Users/darud/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.5/cores/arduino/Arduino.h"
+                "C:/Users/darud/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino/Arduino.h"
             ],
         }
     ],
