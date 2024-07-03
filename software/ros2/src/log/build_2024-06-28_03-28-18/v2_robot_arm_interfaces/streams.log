@@ -1,6 +1,0 @@
-[0.046s] Invoking command in '/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/movement_controllers:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/hardware_interface:/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/install/ros_controller_interface:/opt/ros/rolling DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/darudecookie/Documents/V2-Robot-Arm/software/ros2/src/build/v2_robot_arm_interfaces -- -j4 -l4
-[0.270s] [  0%] Built target v2_robot_arm_interfaces__rosidl_generator_type_description
-[0.292s] gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_copy_v2_robot_arm_interfaces.dir/all] Interrupt
-[0.294s] gmake: *** wait: No child processes.  Stop.
-[0.294s] gmake: *** Waiting for unfinished jobs....
-[0.294s] gmake: *** wait: No child processes.  Stop.
