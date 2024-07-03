@@ -1,4 +1,0 @@
-source;share/v2_robot_arm_interfaces/local_setup.bash
-source;share/v2_robot_arm_interfaces/local_setup.dsv
-source;share/v2_robot_arm_interfaces/local_setup.sh
-source;share/v2_robot_arm_interfaces/local_setup.zsh
