@@ -38,6 +38,9 @@ const uint8_t MCU_key_array[] = {
     51,
 
     60,
+
+    254,
+    255
 };
 
 const String MCU_val_array[] = {
@@ -71,6 +74,10 @@ const String MCU_val_array[] = {
     "Set_EE_Float",
 
     "Get_Temperatures",
+
+
+    "RESERVED",
+    "RESERVED"
 };
 
 const char MCU_init_phrase[] = "<MCU_init>\n";
