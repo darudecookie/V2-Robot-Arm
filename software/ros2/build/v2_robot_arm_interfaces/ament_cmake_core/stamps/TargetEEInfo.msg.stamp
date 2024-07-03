@@ -1,3 +1,0 @@
-std_msgs/Header header
-
-float32 current_end_effector_value
