@@ -2,11 +2,12 @@ import serial
 import time
 from collections import deque
 import threading
+import numpy
+import time as Time
 
 import rclpy
 from rclpy.node import Node
 import rclpy.parameter
-import rclpy.time
 from v2_robot_arm_interfaces.msg import CurrentEEInfo, TargetEEInfo, CurrentJointInfo, TargetJointInfo, SystemDiagnosticInfo
 from v2_robot_arm_interfaces.srv import MicrocontrollerParameterDump, SystemStatus
 
@@ -58,10 +59,12 @@ class Serial_Interface(Node):
         self.declare_parameter("safe_startup",True)
         safe_startup = self.get_parameter("safe_startup")
 
-        self.start_char = rb"<"
-        self.stop_char = rb">"
-        self.end_char = rb"\n"
-        self.string_from_serial = b''
+        self.start_char =254 #rb"þ"
+        self.start_char = self.start_char.to_bytes(length=1, byteorder="little", signed=False)
+
+        self.stop_char = 255    #rb"ÿ"#
+        self.stop_char =self.stop_char .to_bytes(length=1, byteorder="little", signed=False)
+
 
         self.MCU_key_list = tuple(MCU_arguments.keys())
         self.MCU_val_list= tuple(MCU_arguments.values())
@@ -293,7 +296,7 @@ class Serial_Interface(Node):
 
         return response
 
-    def send_joint_information(self, msg) -> None:
+    def send_joint_information(self, msg):
         joint_info_msg = rb""
         float_vals_to_write = []
 
@@ -316,7 +319,7 @@ class Serial_Interface(Node):
         self.MCU_send_queue.append(self.command_to_bytes(self.key_from_val("Set_EE_Float")) + self.encode_1_float(end_effector_val))
 
     def send_MCU_parameter_dump(self, request, response) -> int:
-        def queue_param_if_needed(target_joint: int, param_values: float, param_code_name: str, ) -> None:
+        def queue_param_if_needed(target_joint: int, param_values: float, param_code_name: str, ):
             if target_joint != - 10:
                 encoded_msg = rb''
                 encoded_msg = self.command_to_bytes(
@@ -334,7 +337,7 @@ class Serial_Interface(Node):
 
         queue_param_if_needed(request.PID_update_target, request.PID_update_params, "Set_Target_Joint_PID_Params")
 
-        def queue_workspace_bound_if_needed(workspace_bound: float[2], param_code_name: str) -> None:
+        def queue_workspace_bound_if_needed(workspace_bound: float[2], param_code_name: str):
             if any(workspace_bound) != -1:
                 encoded_msg = self.command_to_bytes(self.key_from_val(param_code_name))
                 encoded_msg += self.encode_n_floats(workspace_bound)
@@ -378,7 +381,7 @@ class Serial_Interface(Node):
                             self.report_end_effector_information(information_to_report[1])
         return 
 
-    def report_system_diagnostic_information(self, passed_cmd: int, passed_arg: str) -> None:
+    def report_system_diagnostic_information(self, passed_cmd: int, passed_arg: str):
         argument = int.from_bytes(passed_arg, "little")
 
         if passed_cmd == self.key_from_val("Estop"):
@@ -397,41 +400,49 @@ class Serial_Interface(Node):
             
         self.System_Diagnostic_pub.publish(msg)
 
-    def report_joint_information(self, passed_cmd: int, passed_arg: str) -> None:
+    def report_joint_information(self, passed_cmd: int, passed_arg: str):
         def checkdem(array):
-            if type(array[0])==type([0,0]):
-                return True
             return False
+            try:
+                array[0]
+                if type(array[0])==type([0,0]):
+                    return True
+            except IndexError:
+                return False
         
         if passed_cmd == self.key_from_val("Get_Joint_Positions"):
-            if checkdem(self.current_Joint_Info_components.positions):
-                print("joint positon", rclpy.time.Time.seconds_nanoseconds())
-                
+            print("pos", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
+            print(self.joint_info_reported)
+
             self.current_Joint_Info_components.positions = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[0] = True
             
         elif passed_cmd == self.key_from_val("Get_Joint_Velocities"):
-            if checkdem(self.current_Joint_Info_components.positions):
-                print("joint velocity", rclpy.time.Time.seconds_nanoseconds())
+            print("vel", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
+            print(self.joint_info_reported)
+
             self.current_Joint_Info_components.velocities = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[1] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Torques"):
-            if checkdem(self.current_Joint_Info_components.positions):
-                print("joint tprqie", rclpy.time.Time.seconds_nanoseconds())
+            print("torque", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
+            print(self.joint_info_reported)
+
             self.current_Joint_Info_components.torques = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[2] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Accelerations"):
-            if checkdem(self.current_Joint_Info_components.positions):
-                print("joint accel", rclpy.time.Time.seconds_nanoseconds())
+            print("accel",self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
+            print(self.joint_info_reported)
+
             self.current_Joint_Info_components.accelerations = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[3] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Jerks"):
-            if checkdem(self.current_Joint_Info_components.positions):
-                print("joint jerk", rclpy.time.Time.seconds_nanoseconds())
-            self.current_Joint_Info_components.torques = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
+            print("jerk", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
+            print(self.joint_info_reported)
+
+            self.current_Joint_Info_components.jerks = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[4] = True
 
         #print(self.joint_info_reported)
@@ -440,13 +451,22 @@ class Serial_Interface(Node):
         #        return
             
         if all(self.joint_info_reported) == True:
+            #print(type(self.current_Joint_Info_components.positions) )
+            if type(self.current_Joint_Info_components.positions) != numpy.ndarray or type(self.current_Joint_Info_components.velocities) != numpy.ndarray or type(self.current_Joint_Info_components.jerks) != numpy.ndarray or type(self.current_Joint_Info_components.accelerations) != numpy.ndarray or type(self.current_Joint_Info_components.jerks) != numpy.ndarray:
+                print("pub fail:")
+                print(self.current_Joint_Info_components.positions, self.current_Joint_Info_components.velocities, self.current_Joint_Info_components.torques, self.current_Joint_Info_components.accelerations, self.current_Joint_Info_components.jerks)
+                
+                #self.current_Joint_Info_components = CurrentJointInfo()
+                self.joint_info_reported = [False,False,False,False,False]
+                return
+            #print("pub")
             self.current_Joint_Info_pub.publish(self.current_Joint_Info_components)
             self.joint_info_reported = [False,False,False,False,False]
             #self.current_Joint_Info_components = CurrentJointInfo()
             
 
 
-    def report_end_effector_information(self,  passed_arg: str) -> None:
+    def report_end_effector_information(self,  passed_arg: str):
         msg = CurrentEEInfo()
         
         msg.current_end_effector_value =  self.decode_1_float(passed_arg)
