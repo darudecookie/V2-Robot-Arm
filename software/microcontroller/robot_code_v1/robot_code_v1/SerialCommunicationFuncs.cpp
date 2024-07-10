@@ -7,9 +7,9 @@ float decode_1_float(byte byte_array[3])
 {
   float parsed_float = 0;
 
-  if (static_cast<short>(byte_array[0]) >= 101)
+  if (static_cast<uint8_t>(byte_array[0]) >= 101)
   {
-    parsed_float = -(static_cast<short>(byte_array[0]) - 101);
+    parsed_float = -(static_cast<uint8_t>(byte_array[0]) - 101);
     parsed_float -= (static_cast<float>(byte_array[1]) - 101) / 100;
     parsed_float -= (static_cast<float>(byte_array[2]) - 101) / (100 * 100);
   }
@@ -33,10 +33,10 @@ void decode_7_floats(float target_array[7], byte input_bytes[21])
 
 void encode_1_float(float input_float, byte modified_bytes[3])
 {
-  short float_sections[3] = {
-      (short)(input_float),
-      (short)(input_float * 100) - (short)(input_float) * 100,
-      (short)(input_float * 100 * 100) - (short)(input_float * 100) * 100,
+  uint8_t float_sections[3] = {
+      (uint8_t)(input_float),
+      (uint8_t)(input_float * 100) - (uint8_t)(input_float) * 100,
+      (uint8_t)(input_float * 100 * 100) - (uint8_t)(input_float * 100) * 100,
   };
 
   for (byte i = 0; i < 3; i++)

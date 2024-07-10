@@ -114,13 +114,13 @@ void Actuator::update_PID_params(double new_PID_params[3])
   Actuator::PID_object->setCoefficients(new_PID_params[0], new_PID_params[1], new_PID_params[2], Actuator::_m_PID_frequency);
 }
 
-void Actuator::update_max_speed(float new_speed)
+void Actuator::update_max_velocity(float new_speed)
 {
   Actuator::stepper_object->setMaxSpeed(abs((new_speed)*_m_steps_rev * _m_reduction_ratio));
   Actuator::joint_velocity_limit = new_speed;
 }
 
-void Actuator::update_max_accel(float new_accel)
+void Actuator::update_max_acceleration(float new_accel)
 {
   Actuator::stepper_object->setAcceleration(abs((new_accel - 1) * _m_steps_rev * _m_reduction_ratio));
 

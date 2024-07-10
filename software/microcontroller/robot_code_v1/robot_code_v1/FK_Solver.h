@@ -18,11 +18,10 @@ public:
     bool check_angles_against_bounds(float joint_angles[7], float workspace_bounds[3][2]);
 
     // private:
-    float _m_joint_DH_paramaters[4][4];
-    float end_effector_Jacobian[4][4];
-    float _m_joint_DH_params[7][4];
+    float _m_joint_DH_paramaters[7][4];
+    float end_effector_transformation[4][4];
 
-    void populate_Jacobian_from_DH(float DH_paramaters[4], float output_Jacobian[4][4]);
+    void populate_transformation_from_DH(float DH_paramaters[4], float output_transformation[4][4]);
     void cross_multiply(float output_matrix[4][4], float matrix1[4][4], float matrix2[4][4]);
 
     void printmatrix(float matrix[4][4]);

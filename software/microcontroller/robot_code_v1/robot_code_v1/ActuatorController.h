@@ -3,20 +3,20 @@
 
 #include "Arduino.h"
 #include "AccelStepper.h"
-#include "FastPID.h"
+#include <FastPID.h>
 
 class Actuator
 {
 public:
-  float _m_position = 0; // this is supposed to be the most current reading from the encoder; so no interpolation/estimation like with other values
-  float _m_velocity = 0; // internal target velocity
-  float _m_acceleration = 0;
-  float _m_jerk = 0;
-  float _m_torque = 0;
+  float _m_position = -0.1; // this is supposed to be the most current reading from the encoder; so no interpolation/estimation like with other values
+  float _m_velocity = -0.2; // internal target velocity
+  float _m_acceleration = -0.3;
+  float _m_jerk = -0.4;
+  float _m_torque = -0.5;
 
   bool joint_hold = false; // designed to set by external jointhold func
 
-  // all of these are in deg/sec^n (ie max velocity is in deg/sec^1, max jerk is in deg/sec^3 ), except for torque which is/will be in Nm
+  // all of these are in rad/sec^n (ie max velocity is in rad/sec^1, max jerk is in rad/sec^3 ), except for torque which is/will be in Nm
   float joint_position_limits[2] = {1, -1};
   float joint_jerk_limit = 2; // these next limits aren't arrays bc i imagine they would be they same regardless of direction of joint travel
   float joint_torque_limit = 2;
@@ -32,8 +32,8 @@ public:
   void Kinematics_PID_Calc(float unparsed_angle_input); // func checks joint position and calculates, veloicty, accel, and jerk, then refreshes PID if neccessary
 
   void update_PID_params(double new_PID_params[3]); // these just update params; should be called when initting joints
-  void update_max_speed(float new_speed);
-  void update_max_accel(float new_accel);
+  void update_max_velocity(float new_speed);
+  void update_max_acceleration(float new_accel);
 
 private:
   AccelStepper *stepper_object;
