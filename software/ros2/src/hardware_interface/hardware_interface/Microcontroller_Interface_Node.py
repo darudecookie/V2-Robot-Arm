@@ -234,14 +234,13 @@ class Serial_Interface(Node):
     def read_from_MCU_write_to_MCU(self):       #MCU comm loop
         if self.Serial_port.in_waiting > 0:
             read_data = rb""
-            should_parse = False
-            byte_num = 0
 
             read_byte = self.Serial_port.read()
             if read_byte == self.start_char:
                 #self.get_logger().debug("reading command-arg from MCU")
                 read_data = self.Serial_port.read_until(expected = self.stop_char)
                 self.MCU_report_queue.append(self.decode_from_serial(read_data))
+                print(self.decode_from_serial(read_data))
                 self.conditional_queue_len_print()
 
         self.conditional_queue_len_print()
@@ -299,16 +298,16 @@ class Serial_Interface(Node):
     def send_joint_information(self, msg):
         joint_info_msg = rb""
         float_vals_to_write = []
-
-        if msg.param_to_control == 0:
-            joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Positions"))
-            float_vals_to_write = msg.target_joint_velocities
-        elif msg.param_to_control == 1:
-            joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Velocities"))
-            float_vals_to_write = msg.Target_Joint_Velocities
-        elif msg.param_to_control == 2:
-            joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Torques"))
-            float_vals_to_write = msg.target_joint_torques
+        match msg.param_to_control :
+            case  0:
+                joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Positions"))
+                float_vals_to_write = msg.target_joint_velocities
+            case 1:
+                joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Velocities"))
+                float_vals_to_write = msg.Target_Joint_Velocities
+            case 2:
+                joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Torques"))
+                float_vals_to_write = msg.target_joint_torques
 
         joint_info_msg += self.encode_n_floats(float_vals_to_write, 7)
 
@@ -360,6 +359,7 @@ class Serial_Interface(Node):
         if len(self.MCU_report_queue) > 0:
             information_to_report = self.MCU_report_queue.popleft()
             if information_to_report!= None:
+                print("prse", information_to_report[0])
                 if information_to_report[0]!= -1:
                     match MCU_arguments[information_to_report[0]]:
                         case "Estop":
@@ -401,15 +401,7 @@ class Serial_Interface(Node):
         self.System_Diagnostic_pub.publish(msg)
 
     def report_joint_information(self, passed_cmd: int, passed_arg: str):
-        def checkdem(array):
-            return False
-            try:
-                array[0]
-                if type(array[0])==type([0,0]):
-                    return True
-            except IndexError:
-                return False
-        
+        print("bwuh")
         if passed_cmd == self.key_from_val("Get_Joint_Positions"):
             print("pos", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
             print(self.joint_info_reported)
