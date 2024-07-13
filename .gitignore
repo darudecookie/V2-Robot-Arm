@@ -8,10 +8,10 @@
 /software/ros2/src/install
 /software/ros2/src/log
 
-/*.dtmp
-/*.drawio.bkp
+*.dtmp
+*.drawio.bkp
 
 
-/*.FCBak
-/*.FCStd1
-/*.stl
+*.FCBak
+*.FCStd1
+*.stl
