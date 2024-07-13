@@ -10,7 +10,7 @@
 
 *.dtmp
 *.drawio.bkp
-
+*.bkp
 
 *.FCBak
 *.FCStd1
