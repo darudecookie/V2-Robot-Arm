@@ -80,12 +80,6 @@ class Peripheral_Controller(Node):
         self.get_logger().info("gamepad found!\nproceeding with initiation")
 
         
-        peripheral_event_frequency = 250
-        self.peripheral_event_timer = self.create_timer(1/peripheral_event_frequency, self.parse_event_from_peripheral)
-
-        self.cartesian_update_frequency = 50
-        self.cartesian_update_timer = self.create_timer(1/self.cartesian_update_frequency, self.update_cartesian_from_peripheral,)
-        
         
         self.System_Status_client = self.create_client(SystemStatus, "system_status")
         if safe_startup.value:    
@@ -101,6 +95,14 @@ class Peripheral_Controller(Node):
 
         self.Target_Cartesian_pub = self.create_publisher(TargetCartesian, "target_cartesian", 10)
         
+
+                
+        peripheral_event_frequency = 250
+        self.peripheral_event_timer = self.create_timer(1/peripheral_event_frequency, self.parse_event_from_peripheral)
+
+        self.cartesian_update_frequency = 50
+        self.cartesian_update_timer = self.create_timer(1/self.cartesian_update_frequency, self.update_cartesian_from_peripheral)
+
         self.get_logger().info(f"node initiated!\nperipheral name: '{inputs.GamePad}'")
 
     def update_jointhold_from_system(self, msg):
@@ -130,22 +132,20 @@ class Peripheral_Controller(Node):
     def parse_event_from_peripheral(self):      #takes info from peripheral and sets appropriate flags/vars ****BINDINGS ARE HERE******
         gamepad_events = inputs.get_gamepad()
 
-        if gamepad_events:
-            for gamepad_event in gamepad_events:
+        for gamepad_event in gamepad_events:
                 match gamepad_event.ev_type:
-                    
                     case "Key":     #button press
-                        if gamepad_event.code == "BTN_Z" and gamepad_event.state == 1:      #trigger button is hit (toggle position/rotation)
+                        if gamepad_event.code == "BTN_TRIGGER" and gamepad_event.state == 1:      #trigger button is hit (toggle position/rotation)
                             self.position_output = not self.position_output
                             
                             self.get_logger().info("toggling position/rotation control")
-                        elif gamepad_event.code == "BTN_WEST" and gamepad_event.state == 1:   #thumb trigger/ wpn release is hit (jointhold)
+                        elif gamepad_event.code == "BTN_THUMB" and gamepad_event.state == 1:   #thumb trigger/ wpn release is hit (jointhold)
                             self.System_Status_Req.jointhold = -(self.System_Status_Req.jointhold)
                             self.System_Status_client.call_async(self.System_Status_Req)
 
                             self.get_logger().warn("toggling jointhold")
 
-                        elif gamepad_event.code == "BTN_SELECT" and gamepad_event.state == 1:
+                        elif gamepad_event.code == "BTN_TOP" and gamepad_event.state == 1:
                             self.System_Status_Req.move_home = 1
                             self.System_Status_client.call_async(self.System_Status_Req)
                             self.System_Status_Req.move_home = 0
@@ -162,12 +162,13 @@ class Peripheral_Controller(Node):
                                 self.joy_values[1] = joy_val
                             case "ABS_Z":
                                 self.joy_values[2] = joy_val
-            self.get_logger().debug("parsing new peripheral event(s)")
+                self.get_logger().debug("parsing new peripheral event(s)")
     
 
     def update_cartesian_from_peripheral(self):
-        if self.should_output and self.System_Status_Req.jointhold == 0 and self.System_Status_Req.move_home == 0:
-            msg = TargetCartesian
+        if self.should_output and self.System_Status_Req.jointhold != 1 and self.System_Status_Req.move_home == 0:
+            print('cart')
+            msg = TargetCartesian()
             
             if self.position_output:
                 msg.rotation = self.current_cartesian_rot
@@ -175,19 +176,23 @@ class Peripheral_Controller(Node):
                 delta_num = self.translation_speed * (1/self.cartesian_update_frequency)
 
                 for i in range(3):
-                    msg.rotation[i] = self.current_cartesian_pos[i] + delta_num*self.joy_values[i]
-                msg.rotation_speed = self.rotation_speed
+                    msg.position[i] = self.current_cartesian_pos[i] + delta_num*self.joy_values[i]
+
+                msg.translation_speed = self.translation_speed
+                msg.rotation_speed = 0
 
             else:
-                msg.position = self.current_cartesian_rot
+                msg.position = self.current_cartesian_pos
                 
                 delta_num = self.rotation_speed * (1/self.cartesian_update_frequency)
+
                 for i in range(3):
                     msg.rotation[i] = self.current_cartesian_rot[i] + delta_num*self.joy_values[i]
-                msg.translation_speed = self.translation_speed
+                msg.rotation_speed = self.rotation_speed
+                msg.translation_speed = 0
                     
             self.Target_Cartesian_pub.publish(msg)
-            self.get_logger().debug("peripheral controller: publishing updated cartesian coords")
+            self.get_logger().info("peripheral controller: publishing updated cartesian coords")
 
 
 def main(args=None):

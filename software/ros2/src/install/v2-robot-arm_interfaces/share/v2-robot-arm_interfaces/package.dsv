@@ -1,8 +1,0 @@
-source;share/v2-robot-arm_interfaces/hook/cmake_prefix_path.ps1
-source;share/v2-robot-arm_interfaces/hook/cmake_prefix_path.dsv
-source;share/v2-robot-arm_interfaces/hook/cmake_prefix_path.sh
-source;share/v2-robot-arm_interfaces/local_setup.bash
-source;share/v2-robot-arm_interfaces/local_setup.dsv
-source;share/v2-robot-arm_interfaces/local_setup.ps1
-source;share/v2-robot-arm_interfaces/local_setup.sh
-source;share/v2-robot-arm_interfaces/local_setup.zsh

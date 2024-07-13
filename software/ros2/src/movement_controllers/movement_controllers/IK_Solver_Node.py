@@ -6,23 +6,31 @@ from v2_robot_arm_interfaces.msg import CurrentJointInfo, TargetJointInfo, Curre
 
 class IK_Controller(Node):
     def __init__(self):
-        super().__init__() 
+        super().__init__("IK_Controller_Node") 
 
         self.should_output = False
 
-        self.Current_Status_sub = self.create_subscription(ControlStatus, "control_status", self.update_output_status)
+        self.Current_Status_sub = self.create_subscription(ControlStatus, "control_status", self.update_output_status, 10)
 
-        self.Current_Joint_sub = self.create_subscription(CurrentJointInfo, "current_joint_information", self.update_current_joint_angles)
-        self.Target_Joint_pub = self.create_publisher(TargetJointInfo, "target_joint_information", 10)
+        self.Current_Joint_sub = self.create_subscription(CurrentJointInfo, "current_joint_information", self.update_current_joint_angles, 10)
+        self.Target_Joint_pub = self.create_publisher(TargetJointInfo, "target_joint_information", 10),
 
         self.Current_Cartesian_pub = self.create_publisher(CurrentCartesian, "current_cartesian", 10)
-        self.Target_Cartesian_sub = self.create_subscription(TargetCartesian, "target_cartesian", self.update_target_cartesian)
+        self.Target_Cartesian_sub = self.create_subscription(TargetCartesian, "target_cartesian", self.update_target_cartesian, 10)
 
         self.target_joint_angles = [0,0,0,0,0,0,0]
         self.current_joint_angles = [0,0,0,0,0,0,0]
 
+        self.current_cartesian_pos = [0,0,0]
+        self.current_cartesian_rot = [0,0,0]
+
+
+
         self.target_cartesian_matrix = PyKDL.Frame()
         self.current_cartesian_matrix = PyKDL.Frame()
+
+        self.target_translation_speed = 1
+        self.target_rotation_speed = 1
 
 
         self.IK_Calc_frequency = 200
@@ -35,25 +43,28 @@ class IK_Controller(Node):
             self.should_output = False
 
     def update_current_joint_angles(self, msg):
-        self.current_joint_angles = msg.current_joint_positions
+        self.current_joint_angles = msg.positions
         self.publish_current_cartesian()
 
     def update_target_cartesian(self, msg):
-        msg.position =  #3 float array
-        msg.rotation = # 3 float array
+        self.target_cartesian_matrix.p = msg.rotation 
+        self.target_cartesian_matrix.M=msg.position  
+
+        self.target_translation_speed = msg.translation_speed
+        self.target_rotation_speed = msg.rotation_speed
 
     def update_and_pub_IK(self):
 
-
-        msg = TargetJointInfo
+        msg = TargetJointInfo()
         msg.param_to_control = 0
-        msg.target_joint_positions = #7 float array
+        msg.target_joint_positions = self.target_joint_angles
+
     
     def publish_current_cartesian(self):
 
 
 
-        msg = CurrentCartesian
+        msg = CurrentCartesian()
         msg.position = [0,0,0]
         msg.rotation = [0,0,0]
 

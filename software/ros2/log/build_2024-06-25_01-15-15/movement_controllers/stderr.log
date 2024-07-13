@@ -1,5 +1,0 @@
-  File "/home/darudecookie/Documents/V2-Robot-Arm/software/ros2/install/movement_controllers/lib/python3.12/site-packages/movement_controllers/IK_Solver_Node.py", line 42
-    msg.position =  #3 float array
-                    ^^^^^^^^^^^^^^^
-SyntaxError: invalid syntax
-

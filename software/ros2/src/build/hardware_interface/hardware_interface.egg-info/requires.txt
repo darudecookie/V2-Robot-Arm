@@ -1,2 +1,0 @@
-V2_Robot_Arm_interfaces
-setuptools
