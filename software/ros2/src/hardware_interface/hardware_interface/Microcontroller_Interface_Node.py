@@ -240,7 +240,6 @@ class Serial_Interface(Node):
                 #self.get_logger().debug("reading command-arg from MCU")
                 read_data = self.Serial_port.read_until(expected = self.stop_char)
                 self.MCU_report_queue.append(self.decode_from_serial(read_data))
-                print(self.decode_from_serial(read_data))
                 self.conditional_queue_len_print()
 
         self.conditional_queue_len_print()
@@ -359,7 +358,6 @@ class Serial_Interface(Node):
         if len(self.MCU_report_queue) > 0:
             information_to_report = self.MCU_report_queue.popleft()
             if information_to_report!= None:
-                print("prse", information_to_report[0])
                 if information_to_report[0]!= -1:
                     match MCU_arguments[information_to_report[0]]:
                         case "Estop":
@@ -401,61 +399,37 @@ class Serial_Interface(Node):
         self.System_Diagnostic_pub.publish(msg)
 
     def report_joint_information(self, passed_cmd: int, passed_arg: str):
-        print("bwuh")
         if passed_cmd == self.key_from_val("Get_Joint_Positions"):
-            print("pos", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
-            print(self.joint_info_reported)
-
             self.current_Joint_Info_components.positions = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[0] = True
             
         elif passed_cmd == self.key_from_val("Get_Joint_Velocities"):
-            print("vel", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
-            print(self.joint_info_reported)
-
             self.current_Joint_Info_components.velocities = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[1] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Torques"):
-            print("torque", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
-            print(self.joint_info_reported)
-
             self.current_Joint_Info_components.torques = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[2] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Accelerations"):
-            print("accel",self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
-            print(self.joint_info_reported)
-
             self.current_Joint_Info_components.accelerations = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[3] = True
 
         elif passed_cmd == self.key_from_val("Get_Joint_Jerks"):
-            print("jerk", self.decode_n_floats(input_bytes = passed_arg, n_floats=7))
-            print(self.joint_info_reported)
-
             self.current_Joint_Info_components.jerks = self.decode_n_floats(input_bytes = passed_arg, n_floats=7)
             self.joint_info_reported[4] = True
-
-        #print(self.joint_info_reported)
-        #for i in range(5):
-        #    if self.joint_info_reported[i] == False:
-        #        return
+        else:
+            return
             
         if all(self.joint_info_reported) == True:
-            #print(type(self.current_Joint_Info_components.positions) )
-            if type(self.current_Joint_Info_components.positions) != numpy.ndarray or type(self.current_Joint_Info_components.velocities) != numpy.ndarray or type(self.current_Joint_Info_components.jerks) != numpy.ndarray or type(self.current_Joint_Info_components.accelerations) != numpy.ndarray or type(self.current_Joint_Info_components.jerks) != numpy.ndarray:
-                print("pub fail:")
-                print(self.current_Joint_Info_components.positions, self.current_Joint_Info_components.velocities, self.current_Joint_Info_components.torques, self.current_Joint_Info_components.accelerations, self.current_Joint_Info_components.jerks)
-                
-                #self.current_Joint_Info_components = CurrentJointInfo()
+            if self.current_Joint_Info_components.positions.ndim != 1 or self.current_Joint_Info_components.velocities.ndim != 1 or self.current_Joint_Info_components.jerks.ndim != 1 or self.current_Joint_Info_components.accelerations.ndim != 1 or self.current_Joint_Info_components.jerks.ndim != 1:
+                self.current_Joint_Info_components=CurrentJointInfo()
                 self.joint_info_reported = [False,False,False,False,False]
                 return
-            #print("pub")
             self.current_Joint_Info_pub.publish(self.current_Joint_Info_components)
             self.joint_info_reported = [False,False,False,False,False]
-            #self.current_Joint_Info_components = CurrentJointInfo()
-            
+        else:
+            return
 
 
     def report_end_effector_information(self,  passed_arg: str):
