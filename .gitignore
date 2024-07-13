@@ -8,17 +8,10 @@
 /software/ros2/src/install
 /software/ros2/src/log
 
-project_documents/.$model_ROS_diagram.drawio.dtmp
-project_documents/.$model_ROS_diagram.drawio.bkp
-project_documents/model_GUI_layout.drawio.dtmp
-project_documents/model_GUI_layout.drawio.bkp
- 
-/CAD/axis_2/axis_0.FCStd1
+/*.dtmp
+/*.drawio.bkp
 
-/CAD/axis_2/axis_1.FCStd1
 
-/CAD/axis_2/axis_2.20240628-174651.FCBak
-/CAD/axis_2/axis_2.FCStd1
-
-/CAD/axis_2/axis_3.FCStd1
-
+/*.FCBak
+/*.FCStd1
+/*.stl
