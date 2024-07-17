@@ -33,7 +33,7 @@ class End_Effector_Controller(Node):
         self.get_logger().debug("updating current end effector value")
 
     def target_EE_timer_callback(self, msg):
-        msg = TargetEEInfo
+        msg = TargetEEInfo()
         msg.current_end_effector_value = self.internal_target_EE_state
         self.target_EE_info_pub.publish(msg)
 
