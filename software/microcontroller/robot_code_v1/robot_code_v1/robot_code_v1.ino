@@ -95,7 +95,7 @@ Deque<to_send_msg> to_send_queue = Deque<to_send_msg>(50);
 volatile bool global_jointhold_flag = true; // flag
 
 volatile bool global_estop_flag = false;      // is estop turned on globally
-const uint8_t stepper_driver_enable_pin = 22; // pin that all of the driver enable pins are connected to
+const uint8_t stepper_driver_enable_pin = 21; // pin that all of the driver enable pins are connected to
 const uint8_t estop_normally_HIGH_pin = 23;   // pins that read from button, these are normally high/low instead of NO/NC bc I haven't figured out how I'm gonna wire up the estop circuit
 const uint8_t estop_normally_LOW_pin = 22;
 const uint8_t estop_led_pin1 = LED_BUILTIN; // light to be turned on when the estop is on
