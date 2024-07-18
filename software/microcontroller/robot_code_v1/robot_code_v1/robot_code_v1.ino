@@ -227,8 +227,10 @@ void get_string_from_serial()
     SCB_AIRCR = 0x05FA0004;   //restart program
   }
 
+  //so the main body of the function only runs if there's a byte in the serial buffer and if the last byte hasn't been processed - this means that maybe the internal data copying in some of the below functions isn't necessary
   if (Serial.available() > 0 && command_flag == false)
   {
+
 
     byte read_char = Serial.read();
 
@@ -397,11 +399,12 @@ void move_home()
 
 void update_target_joint_positions()
 {
-  byte _internal_current_arg[21];
-  memcpy(_internal_current_arg, current_arg, 21);
+  //byte _internal_current_arg[21];
+  //memcpy(_internal_current_arg, current_arg, 21);
 
   float positions[7];
-  decode_7_floats(positions, _internal_current_arg);
+  //decode_7_floats(positions, _internal_current_arg);
+  decode_7_floats(positions, current_arg);
 
   for (uint8_t i = 0; i < 7; i++)
   {
@@ -410,11 +413,12 @@ void update_target_joint_positions()
 }
 void update_target_joint_velocities()
 {
-  byte _internal_current_arg[21];
-  memcpy(_internal_current_arg, current_arg, 21);
+  //byte _internal_current_arg[21];
+  //memcpy(_internal_current_arg, current_arg, 21);
 
   float velocities[7];
-  decode_7_floats(velocities, _internal_current_arg);
+  //decode_7_floats(velocities, _internal_current_arg);
+  decode_7_floats(velocities, current_arg);
 
   for (uint8_t i = 0; i < 7; i++)
   {
@@ -423,11 +427,12 @@ void update_target_joint_velocities()
 }
 void update_target_joint_torques()
 {
-  byte _internal_current_arg[21];
-  memcpy(_internal_current_arg, current_arg, 21);
+  //byte _internal_current_arg[21];
+  //memcpy(_internal_current_arg, current_arg, 21);
 
   float torques[7];
-  decode_7_floats(torques, _internal_current_arg);
+  //decode_7_floats(torques, _internal_current_arg);
+  decode_7_floats(torques, current_arg);
 
   for (uint8_t i = 0; i < 7; i++)
   {
