@@ -59,10 +59,10 @@ class Serial_Interface(Node):
         self.declare_parameter("safe_startup",True)
         safe_startup = self.get_parameter("safe_startup")
 
-        self.start_char =254 #rb"þ"
+        self.start_char =254 #b"þ"
         self.start_char = self.start_char.to_bytes(length=1, byteorder="little", signed=False)
 
-        self.stop_char = 255    #rb"ÿ"#
+        self.stop_char = 255    #b"ÿ"#
         self.stop_char =self.stop_char .to_bytes(length=1, byteorder="little", signed=False)
 
 
@@ -73,8 +73,8 @@ class Serial_Interface(Node):
         MCU_communication_frequency = 300
         ros_communication_frequency = 2 * MCU_communication_frequency
 
-        self.declare_parameter("estop_cooldown", 20)
-        self.estop_cooldown = self.get_parameter("safe_startup")
+        self.declare_parameter("estop_cooldown", 1)
+        self.estop_cooldown = self.get_parameter("estop_cooldown")
         self.time_since_last_estop = time.time() - self.estop_cooldown.value
 
         # queue of decoded received messages from the MCU
@@ -234,7 +234,7 @@ class Serial_Interface(Node):
     def read_from_MCU_write_to_MCU(self):       #MCU comm loop
         if self.Serial_port.in_waiting > 0:
             read_data = rb""
-
+            
             read_byte = self.Serial_port.read()
             if read_byte == self.start_char:
                 #self.get_logger().debug("reading command-arg from MCU")
@@ -247,7 +247,8 @@ class Serial_Interface(Node):
         if len(self.MCU_send_queue) > 0 and ((time.time() - self.time_since_last_estop) > self.estop_cooldown.value):
             to_send_line = self.start_char+self.MCU_send_queue.popleft()+self.stop_char
             self.Serial_port.write(to_send_line)
-            #self.get_logger().debug("sending command-arg to MCU")
+        elif len(self.MCU_send_queue)>0:
+            self.get_logger().info("info not written due to recent estop")
 
 
         return
@@ -270,7 +271,6 @@ class Serial_Interface(Node):
                 self.get_logger().warn("E-Stop deactivated")
             self.MCU_send_queue.appendleft(estop_byte_msg)
             
-
         if request.jointhold != 0:
             system_diag_msg.jointhold = request.jointhold
 
@@ -281,7 +281,7 @@ class Serial_Interface(Node):
                 self.get_logger().warn("joint hold activated")
             elif request.jointhold == -1:
                 jointhold_byte_msg += self.command_to_bytes(0)
-                               
+        
                 self.get_logger().warn("joint hold dectivated")
             self.MCU_send_queue.appendleft(jointhold_byte_msg)
         
@@ -442,8 +442,6 @@ class Serial_Interface(Node):
 
         if all(self.joint_info_reported) == True:
             if self.current_Joint_Info_components.positions.ndim !=1 or self.current_Joint_Info_components.velocities.ndim !=1 or self.current_Joint_Info_components.jerks.ndim !=1 or self.current_Joint_Info_components.accelerations.ndim !=1 or self.current_Joint_Info_components.jerks.ndim !=1 :
-                print("pub fail:")
-                print(self.current_Joint_Info_components.positions, self.current_Joint_Info_components.velocities, self.current_Joint_Info_components.torques, self.current_Joint_Info_components.accelerations, self.current_Joint_Info_components.jerks)
                 
                 self.current_Joint_Info_components = CurrentJointInfo()
                 self.joint_info_reported = [False,False,False,False,False]
