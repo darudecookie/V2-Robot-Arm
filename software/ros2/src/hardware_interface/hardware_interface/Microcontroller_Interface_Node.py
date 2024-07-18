@@ -59,16 +59,17 @@ class Serial_Interface(Node):
         self.declare_parameter("safe_startup",True)
         safe_startup = self.get_parameter("safe_startup")
 
-        self.start_char =254 #b"þ"
+        self.start_char =254 #  b'þ'
         self.start_char = self.start_char.to_bytes(length=1, byteorder="little", signed=False)
 
-        self.stop_char = 255    #b"ÿ"#
+        self.stop_char = 255    #   b'ÿ'
         self.stop_char =self.stop_char .to_bytes(length=1, byteorder="little", signed=False)
 
 
         self.MCU_key_list = tuple(MCU_arguments.keys())
         self.MCU_val_list= tuple(MCU_arguments.values())
         self.clear_queue = True
+        self.to_send_message = b''
 
         MCU_communication_frequency = 300
         ros_communication_frequency = 2 * MCU_communication_frequency
@@ -167,7 +168,7 @@ class Serial_Interface(Node):
         return tuple(parsed_message)
 
 
-    def command_to_bytes(self, command: int) -> str:
+    def uint8t_to_byte(self, command: int) -> str:
         try:
             output_command = command.to_bytes(
                 1, byteorder="little", signed=False)
@@ -245,8 +246,20 @@ class Serial_Interface(Node):
         self.conditional_queue_len_print()
         
         if len(self.MCU_send_queue) > 0 and ((time.time() - self.time_since_last_estop) > self.estop_cooldown.value):
-            to_send_line = self.start_char+self.MCU_send_queue.popleft()+self.stop_char
-            self.Serial_port.write(to_send_line)
+            to_send_cmd_arg = self.start_char+self.MCU_send_queue.popleft()+self.stop_char
+            
+            msg_len =  len(list(self.to_send_message))+len(list(to_send_cmd_arg))
+            
+            if msg_len<=64:
+                self.to_send_message+=to_send_cmd_arg
+                if msg_len==64:
+                    self.Serial_port.write(self.to_send_message)
+                    self.to_send_message=b''
+            else:
+                self.Serial_port.write(self.to_send_message)
+                self.to_send_message=to_send_cmd_arg
+                                
+            #self.Serial_port.write(to_send_line)
         elif len(self.MCU_send_queue)>0:
             self.get_logger().info("info not written due to recent estop")
 
@@ -260,13 +273,13 @@ class Serial_Interface(Node):
         if request.estop != 0:
             system_diag_msg.estop = request.estop
 
-            estop_byte_msg = self.command_to_bytes(self.key_from_val("Estop"))
+            estop_byte_msg = self.uint8t_to_byte(self.key_from_val("Estop"))
             if request.estop == 1:
-                estop_byte_msg += self.command_to_bytes(1)
+                estop_byte_msg += self.uint8t_to_byte(1)
                                 
                 self.get_logger().warn("E-Stop activated - origin: software")
             elif request.estop == -1:
-                estop_byte_msg += self.command_to_bytes(0)
+                estop_byte_msg += self.uint8t_to_byte(0)
 
                 self.get_logger().warn("E-Stop deactivated")
             self.MCU_send_queue.appendleft(estop_byte_msg)
@@ -274,20 +287,20 @@ class Serial_Interface(Node):
         if request.jointhold != 0:
             system_diag_msg.jointhold = request.jointhold
 
-            jointhold_byte_msg = self.command_to_bytes(self.key_from_val("JointHold"))
+            jointhold_byte_msg = self.uint8t_to_byte(self.key_from_val("JointHold"))
             if request.jointhold == 1:
-                jointhold_byte_msg += self.command_to_bytes(1)
+                jointhold_byte_msg += self.uint8t_to_byte(1)
 
                 self.get_logger().warn("joint hold activated")
             elif request.jointhold == -1:
-                jointhold_byte_msg += self.command_to_bytes(0)
+                jointhold_byte_msg += self.uint8t_to_byte(0)
         
                 self.get_logger().warn("joint hold dectivated")
             self.MCU_send_queue.appendleft(jointhold_byte_msg)
         
         self.System_Diagnostic_pub.publish(system_diag_msg)        
         if request.move_home == 1:
-            self.MCU_send_queue.appendleft(self.command_to_bytes(self.key_from_val("Move_Home")))
+            self.MCU_send_queue.appendleft(self.uint8t_to_byte(self.key_from_val("Move_Home")))
 
             self.get_logger().info("move home commanded")
         response.returnsuccess = 1
@@ -299,13 +312,13 @@ class Serial_Interface(Node):
         float_vals_to_write = []
         match msg.param_to_control :
             case  0:
-                joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Positions"))
+                joint_info_msg += self.uint8t_to_byte(self.key_from_val("Set_Joint_Positions"))
                 float_vals_to_write = msg.target_joint_velocities
             case 1:
-                joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Velocities"))
+                joint_info_msg += self.uint8t_to_byte(self.key_from_val("Set_Joint_Velocities"))
                 float_vals_to_write = msg.Target_Joint_Velocities
             case 2:
-                joint_info_msg += self.command_to_bytes(self.key_from_val("Set_Joint_Torques"))
+                joint_info_msg += self.uint8t_to_byte(self.key_from_val("Set_Joint_Torques"))
                 float_vals_to_write = msg.target_joint_torques
 
         joint_info_msg += self.encode_n_floats(float_vals_to_write, 7)
@@ -314,15 +327,15 @@ class Serial_Interface(Node):
 
     def send_end_effector_information(self, msg):
         end_effector_val = msg.target_end_effector_value
-        self.MCU_send_queue.append(self.command_to_bytes(self.key_from_val("Set_EE_Float")) + self.encode_1_float(end_effector_val))
+        self.MCU_send_queue.append(self.uint8t_to_byte(self.key_from_val("Set_EE_Float")) + self.encode_1_float(end_effector_val))
 
     def send_MCU_parameter_dump(self, request, response) -> int:
         def queue_param_if_needed(target_joint: int, param_values: float, param_code_name: str, ):
             if target_joint != - 10:
                 encoded_msg = rb''
-                encoded_msg = self.command_to_bytes(
+                encoded_msg = self.uint8t_to_byte(
                     self.key_from_val(param_code_name))
-                encoded_msg += self.command_to_bytes(target_joint)
+                encoded_msg += self.uint8t_to_byte(target_joint)
                 encoded_msg += self.encode_n_floats(
                     param_values, len(param_values))
             self.MCU_send_queue.append(encoded_msg)
@@ -337,7 +350,7 @@ class Serial_Interface(Node):
 
         def queue_workspace_bound_if_needed(workspace_bound: float[2], param_code_name: str):
             if any(workspace_bound) != -1:
-                encoded_msg = self.command_to_bytes(self.key_from_val(param_code_name))
+                encoded_msg = self.uint8t_to_byte(self.key_from_val(param_code_name))
                 encoded_msg += self.encode_n_floats(workspace_bound)
                 self.MCU_send_queue.append(encoded_msg)
 
@@ -346,7 +359,7 @@ class Serial_Interface(Node):
         queue_workspace_bound_if_needed(request.z_workspace_bounds, "Set_Z_Workspace_Limit")
 
         if any(request.joint_home_positions) != -1:
-            encoded_msg = self.command_to_bytes(self.key_from_val("Set_Home_Joint_Positions"))
+            encoded_msg = self.uint8t_to_byte(self.key_from_val("Set_Home_Joint_Positions"))
             encoded_msg += self.encode_n_floats(request.joint_home_positions, 7)
             self.MCU_send_queue.append(encoded_msg)
 
