@@ -44,7 +44,7 @@ class IK_Controller(Node):
         self.calculate_FK_publish_CurrentCartesian()
 
     def calculate_FK_publish_CurrentCartesian(self):
-       
+
         msg = CurrentCartesian()
 
         self.Current_Cartesian_pub.publish(msg)

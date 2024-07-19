@@ -163,7 +163,7 @@ class Peripheral_Controller(Node):
                                 case "ABS_RZ":
                                     self.joy_values[2] = joy_val
                 self.get_logger().debug("parsing new peripheral event(s)")
-        except inputs.UnpluggedError:
+        except inputs.UnpluggedError:  # this is here to hopefully gracefully pause the robot instead of some weird error or a crash if the joysticks unplugged
             if self.System_Status_Req.jointhold != 1:
                 self.get_logger().fatal("peripheral not detected - triggering joint hold")
                 self.System_Status_Req.jointhold = 1
