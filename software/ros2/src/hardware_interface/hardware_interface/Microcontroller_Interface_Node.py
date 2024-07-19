@@ -142,7 +142,7 @@ class Serial_Interface(Node):
             return
         
     def frequency_debug(self):
-        print(self.debug_counter,"over",self.debug_poll_time,"seconds\nrate of",self.debug_counter/self.debug_poll_time,"per second")
+        print(self.debug_counter, "over", self.debug_poll_time, "seconds\nrate of", self.debug_counter / self.debug_poll_time, "per second")
         
         self.debug_counter = 0
         
@@ -234,8 +234,6 @@ class Serial_Interface(Node):
         return float_array
 
     def read_from_MCU_write_to_MCU(self):  # MCU comm loop
-        self.debug_counter +=1
-
         if self.Serial_port.in_waiting > 0:
             read_data = rb""
             
@@ -265,6 +263,8 @@ class Serial_Interface(Node):
             # self.Serial_port.write(to_send_line)
         elif len(self.MCU_send_queue) > 0:
             self.get_logger().info("info not written due to recent estop")
+            
+        self.debug_counter +=1
         return
     
     def send_system_status(self, request, response):
