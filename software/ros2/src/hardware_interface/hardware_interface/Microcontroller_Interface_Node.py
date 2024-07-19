@@ -1,9 +1,7 @@
 import serial 
 import time
 from collections import deque
-import threading
 import numpy
-import time as Time
 
 import rclpy
 from rclpy.node import Node
@@ -129,6 +127,10 @@ class Serial_Interface(Node):
         # frequency for messages to be pulled from queue and sent to ros (hz)
         self.ros_communication_timer = self.create_timer(1 / ros_communication_frequency, self.parse_queue_from_MCU)
 
+        self.debug_counter = 0
+        self.debug_poll_time = 1
+        self.debug_timer = self.create_timer(self.debug_poll_time, self.frequency_debug)
+
         self.conditional_queue_len_print()
 
         self.get_logger().info("node initiated!")
@@ -138,6 +140,11 @@ class Serial_Interface(Node):
             self.Serial_port.close()
         except AttributeError:
             return
+        
+    def frequency_debug(self):
+        print(self.debug_counter,"over",self.debug_poll_time,"seconds\nrate of",self.debug_counter/self.debug_poll_time,"per second")
+        
+        self.debug_counter = 0
         
     def conditional_queue_len_print(self):
         if len(self.MCU_report_queue) > 0 or len(self.MCU_send_queue) > 0:
@@ -227,6 +234,8 @@ class Serial_Interface(Node):
         return float_array
 
     def read_from_MCU_write_to_MCU(self):  # MCU comm loop
+        self.debug_counter +=1
+
         if self.Serial_port.in_waiting > 0:
             read_data = rb""
             
