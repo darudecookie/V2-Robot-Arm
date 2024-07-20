@@ -233,6 +233,10 @@ class Serial_Interface(Node):
 
         return float_array
 
+    def write_to_mcu_RIGHT_NOW(self, bytes_to_write: str) -> None:
+        self.Serial_port.flush()
+        self.Serial_port.write(bytes_to_write)
+        
     def read_from_MCU_write_to_MCU(self):  # MCU comm loop
         if self.Serial_port.in_waiting > 0:
             read_data = rb""
@@ -264,7 +268,7 @@ class Serial_Interface(Node):
         elif len(self.MCU_send_queue) > 0:
             self.get_logger().info("info not written due to recent estop")
             
-        self.debug_counter +=1
+        self.debug_counter += 1
         return
     
     def send_system_status(self, request, response):
@@ -283,7 +287,7 @@ class Serial_Interface(Node):
                 estop_byte_msg += self.uint8t_to_byte(0)
 
                 self.get_logger().warn("E-Stop deactivated")
-            self.MCU_send_queue.appendleft(estop_byte_msg)
+            self.write_to_mcu_RIGHT_NOW(estop_byte_msg)
             
         if request.jointhold != 0:
             system_diag_msg.jointhold = request.jointhold
@@ -297,11 +301,11 @@ class Serial_Interface(Node):
                 jointhold_byte_msg += self.uint8t_to_byte(0)
         
                 self.get_logger().warn("joint hold deactivated")
-            self.MCU_send_queue.appendleft(jointhold_byte_msg)
+            self.write_to_mcu_RIGHT_NOW(jointhold_byte_msg)
         
         self.System_Diagnostic_pub.publish(system_diag_msg)        
         if request.move_home == 1:
-            self.MCU_send_queue.appendleft(self.uint8t_to_byte(self.key_from_val("Move_Home")))
+            self.write_to_mcu_RIGHT_NOW(self.uint8t_to_byte(self.key_from_val("Move_Home")))
 
             self.get_logger().info("move home commanded")
         response.returnsuccess = 1
