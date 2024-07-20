@@ -4,7 +4,7 @@
 #include "ActuatorController.h"
 #include "SerialCommunicationFuncs.h"
 // #include "FK_Solver.h"
-#include "TimerThree.h"
+// #include "TimerThree.h"
 #include "Deque.h"
 
 const uint8_t MCU_key_array[] = {
@@ -78,8 +78,8 @@ const String MCU_val_array[] = {
     "RESERVED"};
 
 const char MCU_init_phrase[] = "<MCU_init>\n";
-const byte start_byte = static_cast<byte>(254);
-const byte stop_byte = static_cast<byte>(255);
+const byte start_byte = static_cast<uint8_t>(254);
+const byte stop_byte = static_cast<uint8_t>(255);
 
 const int max_serial_input = 25;
 volatile uint16_t current_cmd = 255;
@@ -95,10 +95,11 @@ Deque<to_send_msg> to_send_queue = Deque<to_send_msg>(50);
 volatile bool global_jointhold_flag = true; // flag
 
 volatile bool global_estop_flag = false;      // is estop turned on globally
-const uint8_t stepper_driver_enable_pin = 22; // pin that all of the driver enable pins are connected to
-const uint8_t estop_normally_HIGH_pin = 32;   // pins that read from button, these are normally high/low instead of NO/NC bc I haven't figured out how I'm gonna wire up the estop circuit
-const uint8_t estop_normally_LOW_pin = 31;
-const uint8_t estop_led_pin = LED_BUILTIN; // light to be turned on when the estop is on
+const uint8_t stepper_driver_enable_pin = 21; // pin that all of the driver enable pins are connected to
+const uint8_t estop_normally_HIGH_pin = 23;   // pins that read from button, these are normally high/low instead of NO/NC bc I haven't figured out how I'm gonna wire up the estop circuit
+const uint8_t estop_normally_LOW_pin = 22;
+const uint8_t estop_led_pin1 = LED_BUILTIN; // light to be turned on when the estop is on
+// const uint8_t estop_led_pin2 = LED_BUILTIN; // light to be turned on when the estop is on
 
 Actuator *Actuator_Array[7];
 const uint8_t step_dir_pins[7][2] = {{1, 2}, {1, 2}, {1, 2}, {1, 2}, {1, 2}, {1, 2}, {1, 2}};
@@ -119,22 +120,22 @@ float current_end_effector = 0;
 
 // these are all of the periods that different functions refresh/are run at
 //  units are in the name
-const int serial_print_inverval_micro = 250;
-const int serial_input_interval_micro = 250;
+const int serial_print_interval_micro = 250;
+const int serial_input_interval_micro = 100;
+const int serial_decode_interval_micro = 350;
 
 const int estop_check_interval_milli = 2; // interval to check the estop pins and call functions
 
-const int kinematics_PID_recalc_joint_interval_milli = 75; // recuaclualtes joint PID values, maybe should shoot for a value closer to 1KHz
+const int kinematics_PID_recalc_joint_interval_milli = 75; // recalculates joint PID values, maybe should shoot for a value closer to 1KHz
 const int joint_kinematics_report_interval_micro = 250;    // publishes joint position, velocity, acceleration, jerk, and torque. note that it takes 5 cycles to publish a message with all joint info, so in ros the system will publish joint info at 1/5 this rate
-
-const int serial_check_interval_milli = 1000;
 
 void setup()
 {
   Serial.begin(115200);
 
   pinMode(stepper_driver_enable_pin, OUTPUT);
-  pinMode(estop_led_pin, OUTPUT);
+  pinMode(estop_led_pin1, OUTPUT);
+  // pinMode(estop_led_pin2, OUTPUT);
 
   pinMode(estop_normally_HIGH_pin, INPUT);
   pinMode(estop_normally_LOW_pin, INPUT);
@@ -152,8 +153,8 @@ void setup()
 
   Serial.println(MCU_init_phrase);
 
-  Timer3.attachInterrupt(run_motors);
-  Timer3.initialize(100);
+  // Timer3.attachInterrupt(run_motors);
+  // Timer3.initialize(100);
 }
 
 void loop()
@@ -161,27 +162,35 @@ void loop()
   static long last_estop_check = 0;
   if ((millis() - last_estop_check > estop_check_interval_milli))
   {
-    // if (digitalRead(estop_normally_HIGH_pin) == LOW && !global_estop_flag)
-    if (false)
+    if (!global_estop_flag)
     {
-      Estop_on();
-      report_Estop();
-      last_estop_check = millis();
-    } //    else if (digitalRead(estop_normally_LOW_pin) == HIGH && !global_estop_flag){Estop_on();report_Estop();last_estop_check = millis();}
+      if (digitalRead(estop_normally_HIGH_pin) == LOW || digitalRead(estop_normally_LOW_pin) == HIGH)
+      {
+        Estop_on();
+        report_Estop();
+      }
+    }
+    last_estop_check = millis();
   }
-
   static long last_serial_print = 0;
-  if (micros() - last_serial_print > serial_print_inverval_micro)
+  if (micros() - last_serial_print > serial_print_interval_micro)
   {
     send_bytes_to_serial();
     last_serial_print = micros();
   }
 
-  static long last_serial_input = 0;
-  if (micros() - last_serial_input > serial_input_interval_micro)
+  static long last_serial_read = 0;
+  if (micros() - last_serial_read > serial_input_interval_micro)
+  {
+    get_string_from_serial();
+    last_serial_read = micros();
+  }
+
+  static long serial_input_decode_micro = 0;
+  if (micros() - serial_input_decode_micro > serial_decode_interval_micro)
   {
     decode_data_from_serial();
-    last_serial_input = micros();
+    serial_input_decode_micro = micros();
   }
 
   static long last_joint_PID = 0;
@@ -200,16 +209,6 @@ void loop()
     report_current_joint_info();
     last_joint_kinematic_report = micros();
   }
-
-  static long last_serial_check = 0;
-  if (millis() - last_serial_check > serial_check_interval_milli)
-  {
-    if (!Serial)
-    {
-      SCB_AIRCR = 0x05FA0004;
-    }
-    last_serial_check = millis();
-  }
 }
 
 //--------------------SERIAL READ/WRITE FUNCTIONS--------------------//
@@ -220,8 +219,19 @@ void get_string_from_serial()
   static bool should_read = false;
   static bool first_char = true;
 
+  // if serial isn't detected in this function, trigger the estop and restart the program
+  if (!Serial)
+  {
+    estop_on();     
+    delay(200);   //delay to make sure estop actually did something
+    SCB_AIRCR = 0x05FA0004;   //restart program
+  }
+
+  //so the main body of the function only runs if there's a byte in the serial buffer and if the last byte hasn't been processed - this means that maybe the internal data copying in some of the below functions isn't necessary
   if (Serial.available() > 0 && command_flag == false)
   {
+
+
     byte read_char = Serial.read();
 
     if (read_char == start_byte)
@@ -273,7 +283,6 @@ void send_bytes_to_serial()
       }
     }
   }
-  Serial.write(stop_byte);
 }
 
 //--------------------SERIAL INTERPRETATION FUNCTION--------------------//
@@ -281,11 +290,6 @@ void decode_data_from_serial()
 {
   if (command_flag)
   {
-    /*
-    Serial.print(current_cmd);
-    Serial.print(" ");
-    Serial.println(current_arg[0]);
-    */
     switch (current_cmd)
     {
     case 0:
@@ -351,23 +355,31 @@ void decode_data_from_serial()
 }
 
 //--------------------DOING STUFF WITH DATA--------------------//
-void Estop_from_serial(uint8_t arg)
+void Estop_from_serial(volatile uint8_t arg)
 {
   // this function takes the estop val from serial and does stuff w/ it
-  if (arg == false) // estop off
+  if (arg == 0) // estop off
   {
-    // the reason turning the estop off is only here versus its own seperate function is because the estop is only turned off from software, but it can be turned on from hardware or software, so it needs multiple access points
+    // the reason turning the estop off is only here versus its own separate function is because the estop is only turned off from software, but it can be turned on from hardware or software, so it needs multiple access points
     global_estop_flag = false;                        // set flag
     digitalWriteFast(stepper_driver_enable_pin, LOW); // enable steppers
-    digitalWriteFast(estop_led_pin, HIGH);            // turn light off
+    digitalWriteFast(estop_led_pin1, LOW);            // turn light(s) off
+    // digitalWriteFast(estop_led_pin2, LOW);
   }
-  else // if estop isn't off, it's on
+  else if (arg == 1)
   {
     Estop_on();
   }
+  /*
+  else
+  {
+    Serial.println(arg);
+    Serial.println("estop serial parse error");
+    delay(10000000);
+  }*/
 }
 
-void control_jointhold(byte arg)
+void control_jointhold(volatile byte arg)
 {
   global_jointhold_flag = static_cast<bool>(arg);
 
@@ -387,11 +399,12 @@ void move_home()
 
 void update_target_joint_positions()
 {
-  byte _internal_current_arg[21];
-  memcpy(_internal_current_arg, current_arg, 21);
+  //byte _internal_current_arg[21];
+  //memcpy(_internal_current_arg, current_arg, 21);
 
   float positions[7];
-  decode_7_floats(positions, _internal_current_arg);
+  //decode_7_floats(positions, _internal_current_arg);
+  decode_7_floats(positions, current_arg);
 
   for (uint8_t i = 0; i < 7; i++)
   {
@@ -400,11 +413,12 @@ void update_target_joint_positions()
 }
 void update_target_joint_velocities()
 {
-  byte _internal_current_arg[21];
-  memcpy(_internal_current_arg, current_arg, 21);
+  //byte _internal_current_arg[21];
+  //memcpy(_internal_current_arg, current_arg, 21);
 
   float velocities[7];
-  decode_7_floats(velocities, _internal_current_arg);
+  //decode_7_floats(velocities, _internal_current_arg);
+  decode_7_floats(velocities, current_arg);
 
   for (uint8_t i = 0; i < 7; i++)
   {
@@ -413,11 +427,12 @@ void update_target_joint_velocities()
 }
 void update_target_joint_torques()
 {
-  byte _internal_current_arg[21];
-  memcpy(_internal_current_arg, current_arg, 21);
+  //byte _internal_current_arg[21];
+  //memcpy(_internal_current_arg, current_arg, 21);
 
   float torques[7];
-  decode_7_floats(torques, _internal_current_arg);
+  //decode_7_floats(torques, _internal_current_arg);
+  decode_7_floats(torques, current_arg);
 
   for (uint8_t i = 0; i < 7; i++)
   {
@@ -425,7 +440,7 @@ void update_target_joint_torques()
   }
 }
 
-void update_kinematic_limits(int limit_type, byte arg[max_serial_input])
+void update_kinematic_limits(int limit_type, volatile byte arg[max_serial_input])
 {
   uint8_t target_joint = static_cast<uint8_t>(arg[0]);
   if (0 <= target_joint && target_joint <= 6)
@@ -461,7 +476,7 @@ void update_kinematic_limits(int limit_type, byte arg[max_serial_input])
   }
 }
 
-void update_workspace_limits(uint8_t axis_OI, byte arg[max_serial_input])
+void update_workspace_limits(volatile uint8_t axis_OI, volatile byte arg[max_serial_input])
 {
   byte limit_bytes[3];
 
@@ -472,7 +487,7 @@ void update_workspace_limits(uint8_t axis_OI, byte arg[max_serial_input])
   workspace_bounds[axis_OI][1] = decode_1_float(limit_bytes);
 }
 
-void update_joint_PID(byte arg[max_serial_input])
+void update_joint_PID(volatile byte arg[max_serial_input])
 {
   uint8_t target_joint = static_cast<uint8_t>(arg[0]);
   if (0 <= target_joint && target_joint <= 6)
@@ -489,7 +504,7 @@ void update_joint_PID(byte arg[max_serial_input])
   }
 }
 
-void update_home_position(byte arg[max_serial_input])
+void update_home_position(volatile byte arg[max_serial_input])
 {
 
   byte home_bytes[3];
@@ -513,24 +528,24 @@ void update_ee_value(byte arg1, byte arg2, byte arg3)
 //--------------------SERIAL WRITING FUNCTIONS--------------------//
 void report_Estop()
 {
+
   // this func reports an estop to serial/ros system if an estop is triggered and the estop originates from serial and the estop hasn't yet been reported
-  const uint8_t estop_cmd = key_from_val("Estop"); // key val of estop
-  const uint8_t estop_on_msg[4] = {start_byte, estop_cmd, 1, stop_byte};
+  const byte estop_cmd = key_from_val("Estop"); // key val of estop
 
   to_send_msg estop;
-  memcpy(estop.msg[0], estop_on_msg, sizeof(estop_on_msg));
+  estop.msg[0] = estop_cmd;
+  estop.msg[1] = 1;
+  estop.msg[2] = stop_byte;
 
   to_send_queue.push_front(estop);
-  digitalWriteFast(estop_led_pin, HIGH); // turn led on
+  digitalWriteFast(estop_led_pin1, HIGH); // turn light(s) on
+  // digitalWriteFast(estop_led_pin2, HIGH);
 }
 
 void report_current_joint_info()
 {
   static int info_to_be_reported = 0;
-  // Serial.println("start report");
   to_send_msg current_joint_info;
-
-  // Serial.println("init vals");
 
   switch (info_to_be_reported)
   {
@@ -581,17 +596,11 @@ void report_current_joint_info()
     {
       current_joint_info.msg[(i * 3) + j + 1] = joint_info_float[j];
     }
-    // memcpy(current_joint_info.msg[i], joint_position, sizeof(joint_position));
-    // Serial.println("memcpy");
-
-    // Serial.println(i);
   }
 
-  // Serial.println("finish calc");
   current_joint_info.msg[22] = stop_byte;
 
   to_send_queue.push_back(current_joint_info);
-  // Serial.println("end report");
 
   (info_to_be_reported == 4) ? info_to_be_reported = 0 : info_to_be_reported++;
 }
@@ -615,16 +624,18 @@ void report_temperatures() {}
 void Estop_on()
 {
   global_estop_flag = true;                          // global flag
-  digitalWriteFast(stepper_driver_enable_pin, HIGH); // the stepper enable pin turns stepper off when high
+  digitalWriteFast(stepper_driver_enable_pin, HIGH); // the stepper enable pin turns stepper off when highl
+  digitalWriteFast(estop_led_pin1, HIGH);
+  // digitalWriteFast(estop_led_pin2, HIGH);
 }
 
 float check_I2C_encoder(uint8_t encoder_num)
 {
-  return .1;
+  return 0.1;
 }
 float check_offbore_encoder()
 {
-  return 0;
+  return 0.2;
 }
 
 void run_motors()

@@ -14,3 +14,5 @@ Some issues I identified with V1:
 I really enjoyed some of the trajectory generation and controls stuff, along with the visual servoing i got to see, at my internship so I want an arm that is solid enough to explore some of those higher level concepts.
 
 I've decided to start with a new version of the cycloidal gearbox, because the gearboxes caused a lot of problems.
+
+:3
