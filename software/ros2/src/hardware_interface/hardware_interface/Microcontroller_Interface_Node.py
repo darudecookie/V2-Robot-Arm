@@ -141,10 +141,10 @@ class Serial_Interface(Node):
         except AttributeError:
             return
         
-    def frequency_debug(self):
-        print(self.debug_counter, "over", self.debug_poll_time, "seconds\nrate of", self.debug_counter / self.debug_poll_time, "per second")
-        
-        self.debug_counter = 0
+    #def frequency_debug(self):
+    #    print(self.debug_counter, "over", self.debug_poll_time, "seconds\nrate of", self.debug_counter / self.debug_poll_time, "per second")
+    #    
+    #    self.debug_counter = 0
         
     def conditional_queue_len_print(self):
         if len(self.MCU_report_queue) > 0 or len(self.MCU_send_queue) > 0:
@@ -234,12 +234,10 @@ class Serial_Interface(Node):
         return float_array
 
     def write_to_mcu_RIGHT_NOW(self, bytes_to_write: str) -> None:
-        print("write right now")
-        #self.Serial_port.flush()
+        self.Serial_port.flush()
         bytes_to_write = self.start_char+bytes_to_write+self.stop_char
         
         self.Serial_port.write(bytes_to_write)
-        print(bytes_to_write)
         
     def read_from_MCU_write_to_MCU(self):  # MCU comm loop
         if self.Serial_port.in_waiting > 0:
