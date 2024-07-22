@@ -222,7 +222,7 @@ void get_string_from_serial()
   // if serial isn't detected in this function, trigger the estop and restart the program
   if (!Serial)
   {
-    estop_on();     
+    Estop_on();     
     delay(200);   //delay to make sure estop actually did something
     SCB_AIRCR = 0x05FA0004;   //restart program
   }
