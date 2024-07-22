@@ -69,7 +69,7 @@ class Serial_Interface(Node):
         self.clear_queue = True
         self.to_send_message = b''
 
-        MCU_communication_frequency = 300
+        MCU_communication_frequency = 10000
         ros_communication_frequency = 2 * MCU_communication_frequency
 
         self.declare_parameter("estop_cooldown", 1)
@@ -127,9 +127,9 @@ class Serial_Interface(Node):
         # frequency for messages to be pulled from queue and sent to ros (hz)
         self.ros_communication_timer = self.create_timer(1 / ros_communication_frequency, self.parse_queue_from_MCU)
 
-        self.debug_counter = 0
-        self.debug_poll_time = 1
-        self.debug_timer = self.create_timer(self.debug_poll_time, self.frequency_debug)
+        #self.debug_counter = 0
+        #self.debug_poll_time = 5
+        #self.debug_timer = self.create_timer(self.debug_poll_time, self.frequency_debug)
 
         self.conditional_queue_len_print()
 
@@ -234,8 +234,12 @@ class Serial_Interface(Node):
         return float_array
 
     def write_to_mcu_RIGHT_NOW(self, bytes_to_write: str) -> None:
-        self.Serial_port.flush()
+        print("write right now")
+        #self.Serial_port.flush()
+        bytes_to_write = self.start_char+bytes_to_write+self.stop_char
+        
         self.Serial_port.write(bytes_to_write)
+        print(bytes_to_write)
         
     def read_from_MCU_write_to_MCU(self):  # MCU comm loop
         if self.Serial_port.in_waiting > 0:
@@ -268,7 +272,7 @@ class Serial_Interface(Node):
         elif len(self.MCU_send_queue) > 0:
             self.get_logger().info("info not written due to recent estop")
             
-        self.debug_counter += 1
+        #self.debug_counter += 1
         return
     
     def send_system_status(self, request, response):
@@ -382,7 +386,6 @@ class Serial_Interface(Node):
                             self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
                         case "JointHold":
                             self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
-                            
                         case  "Get_Joint_Positions":
                             self.report_joint_information(information_to_report[0], information_to_report[1])
                         case  "Get_Joint_Velocities":
@@ -395,11 +398,14 @@ class Serial_Interface(Node):
                             self.report_joint_information(information_to_report[0], information_to_report[1])
                         case  "Get_EE_Float":
                             self.report_end_effector_information(information_to_report[1])
-        return 
+                        case "Get_EE_Float":
+                            self.report_end_effector_information(information_to_report[1])
+                        case "Get_Temperatures":
+                            self.report_system_diagnostic_information(information_to_report[0], information_to_report[1])
 
     def report_system_diagnostic_information(self, passed_cmd: int, passed_arg: str):
         argument = int.from_bytes(passed_arg, "little")
-
+        
         if passed_cmd == self.key_from_val("Estop"):
             msg = SystemDiagnosticInfo()
             msg.temperatures = [-1]
@@ -419,7 +425,7 @@ class Serial_Interface(Node):
     def report_joint_information(self, passed_cmd: int, passed_arg: str):
         if passed_cmd == self.key_from_val("Get_Joint_Positions"):
             current_positions = self.decode_n_floats(input_bytes=passed_arg, n_floats=7)
-
+            
             if current_positions:
                 for i in range(7):
                     self.current_Joint_Info_components.positions[i] = current_positions[i]
@@ -427,36 +433,36 @@ class Serial_Interface(Node):
                 
         elif passed_cmd == self.key_from_val("Get_Joint_Velocities"):
             current_velocities = self.decode_n_floats(input_bytes=passed_arg, n_floats=7)
-
+            
             if current_velocities:
                 for i in range(7):
                     self.current_Joint_Info_components.velocities[i] = current_velocities[i]
                 self.joint_info_reported[1] = True
-
+                
         elif passed_cmd == self.key_from_val("Get_Joint_Torques"):
             current_torques = self.decode_n_floats(input_bytes=passed_arg, n_floats=7)
-
+            
             if current_torques:
                 for i in range(7):
                     self.current_Joint_Info_components.torques[i] = current_torques[i]
                 self.joint_info_reported[2] = True
-
+                
         elif passed_cmd == self.key_from_val("Get_Joint_Accelerations"):
             current_accelerations = self.decode_n_floats(input_bytes=passed_arg, n_floats=7)
-
+            
             if current_accelerations:
                 for i in range(7):
                     self.current_Joint_Info_components.accelerations[i] = current_accelerations[i]
                 self.joint_info_reported[3] = True
-
+                
         elif passed_cmd == self.key_from_val("Get_Joint_Jerks"):
             current_jerks = self.decode_n_floats(input_bytes=passed_arg, n_floats=7)
-
+            
             if current_jerks:
                 for i in range(7):
                     self.current_Joint_Info_components.jerks[i] = current_jerks[i]
                 self.joint_info_reported[4] = True
-
+                
         if all(self.joint_info_reported) == True:
             if self.current_Joint_Info_components.positions.ndim != 1 or self.current_Joint_Info_components.velocities.ndim != 1 or self.current_Joint_Info_components.jerks.ndim != 1 or self.current_Joint_Info_components.accelerations.ndim != 1 or self.current_Joint_Info_components.jerks.ndim != 1:
                 
