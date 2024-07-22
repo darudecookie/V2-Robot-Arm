@@ -27,7 +27,7 @@ setup(
         'console_scripts': [
             'Peripheral_Interface_Node = movement_controllers.Peripheral_Interface_Node:main',
             'Trajectory_Controller_Node = movement_controllers.Trajectory_Controller_Node:main',
-            'IK_Solver_Node = movement_controllers.IK_Solver_Node:main'
+            'Kinematic_Solver_Node = movement_controllers.Kinematic_Solver_Node:main'
 
         ],
     },

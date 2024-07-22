@@ -17,7 +17,7 @@ class Trajectory_Controller(Node):
         self.control_status_sub = self.create_subscription(ControlStatus, "control_status", self.update_output_from_system, 10)
         self.system_diagnostic_sub = self.create_subscription(SystemDiagnosticInfo, "system_diagnostic_information", self.update_estop_jointhold_from_system, 10)
         self.Target_Cartesian_pub = self.create_publisher(TargetCartesian, "target_cartesian", 10)
-        self.Parametric_Trajectory_action_server = rclpy.action.ActionServer(self, ParametricTrajectoryInfo, "parametric_trajectory_info", self.parametric_trajector_callback)
+        self.Parametric_Trajectory_action_server = rclpy.action.ActionServer(self, ParametricTrajectoryInfo, "parametric_trajectory_information", self.parametric_trajectory_callback)
 
         self.get_logger().info("node initiated!")
 
@@ -37,7 +37,7 @@ class Trajectory_Controller(Node):
             self.should_output = 1
             self.get_logger().info("restarting trajectory output")
 
-    def parametric_trajector_callback(self):
+    def parametric_trajectory_callback(self):
         print("hiii")
 
         

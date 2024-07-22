@@ -36,17 +36,17 @@ class ROS_Controller(Node):
         self.target_end_effector = 0
         
         self.System_Status_client = self.create_client(SystemStatus, "system_status")
-        #while not self.System_Status_client.wait_for_service(timeout_sec = 1):
-        #    self.get_logger().warn("'system_status' service not available\nretrying in 1 second")
+        while not self.System_Status_client.wait_for_service(timeout_sec = 1):
+            self.get_logger().warn("'system_status' service not available\nretrying in 1 second")
             
         self.MCU_Param_Dump_client = self.create_client(MicrocontrollerParameterDump, "microcontroller_parameter_dump")
         self.Target_EE_client = self.create_client(TargetEEState, "target_end_effector_information")
-        
+        self.Peripheral_Speed_pub = self.create_publisher(PeripheralSpeed, "peripheral_speed", 10)
         self.Current_Cartesian_sub = self.create_subscription(CurrentCartesian, "current_cartesian", self.update_current_cartesian, 10)
         self.Target_Cartesian_pub = self.create_publisher(TargetCartesian, "target_cartesian", 10)
         
-        self.Current_Joint_sub = self.create_subscription(CurrentJointInfo, "current_joint_info", self.update_current_joint, 10)
-        self.Target_Joint_pub = self.create_publisher(TargetJointInfo, "target_joint_info", 10)
+        self.Current_Joint_sub = self.create_subscription(CurrentJointInfo, "current_joint_information", self.update_current_joint, 10)
+        self.Target_Joint_pub = self.create_publisher(TargetJointInfo, "target_joint_information", 10)
         
         
         self.get_logger().info("node initiated!")
@@ -64,7 +64,6 @@ class ROS_Controller(Node):
             self.current_joint_torque[i] = msg.torques
             self.current_joint_acceleration[i] =msg.accelerations
             self.current_joint_jerk[i] = msg.jerks
-        print(self.current_joint_position)
         
     def update_current_ee(self, msg):
         self
