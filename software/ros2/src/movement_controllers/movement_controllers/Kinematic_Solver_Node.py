@@ -5,10 +5,10 @@ from rclpy.node import Node
 from v2_robot_arm_interfaces.msg import CurrentJointInfo, TargetJointInfo, CurrentCartesian, TargetCartesian, ControlStatus
 
 
-class IK_Controller(Node):
+class Kinematic_Solver(Node):
 
     def __init__(self):
-        super().__init__("IK_Solver_Node") 
+        super().__init__("Kinematic_Solver_Node") 
         self.get_logger().info("initiating node")
 
         self.should_output = False
@@ -30,8 +30,11 @@ class IK_Controller(Node):
         self.Current_Cartesian_pub = self.create_publisher(CurrentCartesian, "current_cartesian", 10)
         self.Target_Cartesian_sub = self.create_subscription(TargetCartesian, "target_cartesian", self.receive_target_cartesian, 10)
 
-        self.IK_Calc_frequency = 200
+        self.IK_Calc_frequency = 500
         self.IK_timer = self.create_timer(1 / self.IK_Calc_frequency, self.calculate_IK_publish_JointAngles)
+        
+        self.FK_pub_frequency = 100
+        self.FK_timer = self.create_timer(1 / self.FK_pub_frequency, self.calculate_FK_publish_CurrentCartesian)
 
     def receive_output_status(self, msg):
         if msg.ik_solver == 1:
@@ -40,8 +43,8 @@ class IK_Controller(Node):
             self.should_output = False
 
     def receive_current_joint_angles(self, msg):
-        self.current_joint_angles = msg.positions
-        self.calculate_FK_publish_CurrentCartesian()
+        for i in range(7):
+            self.current_joint_angles[i] = msg.positions[i]
 
     def calculate_FK_publish_CurrentCartesian(self):
 
