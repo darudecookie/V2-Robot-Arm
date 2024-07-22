@@ -36,6 +36,8 @@ class Kinematic_Solver(Node):
         self.FK_pub_frequency = 100
         self.FK_timer = self.create_timer(1 / self.FK_pub_frequency, self.calculate_FK_publish_CurrentCartesian)
 
+        self.get_logger().info("node initiated!")
+
     def receive_output_status(self, msg):
         if msg.ik_solver == 1:
             self.should_output = True
@@ -70,8 +72,8 @@ class Kinematic_Solver(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    IK_Controller_Object = IK_Controller()
-    rclpy.spin(IK_Controller_Object)
+    Kinematic_Solver_Object = Kinematic_Solver()
+    rclpy.spin(Kinematic_Solver_Object)
 
 
 if __name__ == '__main__':
