@@ -55,9 +55,10 @@ class Kinematic_Solver(Node):
         self.Current_Cartesian_pub.publish(msg)
 
     def receive_target_cartesian(self, msg):
-        self.target_cartesian_matrix.p = msg.position 
-        self.target_cartesian_matrix.M = msg.rotation
-
+        for i in range(3):
+            self.target_cartesian_matrix.p[i] = msg.position[i]
+            self.target_cartesian_matrix.M[i] = msg.rotation[i]
+        
         self.translation_speed = msg.translation_speed
         self.rotation_speed = msg.rotation_speed
 
