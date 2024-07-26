@@ -1,0 +1,126 @@
+<robot name="V2-Robot-Arm">
+
+
+    <link name="link_base">
+        <visual>
+            <geometry>
+                <cylinder length="0.1725" radius="0.07" />
+            </geometry>
+            <material name="purple">
+                <color rgba="0.6745 0.1529 0.9608 0.8" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="axis1" type="continuous">
+        <parent link="link_base" />
+        <child link="link1_2" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <link name="link1_2">
+        <visual>
+            <origin xyz=".0505 0 0.1725" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4249" radius="0.0125">
+                </cylinder>
+            </geometry>
+            <material name="orange">
+                <color rgba="1 0.4 0.1 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="axis2" type="continuous">
+        <parent link="link1_2" />
+        <child link="link2_3" />
+        <origin xyz="0 0 0.1725" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <link name="link2_3">
+        <visual>
+            <geometry>
+                <cylinder length="0.4249" radius="0.0125">
+                </cylinder>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="axis3" type="continuous">
+        <parent link="link2_3" />
+        <child link="link3_4" />
+        <origin xyz="0 0 0.1725" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <link name="link3_4">
+        <visual>
+            <geometry>
+
+            </geometry>
+            <material name="grey">
+                <color rgba="0.35 0.35 0.35 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="axis4" type="continuous">
+        <parent link="link3_4" />
+        <child link="link4_5" />
+        <origin xyz="0 0 0.1725" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <link name="link4_5">
+        <visual>
+            <geometry>
+
+            </geometry>
+            <material name="cyan">
+                <color rgba="0.12 0.9 1 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="axis5" type="continuous">
+        <parent link="link4_5" />
+        <child link="link5_6" />
+        <origin xyz="0 0 0.1725" rpy="0 0 0" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="link5_6">
+        <visual>
+            <geometry>
+
+            </geometry>
+            <material name="black">
+                <color rgba="0.05 0.05 0.05 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="axis6" type="continuous">
+        <parent link="link5_6" />
+        <child link="link6_7" />
+        <origin xyz="0 0 0.1725" rpy="0 0 0" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="link6_7">
+        <visual>
+            <geometry>
+
+            </geometry>
+            <material name="purple">
+                <color rgba="0.6745 0.1529 0.9608 0.8" />
+            </material>
+        </visual>
+    </link>
+
+</robot>
